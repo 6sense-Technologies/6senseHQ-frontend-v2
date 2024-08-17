@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, Inter } from "next/font/google";
 import "./globals.css";
-
-// const plex = IBM_Plex_Sans({ subsets:  });
 
 export const metadata: Metadata = {
   title: "6sense - Expert Custom Software Development Company",
@@ -16,6 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.webp" type="image/webp" />
+      </head>
       <body>{children}</body>
     </html>
   );
