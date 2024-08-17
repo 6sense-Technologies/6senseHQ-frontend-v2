@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <div className="bg-hero">
       <div className="max-w-7xl mx-auto py-16 px-6">
-        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
           {/* Content Section */}
           <div>
             <h1 className="text-center lg:text-left font-bold text-5xl leading-tight">
@@ -89,7 +89,7 @@ const Hero = () => {
               width={640}
               height={427}
             />
-            <p className="uppercase text-center font-normal">
+            <p className="text-textSecondary uppercase text-center font-medium">
               6sense engineering DEPT.
             </p>
           </div>
