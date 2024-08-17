@@ -10,3 +10,21 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.custombg {
+  position: relative;
+}
+
+.custombg::after {
+  content: "";
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+    rgb(248, 255, 233) 0%,
+    rgba(248, 255, 233, 0) 31%
+  );
+}

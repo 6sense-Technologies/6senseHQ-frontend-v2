@@ -12,6 +12,7 @@ const config: Config = {
         hero: "#F8F4EC",
         primary: "#17494D",
         secondary: "#BA8D46",
+        textSecondary: "#4E4E4E",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],

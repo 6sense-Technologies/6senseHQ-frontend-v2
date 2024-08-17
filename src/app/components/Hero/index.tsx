@@ -2,6 +2,7 @@
 import { CalendarDots } from "@phosphor-icons/react";
 import Image from "next/image";
 import Button from "../Button";
+import Stats from "../Stats";
 
 const Hero = () => {
   const achievements = [
@@ -22,7 +23,7 @@ const Hero = () => {
       contentEnd: "2023",
     },
     {
-      id: 2,
+      id: 3,
       image: "/images/tickIcon.png",
       alt: "icon",
       contentStart: "Idea to Market in",
@@ -33,52 +34,69 @@ const Hero = () => {
 
   return (
     <div className="bg-hero">
-      <div className="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-0 px-7 lg:px-0 lg:flex-row items-center md:justify-between py-20">
-        <div>
-          <h1 className="text-center md:text-left font-bold text-5xl leading-tight">
-            <span className="text-primary">Expert Custom</span>
-            <br />
-            <span className="text-secondary">Software Development</span>
-          </h1>
-          <h3 className="text-center md:text-left text-primary text-3xl font-bold">
-            By An Award Winning Agency
-          </h3>
+      <div className="max-w-7xl mx-auto py-16 px-6">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
+          {/* Content Section */}
+          <div>
+            <h1 className="text-center lg:text-left font-bold text-5xl leading-tight">
+              <span className="text-primary">Expert Custom</span>
+              <br />
+              <span className="text-secondary">Software Development</span>
+            </h1>
+            <h3 className="text-center lg:text-left text-primary text-3xl font-bold">
+              By An Award Winning Agency
+            </h3>
 
-          <div className="py-8 space-y-1">
-            {achievements.map((item) => (
-              <div key={item.id} className="flex items-center gap-4">
-                <Image src={item.image} alt={item.alt} width={20} height={20} />
-                <p>
-                  {item.contentStart}{" "}
-                  <span className="text-primary font-bold">
-                    {item.contentHighlight}
-                  </span>{" "}
-                  {item.contentEnd}
-                </p>
+            <div className="py-8 space-y-1">
+              {achievements.map((item) => (
+                <div key={item.id} className="flex items-center gap-4">
+                  <div>
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      width={20}
+                      height={20}
+                    />
+                  </div>
+                  <p>
+                    {item.contentStart}{" "}
+                    <span className="text-primary font-bold">
+                      {item.contentHighlight}
+                    </span>{" "}
+                    {item.contentEnd}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center lg:text-left">
+              {/* Button */}
+              <Button />
+              <div className="mt-5 flex gap-2 justify-center lg:justify-normal items-center">
+                <CalendarDots size={22} weight="duotone" />
+                <span className="text-lg text-primary font-medium">Or,</span>
+                <h4 className="text-primary font-bold underline text-lg">
+                  Schedule a Free Consultation
+                </h4>
               </div>
-            ))}
+            </div>
           </div>
 
-          <Button />
-
-          <div className="mt-5 flex gap-2 items-center">
-            <CalendarDots size={22} weight="duotone" />
-            <span className="text-lg text-primary font-medium">Or,</span>
-            <h4 className="text-primary font-bold underline text-lg">
-              Schedule a Free Consultation
-            </h4>
+          {/* Image Section */}
+          <div>
+            <Image
+              src={"/images/6sense.png"}
+              alt="6sense Team"
+              width={640}
+              height={427}
+            />
+            <p className="text-textSecondary uppercase text-center font-medium">
+              6sense engineering DEPT.
+            </p>
           </div>
         </div>
-        <div>
-          <Image
-            src={"/images/6sense.png"}
-            alt="6sense Team"
-            width={640}
-            height={427}
-          />
-          <p className="uppercase text-center font-normal">
-            6sense engineering DEPT.
-          </p>
+
+        <div className="mx-7 pt-12">
+          <Stats />
         </div>
       </div>
     </div>
