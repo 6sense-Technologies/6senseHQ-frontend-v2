@@ -1,8 +1,6 @@
-"use client";
-import { CalendarDots } from "@phosphor-icons/react";
 import Image from "next/image";
-import Button from "../Button";
 import Stats from "../Stats";
+import ButtonWithCTA from "../ButtonWithCTA";
 
 const Hero = () => {
   const achievements = [
@@ -34,7 +32,7 @@ const Hero = () => {
 
   return (
     <div className="bg-hero">
-      <div className="max-w-7xl mx-auto py-16 px-6">
+      <div className="max-w-7xl mx-auto py-16 px-5 lg:px-0">
         <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
           {/* Content Section */}
           <div>
@@ -69,15 +67,8 @@ const Hero = () => {
               ))}
             </div>
             <div className="text-center lg:text-left">
-              {/* Button */}
-              <Button />
-              <div className="mt-5 flex gap-2 justify-center lg:justify-normal items-center">
-                <CalendarDots size={22} weight="duotone" />
-                <span className="text-lg text-primary font-medium">Or,</span>
-                <h4 className="text-primary font-bold underline text-lg">
-                  Schedule a Free Consultation
-                </h4>
-              </div>
+              {/* Button With CTA */}
+              <ButtonWithCTA />
             </div>
           </div>
 
