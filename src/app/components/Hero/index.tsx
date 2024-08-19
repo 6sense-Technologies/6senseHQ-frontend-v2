@@ -1,7 +1,4 @@
-"use client";
-import { CalendarDots } from "@phosphor-icons/react";
 import Image from "next/image";
-import Button from "../Button";
 import Stats from "../Stats";
 import ButtonWithCTA from "../ButtonWithCTA";
 

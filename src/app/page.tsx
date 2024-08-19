@@ -6,6 +6,9 @@ import KeyFactors from "./components/KeyFactor";
 import Technology from "./components/Technology";
 import Features from "./components/Features";
 import Advantages from "./components/Advantages";
+import CallToAction from "./components/CallToAction";
+import Works from "./components/Works";
+import Feedback from "./components/Feedback";
 
 export default function Home() {
   return (
@@ -17,6 +20,9 @@ export default function Home() {
       <Technology />
       <Features />
       <Advantages />
+      <CallToAction />
+      <Works />
+      <Feedback />
     </main>
   );
 }
