@@ -13,6 +13,7 @@ const config: Config = {
         primary: "#17494D",
         secondary: "#BA8D46",
         textSecondary: "#4E4E4E",
+        blackSecondary: "#222222",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],

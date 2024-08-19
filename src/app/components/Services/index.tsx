@@ -1,4 +1,5 @@
 import React from "react";
+import SectionTitle from "../SectionTitle";
 
 const Services = () => {
   const ourServices = [
@@ -45,17 +46,29 @@ const Services = () => {
         "Streamline your business operations with our custom software as a service development solutions.",
     },
   ];
+
+  const title = (
+    <>
+      <h1 className="text-primary text-5xl font-medium">
+        Full-Service{" "}
+        <span className="text-secondary">Software Development</span>
+      </h1>
+    </>
+  );
+
+  const paragraph = (
+    <>
+      <p className="py-5 text-textSecondary">
+        Expert custom software development for your business needs. From design
+        to <br /> deployment, we’ve got you covered.
+      </p>
+    </>
+  );
+
   return (
     <div className="px-5 mt-12 lg:my-28">
       <div className="text-center">
-        <h1 className="text-primary text-5xl font-medium">
-          Full-Service{" "}
-          <span className="text-secondary">Software Development</span>
-        </h1>
-        <p className="py-5 text-textSecondary">
-          Expert custom software development for your business needs. From
-          design to <br /> deployment, we’ve got you covered.
-        </p>
+        <SectionTitle title={title} paragraph={paragraph} />
       </div>
 
       <div className="mt-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center">

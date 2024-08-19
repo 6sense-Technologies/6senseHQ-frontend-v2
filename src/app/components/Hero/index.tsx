@@ -3,6 +3,7 @@ import { CalendarDots } from "@phosphor-icons/react";
 import Image from "next/image";
 import Button from "../Button";
 import Stats from "../Stats";
+import ButtonWithCTA from "../ButtonWithCTA";
 
 const Hero = () => {
   const achievements = [
@@ -69,15 +70,8 @@ const Hero = () => {
               ))}
             </div>
             <div className="text-center lg:text-left">
-              {/* Button */}
-              <Button />
-              <div className="mt-5 flex gap-2 justify-center lg:justify-normal items-center">
-                <CalendarDots size={22} weight="duotone" />
-                <span className="text-lg text-primary font-medium">Or,</span>
-                <h4 className="text-primary font-bold underline text-lg">
-                  Schedule a Free Consultation
-                </h4>
-              </div>
+              {/* Button With CTA */}
+              <ButtonWithCTA />
             </div>
           </div>
 

@@ -4,6 +4,8 @@ import Companies from "./components/Companies";
 import Services from "./components/Services";
 import KeyFactors from "./components/KeyFactor";
 import Technology from "./components/Technology";
+import Features from "./components/Features";
+import Advantages from "./components/Advantages";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Services />
       <KeyFactors />
       <Technology />
+      <Features />
+      <Advantages />
     </main>
   );
 }
