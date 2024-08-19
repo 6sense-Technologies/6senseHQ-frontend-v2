@@ -10,6 +10,8 @@ import CallToAction from "./components/CallToAction";
 import Works from "./components/Works";
 import Feedback from "./components/Feedback";
 import Rating from "./components/Rating";
+import MobileApps from "./components/MobileApps";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
@@ -25,6 +27,11 @@ export default function Home() {
       <Works />
       <Feedback />
       <Rating />
+      <div className="my-12">
+        <CallToAction />
+      </div>
+      <MobileApps />
+      <FAQ />
     </main>
   );
 }

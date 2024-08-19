@@ -8,7 +8,7 @@ const Works = () => {
     <>
       <h1 className="text-primary text-5xl font-bold">
         Some of our
-        <span className="text-secondary">Partnership Works </span>
+        <span className="text-secondary"> Partnership Works </span>
       </h1>
     </>
   );
@@ -28,7 +28,7 @@ const Works = () => {
         <SectionTitle title={title} paragraph={paragraph} />
       </div>
 
-      <div className="mt-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-8 gap-y-4">
+      <div className="mt-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4">
         {worksData.map((work) => (
           <div className="bg-white w-full h-auto shadow-md" key={work.id}>
             <img src={work.imageSrc} className="w-full" alt={work.title} />
