@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <div className="bg-hero">
-      <div className="max-w-7xl mx-auto py-16 px-6">
+      <div className="max-w-7xl mx-auto py-16 px-5 lg:px-0">
         <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
           {/* Content Section */}
           <div>
