@@ -9,6 +9,7 @@ import Advantages from "./components/Advantages";
 import CallToAction from "./components/CallToAction";
 import Works from "./components/Works";
 import Feedback from "./components/Feedback";
+import Rating from "./components/Rating";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <CallToAction />
       <Works />
       <Feedback />
+      <Rating />
     </main>
   );
 }
