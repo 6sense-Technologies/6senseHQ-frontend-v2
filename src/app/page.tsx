@@ -12,26 +12,85 @@ import Feedback from "./components/Feedback";
 import Rating from "./components/Rating";
 import MobileApps from "./components/MobileApps";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import {
+  achievements,
+  advantagesAccordionInfo,
+  faqAccordionItems,
+  featureItems,
+  keyFactorIcons,
+  organizations,
+  ourProcess,
+  ourServices,
+  ratingsInfo,
+  statsInfo,
+} from "@/data/propsData";
+import { worksData } from "@/data/worksData";
+import { appsData } from "@/data/appsData";
 
 export default function Home() {
   return (
-    <main className="font-plex-sans">
-      <Hero />
-      <Companies />
-      <Services />
-      <KeyFactors />
-      <Technology />
-      <Features />
-      <Advantages />
-      <CallToAction />
-      <Works />
-      <Feedback />
-      <Rating />
+    <main className="">
+      <Hero
+        titlePrimary="Expert Custom"
+        titleSecondary="Software Development"
+        subtitle="By An Award Winning Agency"
+        achievements={achievements}
+        statsInfo={statsInfo}
+        imageSrc="/images/6sense.png"
+        imageAlt="6sense Team"
+        imageCaption="6sense engineering DEPT."
+      />
+      <Companies
+        organizations={organizations}
+        title="Trusted by 50+ Companies Worldwide"
+        subtitle="Experience and Expertise You Can Count On. Our team has a proven track record of delivering top-quality solutions for businesses across a variety of industries."
+      />
+      <Services ourServices={ourServices} />
+      <KeyFactors keyfactorIcons={keyFactorIcons} />
+      <Technology image="/images/technologies.png" alt="Technology" />
+      <Features features={featureItems} />
+      <Advantages
+        accordionItems={advantagesAccordionInfo}
+        imageSrc="/images/Choosing-6sense.png"
+        alt="Choosing 6sense"
+      />
+      <CallToAction
+        regularTitle="Curious to Learn"
+        coloredPartTitle="More?"
+        subtitle="Get in touch with us to know more about the timeline & budget"
+        imageSrc="/images/6senseImage.png"
+        alt="6sense"
+      />
+      <Works worksInfo={worksData} />
+
+      <Feedback
+        paragraph="I find it comforting that they follow the schedule they
+                  provided me with. It establishes trust between us."
+        logo="/images/works/impromek.png"
+        name="Gabriel Sotomayor"
+        designation="CEO, Impromek Ltd."
+        ourProcess={ourProcess}
+      />
+
+      <Rating ratingsInfo={ratingsInfo} buttonText="Visit Clutch" />
+
       <div className="my-12">
-        <CallToAction />
+        <CallToAction
+          regularTitle="Curious to Learn"
+          coloredPartTitle="More?"
+          subtitle="Get in touch with us to know more about the timeline & budget"
+          imageSrc="/images/6senseImage.png"
+          alt="6sense"
+        />
       </div>
-      <MobileApps />
-      <FAQ />
+      <MobileApps appsInfo={appsData} />
+      <FAQ
+        faqAccordionItems={faqAccordionItems}
+        regularTitle="Frequently Asked"
+        coloredPartTitle="Question"
+      />
+      <Footer />
     </main>
   );
 }

@@ -16,9 +16,13 @@ const config: Config = {
         blackSecondary: "#222222",
         highlight: "#BD8D46",
         lightGray: "#F8F9F9",
+        footerBg: "#F8F3EC",
+        actionColor: "#FF924E",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],
+        "plex-sans-thai": ["IBM Plex Sans Thai", "sans-serif"],
+        helvetica: ["Helvetica", "sans-serif"],
       },
     },
   },

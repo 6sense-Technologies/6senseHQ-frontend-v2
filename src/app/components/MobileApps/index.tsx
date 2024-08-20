@@ -1,8 +1,15 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
-import { appsData } from "@/data/appsData";
 
-const MobileApps = () => {
+type Props = {
+  appsInfo: {
+    id: number;
+    title: string;
+    imageSrc: string;
+  }[];
+};
+
+const MobileApps = ({ appsInfo }: Props) => {
   const title = (
     <>
       <h1 className="text-primary text-5xl font-bold">
@@ -11,7 +18,6 @@ const MobileApps = () => {
       </h1>
     </>
   );
-
   const paragraph = (
     <>
       <p className="py-5 text-textSecondary">
@@ -20,6 +26,7 @@ const MobileApps = () => {
       </p>
     </>
   );
+
   return (
     <div className="mt-12 lg:my-14 px-5 lg:px-0">
       <div className="text-center">
@@ -27,7 +34,7 @@ const MobileApps = () => {
       </div>
       <div className="mt-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-x-3 lg:gap-x-0 md:gap-y-5 place-items-center">
-          {appsData.map((app) => (
+          {appsInfo.map((app) => (
             <div key={app.id} className="bg-lightGray">
               <img className="px-16 pt-5" src={app.imageSrc} alt={app.title} />
               <div className="mt-2 border-t py-4 border-slate-300 p-0 text-center">

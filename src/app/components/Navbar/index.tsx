@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Button from "../Button";
+import { CaretDown } from "@phosphor-icons/react";
 
 const Navbar = () => {
   return (
@@ -15,77 +17,27 @@ const Navbar = () => {
           <Link className="hover:opacity-60" href={"/case-study"}>
             Case Study
           </Link>
-          <Link className="hover:opacity-60" href={"/case-study"}>
-            Our Services
-          </Link>
-
-          {/* <button
-            id="dropdownHoverButton"
-            data-dropdown-toggle="dropdownHover"
-            data-dropdown-trigger="hover"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button"
-          >
-            Dropdown hover{" "}
-            <svg
-              className="w-2.5 h-2.5 ms-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
+          <div className="relative">
+            <Link
+              className="hover:opacity-60 flex items-center justify-center gap-1"
+              href={"/case-study"}
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
-          </button>
+              Our Services <CaretDown size={16} weight="bold" />
+            </Link>
 
-          <div
-            id="dropdownHover"
-            className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-          >
-            <ul
-              className="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownHoverButton"
-            >
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Dashboard
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Settings
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Earnings
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Sign out
-                </a>
-              </li>
+            <ul className="text-blackSecondary text-lg font-medium absolute bg-white border-t-[3px] border-primary w-[240px]">
+              <div className="px-4">
+                <Link className="hover:opacity-60" href={"/case-study"}>
+                  Design
+                </Link>
+              </div>
+              <div className="px-4">
+                <Link className="hover:opacity-60" href={"/case-study"}>
+                  Development
+                </Link>
+              </div>
             </ul>
-          </div> */}
+          </div>
 
           <Link className="hover:opacity-60" href={"/case-study"}>
             Our Process

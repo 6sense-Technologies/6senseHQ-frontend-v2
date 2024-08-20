@@ -1,53 +1,58 @@
 import Image from "next/image";
-import Stats from "../Stats";
+import Stats, { StatInfo } from "../Stats";
 import ButtonWithCTA from "../ButtonWithCTA";
 
-const Hero = () => {
-  const achievements = [
-    {
-      id: 1,
-      image: "/images/tickIcon.png",
-      alt: "icon",
-      contentStart: "Recognized as Delaware’s",
-      contentHighlight: "Top Software Developer",
-      contentEnd: "2023",
-    },
-    {
-      id: 2,
-      image: "/images/tickIcon.png",
-      alt: "icon",
-      contentStart: "Honored with Delaware’s",
-      contentHighlight: "Top Design Company Award",
-      contentEnd: "2023",
-    },
-    {
-      id: 3,
-      image: "/images/tickIcon.png",
-      alt: "icon",
-      contentStart: "Idea to Market in",
-      contentHighlight: "Three Months",
-      contentEnd: "with Custom Software",
-    },
-  ];
+type Achievement = {
+  id: number;
+  image: string;
+  alt: string;
+  contentStart: string;
+  contentHighlight: string;
+  contentEnd: string;
+};
 
+type HeroProps = {
+  titlePrimary: string;
+  titleSecondary: string;
+  subtitle: string;
+  achievements: Achievement[];
+  statsInfo: StatInfo[];
+  imageSrc: string;
+  imageAlt: string;
+  imageCaption: string;
+};
+
+const Hero = ({
+  titlePrimary,
+  titleSecondary,
+  subtitle,
+  achievements,
+  statsInfo,
+  imageSrc,
+  imageAlt,
+  imageCaption,
+}: HeroProps) => {
   return (
     <div className="bg-hero">
       <div className="max-w-7xl mx-auto py-16 px-5 lg:px-0">
         <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
           {/* Content Section */}
           <div>
-            <h1 className="text-center lg:text-left font-bold text-5xl leading-tight">
-              <span className="text-primary">Expert Custom</span>
+            <h1 className="font-plex-sans-thai text-center lg:text-left font-bold text-5xl leading-tight">
+              <span className="text-primary">{titlePrimary}</span>
               <br />
-              <span className="text-secondary">Software Development</span>
+              <span className="text-secondary">{titleSecondary}</span>
             </h1>
             <h3 className="text-center lg:text-left text-primary text-3xl font-bold">
-              By An Award Winning Agency
+              {subtitle}
             </h3>
 
             <div className="py-8 space-y-1">
               {achievements.map((item) => (
-                <div key={item.id} className="flex items-center gap-4">
+                <div
+                  key={item.id}
+                  className="flex items-center gap-4 font-helvetica"
+                >
                   <div>
                     <Image
                       src={item.image}
@@ -58,7 +63,7 @@ const Hero = () => {
                   </div>
                   <p>
                     {item.contentStart}{" "}
-                    <span className="text-primary font-bold">
+                    <span className="text-[#252B42] font-bold">
                       {item.contentHighlight}
                     </span>{" "}
                     {item.contentEnd}
@@ -74,20 +79,15 @@ const Hero = () => {
 
           {/* Image Section */}
           <div>
-            <Image
-              src={"/images/6sense.png"}
-              alt="6sense Team"
-              width={640}
-              height={427}
-            />
+            <Image src={imageSrc} alt={imageAlt} width={640} height={427} />
             <p className="text-textSecondary uppercase text-center font-medium">
-              6sense engineering DEPT.
+              {imageCaption}
             </p>
           </div>
         </div>
 
-        <div className="mx-7 pt-12">
-          <Stats />
+        <div className="pt-12">
+          <Stats statsInfo={statsInfo} />
         </div>
       </div>
     </div>

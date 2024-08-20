@@ -18,7 +18,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.webp" type="image/webp" />
       </head>
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
