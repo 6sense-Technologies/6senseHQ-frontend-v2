@@ -10,12 +10,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-evenly space-y-4">
           <div className="space-y-2 flex flex-col items-center md:items-start">
             <img src="/images/6senseLogo.svg" alt="6sense Logo" />
-            <p className="text-primary text-sm font-thin text-center md:text-left">
+            <p className="font-helvetica text-primary text-sm font-thin text-center md:text-left">
               Copyright 2023 ©6sense Technologies All rights reserved.
             </p>
           </div>
           <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-32">
-            <div className="text-sm text-primary font-thin flex flex-col items-center md:items-start space-y-4">
+            <div className="font-plex-sans-thai text-sm text-primary font-thin flex flex-col items-center md:items-start space-y-4">
               <Link href={"/"}>Terms & Condition</Link>
               <Link href={"/"}>Privacy Policy</Link>
             </div>

@@ -31,12 +31,14 @@ const TwoColumnLayout = ({
       <div className="lg:w-1/2">
         {features.map(({ title, items }, index) => (
           <div key={index} className={index > 0 ? "mt-8" : ""}>
-            <h3 className="text-3xl text-primary font-bold">{title}</h3>
-            <div className="ml-5 mt-4 space-y-4">
+            <h3 className="font-plex-sans-thai text-3xl text-primary font-bold">
+              {title}
+            </h3>
+            <div className="mt-4 space-y-4">
               {items.map(({ text }, idx) => (
                 <div key={idx} className="flex items-start gap-2">
                   <img src="/images/verified.webp" alt="Verified" />
-                  <p className="text-justify">{text}</p>
+                  <p className="font-helvetica text-justify">{text}</p>
                 </div>
               ))}
             </div>

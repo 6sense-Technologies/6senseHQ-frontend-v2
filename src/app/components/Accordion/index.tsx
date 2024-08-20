@@ -26,7 +26,7 @@ const Accordion = ({ items }: AccordionProps) => {
           className="bg-white shadow-md px-2 border-t border-black"
         >
           <button
-            className="text-left flex justify-between items-center w-full p-4 font-bold text-base text-primary transition-shadow duration-300"
+            className="font-plex-sans-thai text-left flex justify-between items-center w-full p-4 font-bold text-lg text-primary transition-shadow duration-300"
             onClick={() => toggleAccordion(index)}
           >
             {item.title}
@@ -43,7 +43,7 @@ const Accordion = ({ items }: AccordionProps) => {
               openIndex === index ? "max-h-screen p-4 mb-3" : "max-h-0 p-0"
             }`}
           >
-            <div className="text-blackSecondary text-justify">
+            <div className="font-helvetica text-blackSecondary text-justify">
               {item.content}
             </div>
           </div>
