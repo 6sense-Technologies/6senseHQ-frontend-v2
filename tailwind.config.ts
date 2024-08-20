@@ -16,6 +16,7 @@ const config: Config = {
         blackSecondary: "#222222",
         highlight: "#BD8D46",
         lightGray: "#F8F9F9",
+        footerBg: "#F8F3EC",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],

@@ -46,3 +46,9 @@ body {
     rgba(248, 255, 233, 0) 31%
   ) !important;
 }
+
+.customClass {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+}

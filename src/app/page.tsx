@@ -12,6 +12,7 @@ import Feedback from "./components/Feedback";
 import Rating from "./components/Rating";
 import MobileApps from "./components/MobileApps";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       </div>
       <MobileApps />
       <FAQ />
+      <Footer />
     </main>
   );
 }
