@@ -17,7 +17,7 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
       <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-0 justify-around">
         <div className="space-y-5">
           <ClutchWidget />
-          <button className="hidden lg:block ml-2 px-4 py-2 border text-sm text-highlight border-highlight rounded-md font-thin">
+          <button className="hidden lg:block ml-2 px-4 py-2 border text-sm text-highlight border-highlight rounded-md font-semibold">
             {buttonText}
           </button>
         </div>
@@ -48,7 +48,7 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
           ))}
         </div>
 
-        <button className="lg:hidden ml-2 px-4 py-2 border text-sm text-highlight border-highlight rounded-md font-thin">
+        <button className="lg:hidden ml-2 px-4 py-2 border text-sm text-highlight border-highlight rounded-md font-semibold">
           {buttonText}
         </button>
       </div>

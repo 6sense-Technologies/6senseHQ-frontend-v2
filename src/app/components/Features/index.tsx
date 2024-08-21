@@ -31,7 +31,7 @@ const Features = ({ features }: Features) => {
   );
   const paragraph = (
     <>
-      <p className="font-helvetica py-5 text-textSecondary">
+      <p className="px-1 font-helvetica py-5 text-textSecondary">
         We go above and beyond to ensure your satisfaction and success. Don’t
         just take our word for it – check out our track record and see for
         yourself why <br />
@@ -42,7 +42,7 @@ const Features = ({ features }: Features) => {
 
   return (
     <div className="mt-12 lg:mt-28">
-      <div className="px-5 text-center">
+      <div className="text-center">
         <SectionTitle title={title} paragraph={paragraph} />
       </div>
 
