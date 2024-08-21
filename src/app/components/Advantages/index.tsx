@@ -29,7 +29,7 @@ const Advantages = ({ accordionItems, imageSrc, alt }: Props) => {
     </>
   );
   return (
-    <div className="mt-16">
+    <div className="my-16">
       <div className="px-5 text-center">
         <SectionTitle title={title} paragraph={paragraph} />
       </div>

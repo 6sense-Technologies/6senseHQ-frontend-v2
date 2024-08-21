@@ -1,33 +1,34 @@
 export const ourProcess = [
   {
     id: 1,
-    icon: "/images/construction.png",
+    icon: "/images/industry.svg",
     alt: "Sports",
     title: "Sports",
     text: "Industry",
   },
   {
     id: 2,
-    icon: "/images/duration.png",
+    icon: "/images/duration.svg",
     alt: "Duration",
     title: "4 months",
     text: "Duration",
   },
   {
     id: 3,
-    icon: "/images/engineer.png",
+    icon: "/images/team.svg",
     alt: "Engineers",
     title: "5 Engineers",
     text: "Team Size",
   },
   {
     id: 4,
-    icon: "/images/technology.png",
+    icon: "/images/industry.svg",
     alt: "Technology",
     title: "Node JS, React Js",
     text: "Technology",
   },
 ];
+
 export const achievements = [
   {
     id: 1,
@@ -58,21 +59,21 @@ export const statsInfo = [
   {
     id: 1,
     stat: "100+",
-    icon: "/images/icon1.png",
+    icon: "/images/projects.svg",
     alt: "Stats Icon",
     text: "Successful software projects",
   },
   {
     id: 2,
     stat: "60+",
-    icon: "/images/icon2.png",
+    icon: "/images/clients.svg",
     alt: "Stats Icon",
     text: "Happy Clients",
   },
   {
     id: 3,
     stat: "4.9",
-    icon: "/images/icon3.png",
+    icon: "/images/rating.svg",
     alt: "Stats Icon",
     text: "Client Feedbacks",
   },

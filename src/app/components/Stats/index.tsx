@@ -25,8 +25,8 @@ const Stats = ({ statsInfo }: StatsProps) => {
                 <Image
                   src={info.icon}
                   alt={info.alt}
-                  width={index === 0 ? 44 : 24}
-                  height={24}
+                  width={index === 0 ? 30 : 24}
+                  height={index === 0 ? 30 : 24}
                 />
               </div>
               <div>

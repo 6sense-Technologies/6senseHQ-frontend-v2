@@ -16,28 +16,28 @@ const KeyFactors = ({ keyfactorIcons }: Props) => {
   const process = [
     {
       id: 1,
-      icon: "/images/construction.png",
+      icon: "/images/industry.svg",
       alt: "Construction",
       title: "Construction",
       text: "Industry",
     },
     {
       id: 2,
-      icon: "/images/duration.png",
+      icon: "/images/duration.svg",
       alt: "Duration",
       title: "16 months",
       text: "Duration",
     },
     {
       id: 3,
-      icon: "/images/engineer.png",
+      icon: "/images/team.svg",
       alt: "Engineers",
       title: "8 Engineers",
       text: "Team Size",
     },
     {
       id: 4,
-      icon: "/images/technology.png",
+      icon: "/images/industry.svg",
       alt: "Technology",
       title: "Node JS, React Js",
       text: "Technology",
