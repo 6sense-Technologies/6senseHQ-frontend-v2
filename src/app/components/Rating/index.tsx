@@ -16,7 +16,9 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
     <div className="mt-10 px-5 lg:px-0 py-20 max-w-6xl mx-auto bg-slate-50">
       <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-0 justify-around">
         <div className="space-y-5">
-          <ClutchWidget />
+          <div className="w-[200px]">
+            <ClutchWidget />
+          </div>
           <button className="hidden lg:block ml-2 px-4 py-2 border text-sm text-highlight border-highlight rounded-md font-semibold">
             {buttonText}
           </button>

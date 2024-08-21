@@ -21,27 +21,20 @@ const Accordion = ({ items }: AccordionProps) => {
   return (
     <div className="">
       {items.map((item, index) => (
-        <div
-          key={index}
-          className="bg-white shadow-md px-2 border-t border-black"
-        >
+        <div key={index} className="px-2 border-t border-black">
           <button
-            className="font-plex-sans-thai text-left flex justify-between items-center w-full p-4 font-bold text-lg text-blackSecondary transition-shadow duration-300"
+            className="font-plex-sans-thai text-left flex justify-between items-center w-full p-4 font-bold text-lg text-blackSecondary"
             onClick={() => toggleAccordion(index)}
           >
             {item.title}
             {openIndex !== index && (
               <div>
-                <CaretDown
-                  color="black"
-                  weight="bold"
-                  className={`transition-transform duration-300 transform`}
-                />
+                <CaretDown color="black" weight="bold" className={``} />
               </div>
             )}
           </button>
           <div
-            className={`overflow-hidden transition-all duration-300 ${
+            className={`overflow-hidden ${
               openIndex === index ? "max-h-screen p-4 mb-3" : "max-h-0 p-0"
             }`}
           >
