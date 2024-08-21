@@ -19,7 +19,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply font-plex-sans-thai;
+    @apply font-plex-sans-thai tracking-tight;
   }
   p {
     @apply font-helvetica;

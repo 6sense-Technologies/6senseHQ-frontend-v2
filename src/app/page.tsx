@@ -16,9 +16,11 @@ import Footer from "./components/Footer";
 import {
   achievements,
   advantagesAccordionInfo,
+  buyerGuides,
   faqAccordionItems,
   featureItems,
   keyFactorIcons,
+  mistakes,
   organizations,
   ourProcess,
   ourServices,
@@ -27,6 +29,8 @@ import {
 } from "@/data/propsData";
 import { worksData } from "@/data/worksData";
 import { appsData } from "@/data/appsData";
+import BuyerGuide from "./components/BuyerGuide";
+import Mistakes from "./components/Mistakes";
 
 export default function Home() {
   return (
@@ -49,6 +53,24 @@ export default function Home() {
       <Services ourServices={ourServices} />
       <KeyFactors keyfactorIcons={keyFactorIcons} />
       <Technology image="/images/technologies.png" alt="Technology" />
+      <BuyerGuide
+        coloredPartTitle="Buyers Guide"
+        regularTitle="for Developing Custom Software"
+        imageSrc="/images/buyerGuide.png"
+        icon="/images/tick.svg"
+        alt="Tick"
+        guides={buyerGuides}
+      />
+
+      <Mistakes
+        coloredPartTitle="10 Mistakes"
+        regularTitle=" You Should Avoid While Developing Custom Software"
+        icon="/images/tick.svg"
+        alt="Icon"
+        imageSrc="/images/mistakes.png"
+        mistakes={mistakes}
+      />
+
       <Features features={featureItems} />
       <Advantages
         accordionItems={advantagesAccordionInfo}

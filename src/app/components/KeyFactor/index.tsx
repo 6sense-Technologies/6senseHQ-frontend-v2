@@ -75,22 +75,17 @@ const KeyFactors = ({ keyfactorIcons }: Props) => {
           </div>
         </div>
 
-        {/* main div */}
-        <div className="relative">
-          <div className="custombg">
-            <Feedback
-              paragraph="We interviewed different providers and selected 6sense
+        <Feedback
+          paragraph="We interviewed different providers and selected 6sense
                         because of two main factors: their proven track record
                         of success developing businesses, and the leaderships
                         passion and commitment to building great products."
-              quoteLogo="/images/quote.png"
-              logo="/images/itcan1.png"
-              name="AL"
-              designation="CEO, Itcan Inc."
-              ourProcess={process}
-            />
-          </div>
-        </div>
+          quoteLogo="/images/quote.png"
+          logo="/images/itcan1.png"
+          name="AL"
+          designation="CEO, Itcan Inc."
+          ourProcess={process}
+        />
       </div>
     </>
   );

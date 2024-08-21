@@ -25,7 +25,7 @@ const Technology = ({ image, alt }: Props) => {
   );
 
   return (
-    <div className="mt-20">
+    <div className="pt-20 upperGradient">
       <div className="px-5 text-center">
         <SectionTitle title={title} paragraph={paragraph} />
         <div className="mt-10 flex items-center justify-center">

@@ -31,11 +31,13 @@ const Accordion = ({ items }: AccordionProps) => {
           >
             {item.title}
             {openIndex !== index && (
-              <CaretDown
-                color="black"
-                weight="bold"
-                className={`transition-transform duration-300 transform`}
-              />
+              <div>
+                <CaretDown
+                  color="black"
+                  weight="bold"
+                  className={`transition-transform duration-300 transform`}
+                />
+              </div>
             )}
           </button>
           <div

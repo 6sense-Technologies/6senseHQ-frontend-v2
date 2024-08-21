@@ -14,8 +14,8 @@ const Advantages = ({ accordionItems, imageSrc, alt }: Props) => {
   const title = (
     <>
       <h1 className="font-plex-sans-thai text-primary text-5xl font-bold">
-        Advantages Of Choosing
-        <span className="text-secondary"> 6sense </span>
+        <span className="text-secondary">Advantages </span>
+        Advantages Of Choosing 6sense
       </h1>
     </>
   );

@@ -291,3 +291,35 @@ export const faqAccordionItems = [
       "We take the security and confidentiality of our clients’ data very seriously. We use industry-standard security protocols and technologies to ensure the protection of your data, and we are happy to discuss any specific concerns you may have about the security of your information.",
   },
 ];
+
+export const buyerGuides = [
+  { id: 1, text: "Pros of Developing Custom Software" },
+  { id: 2, text: "Cons of Developing Custom Software" },
+  {
+    id: 3,
+    text: "Differences Between Custom Software and Off-the-Shelf Software",
+  },
+  {
+    id: 4,
+    text: "Custom Software Development Process",
+  },
+];
+
+export const mistakes = [
+  {
+    id: 1,
+    text: "Mistake No. 1: Not Having a Clear Brief",
+  },
+  {
+    id: 2,
+    text: "Mistake No. 4: Absence of Clear Communication",
+  },
+  {
+    id: 3,
+    text: "Mistake No. 6: Prioritizing Cost over Value",
+  },
+  {
+    id: 4,
+    text: "Mistake No. 10: Not Having a Good User Experience",
+  },
+];
