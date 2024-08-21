@@ -47,7 +47,7 @@ const Features = ({ features }: Features) => {
       </div>
 
       {features.map((feature, index) => (
-        <div className={`${index === 2 ? "pb-28 gradient" : ""}`}>
+        <div key={index} className={`${index === 2 ? "pb-28 gradient" : ""}`}>
           <div className="px-5">
             <TwoColumnLayout
               features={feature.item}

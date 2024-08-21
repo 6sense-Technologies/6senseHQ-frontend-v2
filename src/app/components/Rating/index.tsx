@@ -26,6 +26,7 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
         <div className="grid grid-cols-2 ">
           {ratingsInfo.map((item, index) => (
             <div
+              key={item.id}
               className={`flex lg:items-center  py-10 gap-4 ${
                 index === 0 || index === 1
                   ? "border-b pb-4 md:border-0"
