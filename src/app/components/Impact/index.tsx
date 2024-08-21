@@ -15,7 +15,7 @@ const Impact = ({ impactStats }: Props) => {
     <>
       <h1 className=" text-primary text-5xl font-bold">
         <span className="text-secondary">Impact </span>
-        We've Made
+        We&apos;ve Made
       </h1>
     </>
   );
