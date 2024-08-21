@@ -24,7 +24,7 @@ const BuyerGuide = ({
   guides,
 }: Props) => {
   return (
-    <div className="mt-10 px-5 lg:px-0 max-w-6xl mx-auto md:gap-x-10 flex flex-col md:flex-row justify-center">
+    <div className="mt-10 px-5 lg:px-0 max-w-6xl md:gap-x-4 mx-auto flex flex-col md:flex-row justify-center">
       <div className="flex w-full md:w-1/2 justify-center">
         <Image src={imageSrc} alt="Buyer Guide" width={535} height={326} />
       </div>
@@ -35,14 +35,16 @@ const BuyerGuide = ({
             {regularTitle}
           </h1>
 
-          {guides.map((guide) => (
-            <div key={guide.id} className="space-y-2 mt-4">
-              <div className="flex gap-2">
-                <img src={icon} alt={alt} className="w-6 h-6" />
-                <p>{guide.text}</p>
+          <div className="max-w-[350px] w-full">
+            {guides.map((guide) => (
+              <div key={guide.id} className="space-y-2 mt-4">
+                <div className="flex gap-2">
+                  <img src={icon} alt={alt} className="w-6 h-6" />
+                  <p>{guide.text}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
           <div className="mt-5">
             <Button

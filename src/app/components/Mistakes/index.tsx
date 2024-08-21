@@ -23,7 +23,7 @@ const Mistakes = ({
   mistakes,
 }: Props) => {
   return (
-    <div className="my-20 px-5 lg:px-0 max-w-6xl mx-auto md:gap-x-10 flex flex-col md:flex-row justify-center">
+    <div className="my-20 px-5 lg:px-0 max-w-6xl mx-auto md:gap-x-4 flex flex-col-reverse md:flex-row justify-center">
       <div className="w-full md:w-1/2 flex justify-center">
         <div>
           <h1 className="font-bold text-primary text-4xl max-w-[460px] w-full">
