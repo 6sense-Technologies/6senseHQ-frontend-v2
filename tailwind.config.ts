@@ -18,6 +18,8 @@ const config: Config = {
         lightGray: "#F8F9F9",
         footerBg: "#F8F3EC",
         actionColor: "#FF924E",
+        dimmed: "#737373",
+        dark: "#252B42",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],

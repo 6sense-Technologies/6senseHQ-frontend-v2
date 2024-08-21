@@ -30,10 +30,10 @@ const Stats = ({ statsInfo }: StatsProps) => {
                 />
               </div>
               <div>
-                <h2 className="font-bold text-primary text-2xl md:text-3xl">
+                <h2 className="font-bold text-dark text-2xl md:text-3xl">
                   {info.stat}
                 </h2>
-                <p className="font-medium text-[#737373]">{info.text}</p>
+                <p className="font-medium text-dimmed">{info.text}</p>
               </div>
             </div>
           </div>

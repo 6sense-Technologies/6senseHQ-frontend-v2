@@ -323,3 +323,27 @@ export const mistakes = [
     text: "Mistake No. 10: Not Having a Good User Experience",
   },
 ];
+
+export const impactStats = [
+  {
+    id: 1,
+    icon: "/images/projects.svg",
+    count: "60+",
+    alt: "Icon",
+    text: "Successful Projects",
+  },
+  {
+    id: 2,
+    icon: "/images/clients.svg",
+    count: "200+",
+    alt: "Icon",
+    text: "Happy Clients",
+  },
+  {
+    id: 3,
+    icon: "/images/rating.svg",
+    count: "5.0",
+    alt: "Icon",
+    text: "Client Feedbacks",
+  },
+];

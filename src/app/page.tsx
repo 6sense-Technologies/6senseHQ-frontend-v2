@@ -19,6 +19,7 @@ import {
   buyerGuides,
   faqAccordionItems,
   featureItems,
+  impactStats,
   keyFactorIcons,
   mistakes,
   organizations,
@@ -31,6 +32,7 @@ import { worksData } from "@/data/worksData";
 import { appsData } from "@/data/appsData";
 import BuyerGuide from "./components/BuyerGuide";
 import Mistakes from "./components/Mistakes";
+import Impact from "./components/Impact";
 
 export default function Home() {
   return (
@@ -72,6 +74,7 @@ export default function Home() {
       />
 
       <Features features={featureItems} />
+      <Impact impactStats={impactStats} />
       <Advantages
         accordionItems={advantagesAccordionInfo}
         imageSrc="/images/Choosing-6sense.png"

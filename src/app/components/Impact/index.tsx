@@ -1,0 +1,57 @@
+import SectionTitle from "../SectionTitle";
+
+type Props = {
+  impactStats: {
+    id: number;
+    icon: string;
+    count: string;
+    alt: string;
+    text: string;
+  }[];
+};
+
+const Impact = ({ impactStats }: Props) => {
+  const title = (
+    <>
+      <h1 className=" text-primary text-5xl font-bold">
+        <span className="text-secondary">Impact </span>
+        We've Made
+      </h1>
+    </>
+  );
+
+  const paragraph = (
+    <>
+      <p className="py-5 text-textSecondary">
+        Proven Success with Stats and Client Reviews
+      </p>
+    </>
+  );
+
+  return (
+    <div className="bg-lightGray">
+      <div className="py-20">
+        <div className="text-center">
+          <SectionTitle title={title} paragraph={paragraph} />
+        </div>
+        <div className="mt-10 flex flex-col md:flex-row gap-5 md:gap-10 items-center md:items-start md:justify-center">
+          {impactStats.map((item) => (
+            <div key={item.id}>
+              <div className="flex justify-center items-center w-[302px] md:w-[230px] h-[204px] bg-white">
+                <div className="flex justify-center items-center flex-col space-y-2">
+                  <img src={item.icon} alt={item.alt} />
+                  <h2 className="font-bold text-dark text-2xl md:text-3xl">
+                    {item.count}
+                  </h2>
+                  <p className="text-dimmed font-bold text-sm">{item.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Impact;
