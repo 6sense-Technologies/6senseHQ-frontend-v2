@@ -38,12 +38,12 @@ const Hero = ({
         <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
           {/* Content Section */}
           <div>
-            <h1 className="font-plex-sans-thai text-center lg:text-left font-bold text-5xl leading-tight">
+            <h1 className="font-plex-sans-thai text-center lg:text-left font-bold text-4xl md:text-5xl leading-tight">
               <span className="text-primary">{titlePrimary}</span>
               <br />
               <span className="text-secondary">{titleSecondary}</span>
             </h1>
-            <h3 className="text-center lg:text-left text-primary text-3xl font-bold">
+            <h3 className="text-center lg:text-left text-primary text-[26px] md:text-[28px] mt-6 md:mt-0 font-bold">
               {subtitle}
             </h3>
 
@@ -51,9 +51,9 @@ const Hero = ({
               {achievements.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-4 font-helvetica"
+                  className="flex items-start md:items-center gap-1 md:gap-2 font-helvetica"
                 >
-                  <div>
+                  <div className="mt-1 md:mt-0">
                     <Image
                       src={item.image}
                       alt={item.alt}
@@ -80,7 +80,7 @@ const Hero = ({
           {/* Image Section */}
           <div>
             <Image src={imageSrc} alt={imageAlt} width={640} height={427} />
-            <p className="text-textSecondary uppercase text-center font-medium">
+            <p className="text-textSecondary uppercase text-center text-sm md:text-base font-medium">
               {imageCaption}
             </p>
           </div>

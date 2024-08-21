@@ -32,7 +32,7 @@ export const ourProcess = [
 export const achievements = [
   {
     id: 1,
-    image: "/images/tickIcon.png",
+    image: "/images/pointIcon.svg",
     alt: "icon",
     contentStart: "Recognized as Delaware’s",
     contentHighlight: "Top Software Developer",
@@ -40,7 +40,7 @@ export const achievements = [
   },
   {
     id: 2,
-    image: "/images/tickIcon.png",
+    image: "/images/pointIcon.svg",
     alt: "icon",
     contentStart: "Honored with Delaware’s",
     contentHighlight: "Top Design Company Award",
@@ -48,7 +48,7 @@ export const achievements = [
   },
   {
     id: 3,
-    image: "/images/tickIcon.png",
+    image: "/images/pointIcon.svg",
     alt: "icon",
     contentStart: "Idea to Market in",
     contentHighlight: "Three Months",

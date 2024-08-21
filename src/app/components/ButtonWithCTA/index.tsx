@@ -14,9 +14,9 @@ const ButtonWithCTA = () => {
         <div className="flex gap-1 items-center justify-center">
           <img src="/images/calendericon.png" alt="Calender" />
           <div className="flex gap-2 items-center">
-            <span className="text-lg text-primary font-medium">Or,</span>
-            <h4 className="text-primary font-bold underline text-lg text-center">
-              Schedule a Free Consultation
+            <h4 className="text-primary font-bold text-lg text-center">
+              <span className="font-normal">Or, </span>{" "}
+              <span className="underline">Schedule a Free Consultation</span>
             </h4>
           </div>
         </div>
