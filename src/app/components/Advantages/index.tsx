@@ -32,11 +32,11 @@ text-4xl md:text-5xl font-bold"
     </>
   );
   return (
-    <div className="my-16">
+    <div className="my-9">
       <div className="px-[17px] text-center">
         <SectionTitle title={title} paragraph={paragraph} />
       </div>
-      <div className="mt-6 px-4 max-w-7xl mx-auto">
+      <div className="my-10 px-4 max-w-7xl mx-auto">
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row items-start lg:justify-center">
           <div className="lg:w-1/2">
             <Accordion items={accordionItems} />
