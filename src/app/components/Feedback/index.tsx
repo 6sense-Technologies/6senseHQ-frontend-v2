@@ -20,7 +20,7 @@ const Feedback = ({
   return (
     <>
       <div className="md:mx-10 my-9 ">
-        <div className="max-w-6xl mx-auto md:bg-slate-50  h-full rounded-t-md py-12 px-4 lg:px-0">
+        <div className="relative max-w-6xl mx-auto md:bg-slate-50  h-full rounded-t-md py-12 px-4 lg:px-0">
           <div className="max-w-4xl mx-auto flex lg:gap-8 flex-col-reverse lg:flex-row lg:items-start">
             <img className="hidden lg:block lg:pt-2" src={logo} alt="Logo" />
             <div className="w-full">
@@ -30,7 +30,7 @@ const Feedback = ({
                 </p>
                 {quoteLogo && (
                   <img
-                    className="hidden lg:flex"
+                    className="absolute right-10 bottom-28 hidden md:flex"
                     src={quoteLogo}
                     alt={quoteLogo ? "Quote" : ""}
                   />

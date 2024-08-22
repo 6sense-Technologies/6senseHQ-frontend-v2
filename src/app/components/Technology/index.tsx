@@ -11,7 +11,7 @@ const Technology = ({ image, alt }: Props) => {
     <>
       <h1
         className="font-plex-sans-thai text-primary 
-text-4xl md:text-5xl font-bold"
+text-4xl md:text-5xl font-bold px-8"
       >
         Expertise In
         <span className="text-secondary"> Leading Technologies</span>
@@ -28,7 +28,7 @@ text-4xl md:text-5xl font-bold"
   );
 
   return (
-    <div className="pt-20 upperGradient">
+    <div className="pt-9 md:pt-16 upperGradient">
       <div className="px-5 text-center">
         <SectionTitle title={title} paragraph={paragraph} />
         <div className="mt-10 flex items-center justify-center">

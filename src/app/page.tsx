@@ -58,7 +58,7 @@ export default function Home() {
       <BuyerGuide
         coloredPartTitle="Buyers Guide"
         regularTitle="for Developing Custom Software"
-        imageSrc="/images/buyerGuide.png"
+        imageSrc="/images/buyersguide.png"
         icon="/images/tick.svg"
         alt="Tick"
         guides={buyerGuides}
@@ -69,7 +69,7 @@ export default function Home() {
         regularTitle=" You Should Avoid While Developing Custom Software"
         icon="/images/tick.svg"
         alt="Icon"
-        imageSrc="/images/mistakes.png"
+        imageSrc="/images/10mistakes.png"
         mistakes={mistakes}
       />
 
@@ -92,7 +92,7 @@ export default function Home() {
       <Feedback
         paragraph="I find it comforting that they follow the schedule they
                   provided me with. It establishes trust between us."
-        logo="/images/works/impromek.png"
+        logo="/images/impromek.svg"
         name="Gabriel Sotomayor"
         designation="CEO, Impromek Ltd."
         ourProcess={ourProcess}

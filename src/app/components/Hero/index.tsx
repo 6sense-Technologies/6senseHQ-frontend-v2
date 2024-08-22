@@ -34,7 +34,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <div className="bg-hero">
-      <div className="max-w-7xl mx-auto py-16 px-5 lg:px-0">
+      <div className="max-w-7xl mx-auto py-16 px-5">
         <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
           {/* Content Section */}
           <div>
@@ -47,38 +47,48 @@ const Hero = ({
               {subtitle}
             </h3>
 
-            <div className="py-8 space-y-1">
-              {achievements.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex items-start md:items-center gap-1 md:gap-2 font-helvetica"
-                >
-                  <div className="mt-1 md:mt-0">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      width={20}
-                      height={20}
-                    />
+            <div className="mt-5 flex justify-center md:justify-start">
+              <div className="space-y-1">
+                {achievements.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex items-start md:items-center gap-1 md:gap-2 font-helvetica"
+                  >
+                    <div className="mt-1 md:mt-0">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        width={20}
+                        height={20}
+                      />
+                    </div>
+                    <p>
+                      {item.contentStart}{" "}
+                      <span className="text-[#252B42] font-bold">
+                        {item.contentHighlight}
+                      </span>{" "}
+                      {item.contentEnd}
+                    </p>
                   </div>
-                  <p>
-                    {item.contentStart}{" "}
-                    <span className="text-[#252B42] font-bold">
-                      {item.contentHighlight}
-                    </span>{" "}
-                    {item.contentEnd}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <div className="text-center lg:text-left">
+
+            <div className="block md:hidden my-5 md:my-0">
+              <Image src={imageSrc} alt={imageAlt} width={640} height={427} />
+              <p className="text-textSecondary uppercase text-center text-sm md:text-base font-medium">
+                {imageCaption}
+              </p>
+            </div>
+
+            <div className="my-5 text-center lg:text-left">
               {/* Button With CTA */}
               <ButtonWithCTA />
             </div>
           </div>
 
           {/* Image Section */}
-          <div>
+          <div className="hidden md:block">
             <Image src={imageSrc} alt={imageAlt} width={640} height={427} />
             <p className="text-textSecondary uppercase text-center text-sm md:text-base font-medium">
               {imageCaption}

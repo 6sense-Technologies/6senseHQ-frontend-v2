@@ -1,5 +1,5 @@
 "use client";
-import { CaretDown } from "@phosphor-icons/react";
+import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import { useState } from "react";
 
 type AccordionItem = {
@@ -23,15 +23,17 @@ const Accordion = ({ items }: AccordionProps) => {
       {items.map((item, index) => (
         <div key={index} className="px-2 border-t border-black">
           <button
-            className="font-plex-sans-thai text-left flex justify-between items-center w-full p-4 font-bold text-lg text-blackSecondary"
+            className="font-plex-sans-thai text-left flex justify-between items-center w-full p-4 font-bold text-lg text-primary"
             onClick={() => toggleAccordion(index)}
           >
             {item.title}
-            {openIndex !== index && (
-              <div>
-                <CaretDown color="black" weight="bold" className={``} />
-              </div>
-            )}
+            <div>
+              {openIndex === index ? (
+                <CaretUp color="black" weight="bold" />
+              ) : (
+                <CaretDown color="black" weight="bold" />
+              )}
+            </div>
           </button>
           <div
             className={`overflow-hidden ${

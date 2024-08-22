@@ -23,10 +23,10 @@ const Mistakes = ({
   mistakes,
 }: Props) => {
   return (
-    <div className="my-20 px-5 lg:px-0 max-w-6xl mx-auto md:gap-x-4 flex flex-col-reverse md:flex-row justify-center">
-      <div className="w-full md:w-1/2 flex justify-center">
+    <div className="my-20 px-5 md:px-20 max-w-6xl mx-auto md:gap-x-20 flex flex-col-reverse md:flex-row justify-center">
+      <div className="w-full md:w-1/2">
         <div>
-          <h1 className="font-bold text-primary text-4xl max-w-[460px] w-full">
+          <h1 className="font-bold text-primary text-4xl">
             <span className="text-secondary">{coloredPartTitle}</span>{" "}
             {regularTitle}
           </h1>
@@ -48,7 +48,7 @@ const Mistakes = ({
           </div>
         </div>
       </div>
-      <div className="flex w-full md:w-1/2 justify-center">
+      <div className="">
         <Image src={imageSrc} alt="Buyer Guide" width={535} height={326} />
       </div>
     </div>

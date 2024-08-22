@@ -24,7 +24,7 @@ const TwoColumnLayout = ({
 }: FeaturesProps) => {
   return (
     <div
-      className={`mt-20 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row lg:items-center lg:gap-10 ${
+      className={`mt-4  max-w-7xl mx-auto flex flex-col-reverse lg:flex-row lg:items-center lg:gap-10 ${
         imageOnLeft ? "lg:flex-row-reverse" : ""
       }`}
     >

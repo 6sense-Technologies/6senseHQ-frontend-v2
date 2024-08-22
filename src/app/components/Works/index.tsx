@@ -14,7 +14,7 @@ type Props = {
 const Works = ({ worksInfo }: Props) => {
   const title = (
     <>
-      <h1 className="text-primary text-5xl font-bold">
+      <h1 className="text-primary text-4xl md:text-5xl font-bold">
         Some of our
         <span className="text-secondary"> Partnership Works </span>
       </h1>
@@ -23,7 +23,7 @@ const Works = ({ worksInfo }: Props) => {
 
   const paragraph = (
     <>
-      <p className="py-5 text-textSecondary">
+      <p className="py-4 md:py-1 text-blackSecondary">
         Experience the Cost-Effective Benefits of Partnering with Our Software
         Development Team
       </p>
@@ -37,7 +37,7 @@ const Works = ({ worksInfo }: Props) => {
           <SectionTitle title={title} paragraph={paragraph} />
         </div>
 
-        <div className="mt-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4">
+        <div className="mt-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4">
           {worksInfo.map((work) => (
             <div className="bg-white w-full h-auto shadow-md" key={work.id}>
               <img src={work.imageSrc} className="w-full" alt={work.title} />

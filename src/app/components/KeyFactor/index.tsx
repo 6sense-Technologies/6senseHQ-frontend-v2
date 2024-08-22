@@ -58,7 +58,7 @@ text-4xl md:text-5xl font-bold"
 
   const paragraph = (
     <>
-      <p className="font-helvetica py-5 text-textSecondary">
+      <p className="font-helvetica py-5 text-blackSecondary">
         Ensuring Success through Quality Assurance, Timely Delivery,
         Scalability, and Collaboration.
       </p>
@@ -66,7 +66,7 @@ text-4xl md:text-5xl font-bold"
   );
   return (
     <>
-      <div className="mt-12 lg:my-28">
+      <div className="mt-6 lg:my-28">
         <div className="px-4 text-center">
           <SectionTitle title={title} paragraph={paragraph} />
           <div className="flex flex-wrap items-center justify-center gap-4">

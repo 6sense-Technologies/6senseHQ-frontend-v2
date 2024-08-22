@@ -80,11 +80,11 @@ export const statsInfo = [
 ];
 
 export const organizations = [
-  { id: 1, image: "/images/logo1.webp", alt: "Logo" },
-  { id: 2, image: "/images/logo2.webp", alt: "Logo" },
-  { id: 3, image: "/images/logo3.webp", alt: "Logo" },
-  { id: 4, image: "/images/logo4.webp", alt: "Logo" },
-  { id: 5, image: "/images/logo5.webp", alt: "Logo" },
+  { id: 1, image: "/images/companies/breakingmars.svg", alt: "Breaking Mars" },
+  { id: 2, image: "/images/companies/chargeonsite.svg", alt: "Charge Onsite" },
+  { id: 3, image: "/images/companies/impromek.svg", alt: "Impromek" },
+  { id: 4, image: "/images/companies/jawhargy.svg", alt: "Jawhargy" },
+  { id: 5, image: "/images/companies/itcan.svg", alt: "Itcan" },
 ];
 
 export const ourServices = [

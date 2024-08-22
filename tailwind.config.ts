@@ -20,6 +20,7 @@ const config: Config = {
         actionColor: "#FF924E",
         dimmed: "#737373",
         dark: "#252B42",
+        lightGray2: "#6F6F6F",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],

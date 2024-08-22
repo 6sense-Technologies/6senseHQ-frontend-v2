@@ -24,13 +24,13 @@ const BuyerGuide = ({
   guides,
 }: Props) => {
   return (
-    <div className="mt-10 px-5 lg:px-0 max-w-6xl md:gap-x-4 mx-auto flex flex-col md:flex-row justify-center">
-      <div className="flex w-full md:w-1/2 justify-center">
+    <div className="bg-white mt-10 px-5 md:px-20 md:shadow-md md:py-16 max-w-6xl md:gap-x-20 mx-auto flex flex-col md:flex-row justify-center">
+      <div className="w-full">
         <Image src={imageSrc} alt="Buyer Guide" width={535} height={326} />
       </div>
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="">
         <div>
-          <h1 className="font-bold text-primary text-4xl max-w-[460px] w-full">
+          <h1 className="font-bold text-primary text-4xl">
             <span className="text-secondary">{coloredPartTitle}</span>{" "}
             {regularTitle}
           </h1>

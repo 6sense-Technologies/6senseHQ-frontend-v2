@@ -24,7 +24,7 @@ const Services = ({ ourServices }: Props) => {
 
   const paragraph = (
     <>
-      <p className="max-w-xl mx-auto font-helvetica py-4 text-textSecondary">
+      <p className="max-w-xl mx-auto font-helvetica py-4 text-blackSecondary">
         Expert custom software development for your business needs. From design
         to deployment, we’ve got you covered.
       </p>
@@ -32,7 +32,7 @@ const Services = ({ ourServices }: Props) => {
   );
 
   return (
-    <div className="px-4 mt-12 lg:my-28">
+    <div className="px-4 my-16">
       <div className="text-center">
         <SectionTitle title={title} paragraph={paragraph} />
       </div>

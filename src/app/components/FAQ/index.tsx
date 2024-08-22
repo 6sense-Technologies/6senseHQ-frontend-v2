@@ -12,7 +12,7 @@ const FAQ = ({ faqAccordionItems, regularTitle, coloredPartTitle }: Props) => {
   return (
     <div className="mt-12 upperGradient">
       <div className="max-w-5xl px-5 lg:px-0 mx-auto py-24">
-        <h1 className="text-primary text-5xl font-bold text-center">
+        <h1 className="text-primary text-4xl md:text-5xl font-bold text-center">
           {regularTitle}
           <span className="text-secondary"> {coloredPartTitle}</span>
         </h1>
