@@ -7,6 +7,8 @@ type Props = {
   name: string;
   designation: string;
   ourProcess: any;
+  bgColor?: string;
+  hasShadow?: boolean;
 };
 
 const Feedback = ({
@@ -16,12 +18,18 @@ const Feedback = ({
   name,
   designation,
   ourProcess,
+  bgColor,
+  hasShadow,
 }: Props) => {
   return (
     <>
       <div className="md:mx-10 my-9 ">
-        <div className="relative max-w-6xl mx-auto h-full shadow-custom-drop">
-          <div className="rounded-t-md py-12 px-4 lg:px-0">
+        <div
+          className={`max-w-6xl mx-auto h-full ${
+            hasShadow ? "md:shadow-custom-drop" : ""
+          } ${bgColor ? bgColor : ""}`}
+        >
+          <div className="relative rounded-t-md py-12 px-4 lg:px-0">
             <div className="max-w-4xl mx-auto flex lg:gap-8 flex-col-reverse lg:flex-row lg:items-start">
               <img className="hidden lg:block lg:pt-2" src={logo} alt="Logo" />
               <div className="w-full">

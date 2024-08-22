@@ -88,6 +88,7 @@ text-4xl md:text-5xl font-bold"
           name="AL"
           designation="CEO, Itcan Inc."
           ourProcess={process}
+          hasShadow={true}
         />
       </div>
     </>

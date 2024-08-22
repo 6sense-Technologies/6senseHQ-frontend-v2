@@ -96,6 +96,7 @@ export default function Home() {
         name="Gabriel Sotomayor"
         designation="CEO, Impromek Ltd."
         ourProcess={ourProcess}
+        bgColor="bg-slate-50"
       />
 
       <Rating ratingsInfo={ratingsInfo} buttonText="Visit Clutch" />
