@@ -19,8 +19,8 @@ const Feedback = ({
 }: Props) => {
   return (
     <>
-      <div className="mx-10">
-        <div className="mt-20 max-w-6xl mx-auto bg-slate-50  h-full rounded-t-md py-12 px-4 lg:px-0">
+      <div className="md:mx-10 my-9 ">
+        <div className="max-w-6xl mx-auto md:bg-slate-50  h-full rounded-t-md py-12 px-4 lg:px-0">
           <div className="max-w-4xl mx-auto flex lg:gap-8 flex-col-reverse lg:flex-row lg:items-start">
             <img className="hidden lg:block lg:pt-2" src={logo} alt="Logo" />
             <div className="w-full">
@@ -43,7 +43,7 @@ const Feedback = ({
                   src={logo}
                   alt="Logo"
                 />
-                <h3 className="font-helvetica text-primary font-bold">
+                <h3 className="font-helvetica text-sm text-primary font-bold">
                   {name}
                 </h3>
                 <p className="font-helvetica text-primary text-xs">
@@ -53,7 +53,7 @@ const Feedback = ({
             </div>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto bg-slate-50 h-full rounded-b-md border-t py-12 px-5 lg:px-0">
+        <div className="hidden md:block max-w-6xl mx-auto bg-slate-50 h-full rounded-b-md border-t py-12 px-5 lg:px-0">
           <div className="max-w-3xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-y-8">
               {ourProcess.map((item: any) => (

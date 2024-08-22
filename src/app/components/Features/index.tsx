@@ -22,7 +22,10 @@ type Features = {
 const Features = ({ features }: Features) => {
   const title = (
     <>
-      <h1 className="font-plex-sans-thai text-primary text-5xl font-bold">
+      <h1
+        className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold"
+      >
         Setting
         <span className="text-secondary"> 6sense </span>
         Apart From The Competition
@@ -31,17 +34,16 @@ const Features = ({ features }: Features) => {
   );
   const paragraph = (
     <>
-      <p className="px-1 font-helvetica py-5 text-textSecondary">
+      <p className="max-w-3xl mx-auto font-helvetica py-5 text-textSecondary">
         We go above and beyond to ensure your satisfaction and success. Don’t
         just take our word for it – check out our track record and see for
-        yourself why <br />
-        we stand out from the competition.
+        yourself why we stand out from the competition.
       </p>
     </>
   );
 
   return (
-    <div className="mt-12 lg:mt-28">
+    <div className="px-4 mt-12 lg:mt-28">
       <div className="text-center">
         <SectionTitle title={title} paragraph={paragraph} />
       </div>

@@ -13,7 +13,10 @@ type Props = {
 const Advantages = ({ accordionItems, imageSrc, alt }: Props) => {
   const title = (
     <>
-      <h1 className="font-plex-sans-thai text-primary text-5xl font-bold">
+      <h1
+        className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold"
+      >
         <span className="text-secondary">Advantages </span>
         Of Choosing 6sense
       </h1>
@@ -21,19 +24,19 @@ const Advantages = ({ accordionItems, imageSrc, alt }: Props) => {
   );
   const paragraph = (
     <>
-      <p className="font-helvetica py-5 text-textSecondary">
+      <p className="max-w-3xl mx-auto font-helvetica py-4 text-textSecondary">
         By utilizing our full off-shore team of experienced software developers,
-        responsible American companies are <br /> enjoying an impressive range
-        of benefits.
+        responsible American companies are enjoying an impressive range of
+        benefits.
       </p>
     </>
   );
   return (
     <div className="my-16">
-      <div className="px-5 text-center">
+      <div className="flex flex-col items-center text-center">
         <SectionTitle title={title} paragraph={paragraph} />
       </div>
-      <div className="mt-10 px-5 max-w-7xl mx-auto">
+      <div className="mt-10 px-4 max-w-7xl mx-auto">
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row items-start lg:justify-center">
           <div className="lg:w-1/2">
             <Accordion items={accordionItems} />

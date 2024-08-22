@@ -46,7 +46,10 @@ const KeyFactors = ({ keyfactorIcons }: Props) => {
 
   const title = (
     <>
-      <h1 className="font-plex-sans-thai text-primary text-5xl font-bold">
+      <h1
+        className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold"
+      >
         <span className="text-secondary">Key Factors </span>
         In 6sense Process
       </h1>
@@ -64,7 +67,7 @@ const KeyFactors = ({ keyfactorIcons }: Props) => {
   return (
     <>
       <div className="mt-12 lg:my-28">
-        <div className="px-5 text-center">
+        <div className="px-4 text-center">
           <SectionTitle title={title} paragraph={paragraph} />
           <div className="flex flex-wrap items-center justify-center gap-4">
             {keyfactorIcons.map((ico) => (

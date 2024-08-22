@@ -9,7 +9,10 @@ type Props = {
 const Technology = ({ image, alt }: Props) => {
   const title = (
     <>
-      <h1 className="font-plex-sans-thai text-primary text-5xl font-bold">
+      <h1
+        className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold"
+      >
         Expertise In
         <span className="text-secondary"> Leading Technologies</span>
       </h1>

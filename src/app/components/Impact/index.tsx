@@ -13,7 +13,7 @@ type Props = {
 const Impact = ({ impactStats }: Props) => {
   const title = (
     <>
-      <h1 className=" text-primary text-5xl font-bold">
+      <h1 className="px-9 text-primary text-4xl md:text-5xl text-center font-bold">
         <span className="text-secondary">Impact </span>
         We&apos;ve Made
       </h1>
@@ -22,7 +22,7 @@ const Impact = ({ impactStats }: Props) => {
 
   const paragraph = (
     <>
-      <p className="py-5 text-textSecondary">
+      <p className="py-4 text-textSecondary text-center">
         Proven Success with Stats and Client Reviews
       </p>
     </>
@@ -30,7 +30,7 @@ const Impact = ({ impactStats }: Props) => {
 
   return (
     <div className="bg-lightGray">
-      <div className="py-20">
+      <div className="py-14">
         <div className="text-center">
           <SectionTitle title={title} paragraph={paragraph} />
         </div>
@@ -40,10 +40,10 @@ const Impact = ({ impactStats }: Props) => {
               <div className="flex justify-center items-center w-[302px] md:w-[230px] h-[204px] bg-white">
                 <div className="flex justify-center items-center flex-col space-y-2">
                   <img src={item.icon} alt={item.alt} />
-                  <h2 className="font-bold text-dark text-2xl md:text-3xl">
+                  <h2 className="font-bold text-dark text-[40px]">
                     {item.count}
                   </h2>
-                  <p className="text-dimmed font-bold text-sm">{item.text}</p>
+                  <p className="text-dimmed font-bold">{item.text}</p>
                 </div>
               </div>
             </div>
