@@ -40,7 +40,7 @@ const Services = ({ ourServices }: Props) => {
       <div className="mt-5 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center">
         {ourServices.map((item) => (
           <div
-            className="bg-white w-full h-full drop-shadow-2xl px-5 py-8 rounded-md flex flex-col"
+            className="bg-white w-full h-full shadow-custom px-5 py-8 rounded-md flex flex-col"
             key={item.id}
           >
             <div className="flex-1">

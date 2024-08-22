@@ -1,171 +1,265 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import { CaretDown } from "@phosphor-icons/react";
+import Image from "next/image";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="bg-white drop-shadow-md h-20 py-5">
-      <div className="px-5 lg:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
+    <div className="bg-white drop-shadow-md h-20 py-5 relative">
+      <div className="px-2 md:px-5 lg:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
+        {/* Logo Section */}
         <div>
           <Link href="/">
             <img src="/images/logo.png" alt="6sense Logo" />
           </Link>
         </div>
-        <div
-          className="font-plex-sans-thai
-         text-blackSecondary font-medium text-lg flex items-center justify-center gap-6"
-        >
-          <Link className="hover:opacity-60" href={"/case-study"}>
+        {/* Button & Menu Icon */}
+        <div className="lg:hidden flex items-center">
+          <Button
+            text="Schedule a Free Consultation"
+            className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-sm md:text-lg mx-2"
+          />
+          <div className="cursor-pointer" onClick={toggleMenu}>
+            <Image
+              src="/images/menu.svg"
+              alt="Menu Icon"
+              width={40}
+              height={32}
+            />
+          </div>
+        </div>
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex lg:items-center font-plex-sans-thai text-blackSecondary font-normal text-lg lg:space-x-6">
+          <Link className="hover:opacity-60 py-2" href={"/"}>
             Home
           </Link>
 
-          <div className="group relative">
-            <Link
-              className="hover:opacity-60 flex items-center justify-center gap-1"
-              href={"/case-study"}
-            >
-              Services <CaretDown size={16} weight="bold" />
-            </Link>
+          <div className="group relative lg:py-2">
+            <div className="flex justify-between items-center">
+              <Link
+                className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
+                href={"/case-study"}
+              >
+                Services <CaretDown size={16} weight="bold" />
+              </Link>
+            </div>
 
-            <ul className="transition-all duration-500 ease-in-out transform scale-y-0 origin-top group-hover:scale-y-100 group-hover:opacity-100 opacity-0 text-blackSecondary font-medium absolute bg-white border-t-[3px] border-primary w-[300px] px-2 py-4 space-y-3">
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+            <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[300px]">
+              <div className="flex flex-col px-4 lg:py-4 lg:space-y-3">
+                <Link href="/ui-design" className="hover:opacity-60">
                   UI Design
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/ux-design-research" className="hover:opacity-60">
                   UX Design & Research
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Web Application Development
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Mobile Application Development
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Software Testing as a Service
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Software Project Management as a Service
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Ecommerce Solution
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   ML & AI
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Open AI
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/development" className="hover:opacity-60">
                   Facebook Meta
                 </Link>
               </div>
             </ul>
           </div>
-          <div className="group relative">
+
+          <div className="group relative lg:py-2">
             <Link
-              className="hover:opacity-60 flex items-center justify-center gap-1"
+              className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
               href={"/case-study"}
             >
               Case Studies <CaretDown size={16} weight="bold" />
             </Link>
 
-            <ul className="transition-all duration-500 ease-in-out transform scale-y-0 origin-top group-hover:scale-y-100 group-hover:opacity-100 opacity-0 text-blackSecondary font-medium absolute bg-white border-t-[3px] border-primary w-[240px] h-[200px] px-2 py-4 space-y-2">
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+            <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
+              <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
+                <Link href="/charge-onsite" className="hover:opacity-60">
                   Charge Onsite
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/pattern50" className="hover:opacity-60">
                   Pattern50
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/quran-touch" className="hover:opacity-60">
                   Quran Touch
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/impromek" className="hover:opacity-60">
                   Impromek
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/itcan" className="hover:opacity-60">
                   Itcan
                 </Link>
               </div>
             </ul>
           </div>
 
-          <div className="group relative">
+          <div className="group relative lg:py-2">
             <Link
-              className="hover:opacity-60 flex items-center justify-center gap-1"
-              href={"/case-study"}
+              className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
+              href={"/about-us"}
             >
               About Us <CaretDown size={16} weight="bold" />
             </Link>
 
-            <ul className="transition-all duration-500 ease-in-out transform scale-y-0 origin-top group-hover:scale-y-100 group-hover:opacity-100 opacity-0 text-blackSecondary font-medium absolute bg-white border-t-[3px] border-primary w-[240px] px-2 py-4 space-y-2">
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+            <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
+              <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
+                <Link href="/values" className="hover:opacity-60">
                   Values
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/team" className="hover:opacity-60">
                   Team
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/values" className="hover:opacity-60">
                   Clients
                 </Link>
-              </div>
-              <div className="px-4">
-                <Link className="hover:opacity-60" href={"/case-study"}>
+                <Link href="/team" className="hover:opacity-60">
                   Partners
                 </Link>
               </div>
             </ul>
           </div>
 
-          <Link className="hover:opacity-60" href={"/case-study"}>
+          <Link className="hover:opacity-60 py-2" href={"/blog"}>
             Blog
           </Link>
-          <Link className="hover:opacity-60" href={"/case-study"}>
+          <Link className="hover:opacity-60 py-2" href={"/contact"}>
             Contact
           </Link>
+        </div>
+        {/* Button on large screens */}
+        <div className="hidden lg:block">
           <Button
             text="Schedule a Free Consultation"
-            className="w-full lg:w-[300px] bg-secondary text-white font-bold py-4 text-sm"
+            className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-lg"
           />
-
-          <div className="cursor-pointer">
-            <img src="/images/menuIcon.svg" alt="Menu Icon" />
-          </div>
         </div>
+      </div>
+
+      {/* Mobile Drawer Menu */}
+      <div
+        className={`${
+          isOpen
+            ? "translate-y-20 border-t-[3px] border-primary"
+            : "-translate-y-full"
+        } fixed top-0 right-0 w-[300px] bg-white z-40 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
+      >
+        <nav className="font-plex-sans-thai flex flex-col p-5 space-y-4">
+          <Link href="/" className="hover:opacity-60">
+            Home
+          </Link>
+
+          {/* parent */}
+          <Link href="/our-services" className="font-semibold hover:opacity-60">
+            Services
+          </Link>
+          {/* Submenu of services */}
+          <div className="pl-4 flex flex-col space-y-4">
+            <Link href="/ui-design" className="hover:opacity-60">
+              UI Design
+            </Link>
+            <Link href="/ux-design-research" className="hover:opacity-60">
+              UX Design & Research
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Web Application Development
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Mobile Application Development
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Software Testing as a Service
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Software Project Management as a Service
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Ecommerce Solution
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              ML & AI
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Open AI
+            </Link>
+            <Link href="/development" className="hover:opacity-60">
+              Facebook Meta
+            </Link>
+          </div>
+
+          {/* Parent */}
+          <Link href="/case-studies" className="font-semibold hover:opacity-60">
+            Case Studies
+          </Link>
+          {/* submenu */}
+          <div className="pl-4 flex flex-col space-y-4">
+            <Link href="/charge-onsite" className="hover:opacity-60">
+              Charge Onsite
+            </Link>
+            <Link href="/pattern50" className="hover:opacity-60">
+              Pattern50
+            </Link>
+            <Link href="/quran-touch" className="hover:opacity-60">
+              Quran Touch
+            </Link>
+            <Link href="/impromek" className="hover:opacity-60">
+              Impromek
+            </Link>
+            <Link href="/itcan" className="hover:opacity-60">
+              Itcan
+            </Link>
+          </div>
+
+          {/* Parent */}
+          <Link href="/about-us" className="font-semibold hover:opacity-60">
+            About Us
+          </Link>
+          {/* submenus */}
+          <div className="pl-4 flex flex-col space-y-4">
+            <Link href="/values" className="hover:opacity-60">
+              Values
+            </Link>
+            <Link href="/team" className="hover:opacity-60">
+              Team
+            </Link>
+            <Link href="/values" className="hover:opacity-60">
+              Clients
+            </Link>
+            <Link href="/team" className="hover:opacity-60">
+              Partners
+            </Link>
+          </div>
+
+          <Link href="/blog" className="hover:opacity-60">
+            Blog
+          </Link>
+          <Link href="/contact" className="hover:opacity-60">
+            Contact
+          </Link>
+        </nav>
       </div>
     </div>
   );

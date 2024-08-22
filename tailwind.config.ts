@@ -27,6 +27,10 @@ const config: Config = {
         "plex-sans-thai": ["IBM Plex Sans Thai", "sans-serif"],
         helvetica: ["Helvetica", "sans-serif"],
       },
+      boxShadow: {
+        custom: "0 4px 55px 0 rgba(0, 0, 0, 0.05)",
+        "custom-drop": "0 20px 30px 0 rgba(0, 0, 0, 0.05)",
+      },
     },
   },
   plugins: [],
