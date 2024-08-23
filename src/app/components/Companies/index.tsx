@@ -10,21 +10,42 @@ type OrgProps = {
 
 type CompayProps = {
   organizations: OrgProps[];
-  title: string;
+  title?: string;
   subtitle: string;
+  pageName: string;
 };
 
-const Companies = ({ organizations, title, subtitle }: CompayProps) => {
+const Companies = ({
+  organizations,
+  title,
+  subtitle,
+  pageName,
+}: CompayProps) => {
   return (
-    <div className="mt-12 px-5">
-      <h2 className="uppercase text-center text-primary font-bold text-2xl pb-2">
-        {title}
-      </h2>
-      <p className="text-center text-textSecondary text-base">{subtitle}</p>
-      <div className="mt-10 flex gap-5 md:gap-10 flex-wrap justify-center items-center">
-        {organizations.map((org) => (
-          <img key={org.id} src={org.image} alt={org.alt} />
-        ))}
+    <div className={`${pageName === "case-studies" && "bg-lightGray"}`}>
+      <div className={`${pageName === "home" ? "mt-12" : "mt-0 pt-14"}  px-5`}>
+        {title && (
+          <h2 className="uppercase text-center text-primary font-bold text-2xl pb-2">
+            {title}
+          </h2>
+        )}
+        {pageName === "home" && (
+          <p className="text-center text-textSecondary text-base">{subtitle}</p>
+        )}
+        <div
+          className={`mt-10 flex gap-5 md:gap-${
+            pageName === "case-studies" ? "14" : "10"
+          } flex-wrap justify-center items-center`}
+        >
+          {organizations.map((org) => (
+            <img key={org.id} src={org.image} alt={org.alt} />
+          ))}
+        </div>
+        {pageName === "case-studies" && (
+          <p className="text-center text-textSecondary text-base md:py-2 py-5">
+            {subtitle}
+          </p>
+        )}
       </div>
     </div>
   );

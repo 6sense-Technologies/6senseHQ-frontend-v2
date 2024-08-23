@@ -40,14 +40,20 @@ export default function Home() {
       <Hero
         titlePrimary="Expert Custom"
         titleSecondary="Software Development"
+        breakBetweenTitle={true}
         subtitle="By An Award Winning Agency"
         achievements={achievements}
         statsInfo={statsInfo}
         imageSrc="/images/6sense.png"
+        imageWidth={640}
+        imageHeight={427}
         imageAlt="6sense Team"
+        justify="between"
         imageCaption="6sense engineering DEPT."
+        pageName="home"
       />
       <Companies
+        pageName="home"
         organizations={organizations}
         title="Trusted by 50+ Companies Worldwide"
         subtitle="Experience and Expertise You Can Count On. Our team has a proven track record of delivering top-quality solutions for businesses across a variety of industries."
@@ -81,13 +87,19 @@ export default function Home() {
         alt="Choosing 6sense"
       />
       <CallToAction
+        pageName="home"
         regularTitle="Curious to Learn"
         coloredPartTitle="More?"
         subtitle="Get in touch with us to know more about the timeline & budget"
         imageSrc="/images/6senseImage.png"
         alt="6sense"
       />
-      <Works worksInfo={worksData} />
+      <Works
+        pageName="home"
+        worksInfo={worksData}
+        subtitle="Experience the Cost-Effective Benefits of Partnering with Our Software
+        Development Team"
+      />
 
       <Feedback
         paragraph="I find it comforting that they follow the schedule they
@@ -103,6 +115,7 @@ export default function Home() {
 
       <div className="my-12">
         <CallToAction
+          pageName="home"
           regularTitle="Curious to Learn"
           coloredPartTitle="More?"
           subtitle="Get in touch with us to know more about the timeline & budget"
@@ -110,7 +123,12 @@ export default function Home() {
           alt="6sense"
         />
       </div>
-      <MobileApps appsInfo={appsData} />
+      <MobileApps
+        pageName="home"
+        subtitle="Experience the Benefits of Partnering with Our Expert Software
+        Development Team"
+        appsInfo={appsData}
+      />
       <FAQ
         faqAccordionItems={faqAccordionItems}
         regularTitle="Frequently Asked"

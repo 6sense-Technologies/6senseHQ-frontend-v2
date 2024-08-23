@@ -14,33 +14,51 @@ type Achievement = {
 type HeroProps = {
   titlePrimary: string;
   titleSecondary: string;
-  subtitle: string;
+  breakBetweenTitle?: boolean;
+  subtitle?: string;
   achievements: Achievement[];
-  statsInfo: StatInfo[];
+  statsInfo?: StatInfo[];
   imageSrc: string;
+  imageWidth: number;
+  imageHeight: number;
   imageAlt: string;
-  imageCaption: string;
+  imageCaption?: string;
+  classNames?: string;
+  justify: string;
+  pageName: string;
 };
 
 const Hero = ({
   titlePrimary,
   titleSecondary,
+  breakBetweenTitle,
   subtitle,
   achievements,
   statsInfo,
   imageSrc,
+  imageWidth,
+  imageHeight,
   imageAlt,
   imageCaption,
+  classNames,
+  justify,
+  pageName,
 }: HeroProps) => {
   return (
     <div className="bg-hero">
-      <div className="max-w-7xl mx-auto py-16 px-5">
-        <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-between">
+      <div
+        className={`max-w-7xl mx-auto ${pageName === "home" && "py-16"} ${
+          pageName === "case-studies" && "py-28"
+        } px-5 ${classNames}`}
+      >
+        <div
+          className={`flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-${justify}`}
+        >
           {/* Content Section */}
           <div>
             <h1 className="font-plex-sans-thai text-center lg:text-left font-bold text-4xl md:text-5xl leading-tight">
               <span className="text-primary">{titlePrimary}</span>
-              <br />
+              {breakBetweenTitle && <br />}
               <span className="text-secondary">{titleSecondary}</span>
             </h1>
             <h3 className="text-center lg:text-left text-primary text-[26px] md:text-[28px] mt-6 md:mt-0 font-bold">
@@ -74,30 +92,48 @@ const Hero = ({
               </div>
             </div>
 
-            <div className="block md:hidden my-5 md:my-0">
-              <Image src={imageSrc} alt={imageAlt} width={640} height={427} />
+            <div
+              className={`block md:hidden my-5 md:my-0 w-full ${
+                pageName === "case-studies" && "custombgImage"
+              }`}
+            >
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={imageWidth}
+                height={imageHeight}
+              />
               <p className="text-textSecondary uppercase text-center text-sm md:text-base font-medium">
                 {imageCaption}
               </p>
             </div>
 
-            <div className="my-5 text-center lg:text-left">
+            <div className={`text-center lg:text-left py-5`}>
               {/* Button With CTA */}
               <ButtonWithCTA />
             </div>
           </div>
 
           {/* Image Section */}
-          <div className="hidden md:block">
-            <Image src={imageSrc} alt={imageAlt} width={640} height={427} />
+          <div
+            className={`hidden md:block ${
+              pageName === "case-studies" && "custombgImage"
+            }`}
+          >
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={imageWidth}
+              height={imageHeight}
+            />
             <p className="text-textSecondary uppercase text-center text-sm md:text-base font-medium">
               {imageCaption}
             </p>
           </div>
         </div>
 
-        <div className="pt-12">
-          <Stats statsInfo={statsInfo} />
+        <div className={`${pageName === "home" && "pt-12"}`}>
+          <Stats statsInfo={statsInfo ? statsInfo : []} />
         </div>
       </div>
     </div>

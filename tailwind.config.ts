@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "case-study-bg": "url('/images/case-studies/background.webp')",
+      },
       colors: {
         hero: "#F8F4EC",
         primary: "#17494D",
