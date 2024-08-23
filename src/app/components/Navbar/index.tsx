@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="lg:hidden flex items-center">
           <Button
             text="Schedule a Free Consultation"
-            className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-sm md:text-lg mx-2"
+            className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-sm mx-2"
           />
           <div className="cursor-pointer" onClick={toggleMenu}>
             <Image
@@ -154,7 +154,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <Button
             text="Schedule a Free Consultation"
-            className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-lg"
+            className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
           />
         </div>
       </div>

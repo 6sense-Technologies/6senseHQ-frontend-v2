@@ -1,5 +1,6 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
+import Link from "next/link";
 
 type Props = {
   subtitle: string;
@@ -50,13 +51,15 @@ const Works = ({ worksInfo, subtitle, pageName }: Props) => {
           } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
         >
           {worksInfo.map((work) => (
-            <div className="bg-white w-full h-auto shadow-md" key={work.id}>
-              <img src={work.imageSrc} className="w-full" alt={work.title} />
-              <div className="p-5">
-                <img src={work.logo} alt={work.title} />
-                <h3 className="text-primary font-semibold">{work.title}</h3>
+            <Link href={`/case-studies/${work.slug}`} key={work.id}>
+              <div className="bg-white w-full h-auto shadow-md">
+                <img src={work.imageSrc} className="w-full" alt={work.title} />
+                <div className="p-5">
+                  <img src={work.logo} alt={work.title} />
+                  <h3 className="text-primary font-semibold">{work.title}</h3>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
