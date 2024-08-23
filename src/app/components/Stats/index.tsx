@@ -40,9 +40,11 @@ const Stats = ({ statsInfo }: StatsProps) => {
               </div>
             </div>
           ))}
-          <div className="w-full flex lg:justify-end">
-            <ClutchWidget />
-          </div>
+          {statsInfo.length > 0 && (
+            <div className="w-full flex lg:justify-end">
+              <ClutchWidget />
+            </div>
+          )}
         </div>
       </div>
     </div>

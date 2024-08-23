@@ -2,6 +2,8 @@ import React from "react";
 import SectionTitle from "../SectionTitle";
 
 type Props = {
+  subtitle: string;
+  pageName: string;
   worksInfo: {
     id: number;
     title: string;
@@ -11,7 +13,7 @@ type Props = {
   }[];
 };
 
-const Works = ({ worksInfo }: Props) => {
+const Works = ({ worksInfo, subtitle, pageName }: Props) => {
   const title = (
     <>
       <h1 className="text-primary text-4xl md:text-5xl font-bold">
@@ -23,21 +25,30 @@ const Works = ({ worksInfo }: Props) => {
 
   const paragraph = (
     <>
-      <p className="py-4 md:py-1 text-blackSecondary">
-        Experience the Cost-Effective Benefits of Partnering with Our Software
-        Development Team
+      <p
+        className={`max-w-5xl mx-auto ${
+          pageName === "home" ? "py-4 md:py-1" : "py-5"
+        } text-blackSecondary`}
+      >
+        {subtitle}
       </p>
     </>
   );
 
   return (
     <div className="bg-lightGray">
-      <div className="px-5 lg:px-0 py-20">
+      <div
+        className={`px-5 lg:px-0 ${pageName === "home" ? "py-20" : "py-14"}`}
+      >
         <div className="text-center">
           <SectionTitle title={title} paragraph={paragraph} />
         </div>
 
-        <div className="mt-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4">
+        <div
+          className={`${
+            pageName === "home" ? "mt-6" : "mt-6 md:mt-14"
+          } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
+        >
           {worksInfo.map((work) => (
             <div className="bg-white w-full h-auto shadow-md" key={work.id}>
               <img src={work.imageSrc} className="w-full" alt={work.title} />

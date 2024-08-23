@@ -91,7 +91,7 @@ const Navbar = () => {
           <div className="group relative lg:py-2">
             <Link
               className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
-              href={"/case-study"}
+              href={"/case-studies"}
             >
               Case Studies <CaretDown size={16} weight="bold" />
             </Link>
@@ -165,7 +165,7 @@ const Navbar = () => {
           isOpen
             ? "translate-y-20 border-t-[3px] border-primary"
             : "-translate-y-full"
-        } fixed top-0 right-0 w-[300px] bg-white z-40 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
+        } fixed top-0 right-0 w-[300px] bg-white z-50 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
       >
         <nav className="font-plex-sans-thai flex flex-col p-5 space-y-4">
           <Link href="/" className="hover:opacity-60">
