@@ -134,7 +134,6 @@ export default function Home() {
         regularTitle="Frequently Asked"
         coloredPartTitle="Question"
       />
-      <Footer />
     </main>
   );
 }
