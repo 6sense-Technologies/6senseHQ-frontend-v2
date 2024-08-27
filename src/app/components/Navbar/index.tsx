@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Button & Menu Icon */}
         <div className="lg:hidden flex items-center">
           <Button
-            text="Schedule a Free Consultation"
+            text="Free Consultation"
             className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-sm mx-2"
           />
           <div className="cursor-pointer" onClick={toggleMenu}>
