@@ -348,3 +348,86 @@ export const impactStats = [
     text: "Client Feedbacks",
   },
 ];
+
+export const resultPoints = [
+  "Our experienced and dedicated team has developed a high-quality fund management app for iOS users.",
+  "The Munca app is a great tool to get the whole picture of financial status. Users can examine their monetary transactions daily, weekly, monthly, or yearly. The user can then generate reports of past or current financial states and share these with others whenever they like.",
+  "Munca is a flawless software that allows users to achieve their business objectives successfully",
+];
+
+// Case study details
+export const heroInfoItems = [
+  {
+    id: 1,
+    icon: "/images/case-studies/developers.svg",
+    alt: "Developers",
+    title: "4 Developers",
+    subtitle: "We had 4 developers, one SQA and one scrum master.",
+  },
+  {
+    id: 2,
+    icon: "/images/case-studies/sprints.svg",
+    alt: "Sprints",
+    title: "7 Sprints",
+    subtitle: "This product ran for total 7 sprints.",
+  },
+  {
+    id: 3,
+    icon: "/images/case-studies/duration.svg",
+    alt: "Duration",
+    title: "5 Months",
+    subtitle: "The total duration of the development timeline was 3 months.",
+  },
+];
+
+export const aboutProjectInfo = [
+  {
+    id: 1,
+    subtitle: "Industry",
+    title: "Healthcare",
+    logo: "/images/case-studies/sprints.svg",
+  },
+  {
+    id: 2,
+    subtitle: "Technologies",
+    title: "React, node js, Python",
+    logo: "/images/case-studies/code.svg",
+  },
+  {
+    id: 3,
+    subtitle: "Team Size",
+    title: "5 Specialists",
+    logo: "/images/case-studies/developers.svg",
+  },
+  {
+    id: 4,
+    subtitle: "Duration",
+    title: "36+ Months",
+    logo: "/images/case-studies/duration.svg",
+  },
+];
+
+export const overviewParagraphs = [
+  "Munca is a flexible plan management app that helps users log their expenses and manage their budgets. Munca takes a different approach to the budget, using intelligent algorithms to manage and track user expenses.",
+  "According to research, disability affects 4.3 million Australians.About 50,000 Australians with Short-Term Disabilities or Long-Term Disabilities will have access to the National Disability Insurance Scheme over the next five years.The Australian government provides funds to the parents of disabled children every year.Often, financial literacy leads to poor financial decisions, impulsive spending, less security, and more stress. This convenient software assists parents and fund holders in managing their insurance funds.",
+  "This sustainable app helps users to track their funds, incomes, and expenditures. This app assists fund holders in monitoring their funding, budget making, and appointments. Plan managers can safely make and store the invoices in the app to fund their future expenditures and savings.",
+];
+
+export const solutionPoints = [
+  "Users can set their funding goals by making reports and budgets.",
+  "Most iOS applications lacked a single platform for report making and budget making, but our experts worked on this and made a helpful app that provides both facilities.",
+  "We enhanced the app's capabilities by adding new features like easy onboarding on the app.",
+  "We conducted different interviews and collected data from various fields of work. After interviewing, we analyse the data and build the app according to the user's demand.",
+  "We have made the user journey centralized and coordinated with customer experience insights.",
+];
+
+export const keyPoints1 = [
+  "An easy onboarding process made it possible to introduce the software to the user quickly.",
+  "We have created user-friendly and functional interfaces, allowing users to navigate the application efficiently.",
+  "Munca is a well-designed app with an easy-to-navigate interface that doesn't frustrate users and features that assure them their personal information is protected.",
+];
+
+export const keyPoints2 = [
+  "Munca allows users to create and generate a professional report that users can share from their iOS mobile phone with anyone.",
+  "Users can easily link all their bank accounts and will track all the transactions and expenses in one place.",
+];

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-white drop-shadow-md h-20 py-5 relative">
-      <div className="px-2 md:px-5 lg:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
+      <div className="px-4 md:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
         {/* Logo Section */}
         <div>
           <Link href="/">
