@@ -7,7 +7,7 @@ type Props = {
   pageName: string;
   worksInfo: {
     id: number;
-    title: string;
+    name: string;
     slug: string;
     logo: string;
     imageSrc: string;
@@ -53,10 +53,10 @@ const Works = ({ worksInfo, subtitle, pageName }: Props) => {
           {worksInfo.map((work) => (
             <Link href={`/case-studies/${work.slug}`} key={work.id}>
               <div className="bg-white w-full h-auto shadow-md">
-                <img src={work.imageSrc} className="w-full" alt={work.title} />
+                <img src={work.imageSrc} className="w-full" alt={work.name} />
                 <div className="p-5">
-                  <img src={work.logo} alt={work.title} />
-                  <h3 className="text-primary font-semibold">{work.title}</h3>
+                  <img src={work.logo} alt={work.name} />
+                  <h3 className="text-primary font-semibold">{work.name}</h3>
                 </div>
               </div>
             </Link>
