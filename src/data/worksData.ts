@@ -564,43 +564,43 @@ export const worksData = [
     logo: "/images/works/images/logos/forgetmenot.svg",
     imageSrc: "/images/works/images/forgetmenot.png",
     details: {
-      coloredPartTitle: "Impromek- ",
-      regularTitle: "Online baseball training coaching by professional mentor",
+      coloredPartTitle: "Foget Me Not- ",
+      regularTitle:
+        "reliable tool for scheduling messages and automatic future delivery",
       heroInfo: [
         {
           id: 1,
           icon: "/images/case-studies/developers.svg",
           alt: "Developers",
-          title: "5 Members",
-          subtitle: "We had three developers, one SQA and one scrum master.",
+          title: "4 Developers",
+          subtitle: "We had  4 developers, one SQA and one scrum master.",
         },
         {
           id: 2,
           icon: "/images/case-studies/sprints.svg",
           alt: "Sprints",
-          title: "13 Sprints",
-          subtitle: "This product ran for total 13 sprints.",
+          title: "11 Sprints",
+          subtitle: "This product ran for total 11 sprints.",
         },
         {
           id: 3,
           icon: "/images/case-studies/duration.svg",
           alt: "Duration",
-          title: "5 Months",
+          title: "4.5 Months",
           subtitle:
-            "The total duration of the development timeline was 5 months.",
+            "The total duration of the development timeline was 4.5 months.",
         },
       ],
       overviewParagraphs: [
-        "Charge OnSite is the largest electric vehicle charging network in the world. One can find over 500+ charging locations in its app. It’s the most extensive and easy-to-use network, with charging stations for electric cars for both commercial fleets and individual drivers. It provides a vast network of charging stations throughout the United States, with the added convenience of accepting digital payments.",
+        "Forget Me Not is a web-based tool that lets users send messages and memories privately to their contact list today for future delivery. It preserves users' precious memories and shares their legacy and wisdom for tomorrow. It simply completes the user's dearest goals before drawing their last breath. It allows users to upload customized messages, pictures, surprises, memories, and greetings and schedule delivery to send them to their loved ones. With this app, users can never miss a moment to celebrate special occasions. Users can stay on top of their minds with their relationships through this timely website. They can schedule a special surprise or message for their loved one's upcoming celebrations.",
       ],
-      overviewImage: "/images/case-studies/overviewChargeonsite.webp",
-      aboutParagraph: `Our professional software development team mapped out a strategy to build a platform after thoroughly analyzing the client’s requirements through careful planning and research. To create this software, we employed state-of-the-art methods and hardware. We use cutting-edge lingo and technologies such as Node.js, React.py, and the Ant design framework.
-`,
+      overviewImage: "/images/case-studies/forgetmenotOverview.png",
+      aboutParagraph: `Our dedicated team began their process by collecting detailed information on the user's wants and needs. When designing this app, we kept the site's visitors' feelings in mind. We conducted a series of interviews to understand why some people have difficulty expressing their emotions. Most of those who took part in the interviews were patients. They didn't want to lose touch with those who cared about them even after they passed away. So, based on the insights gained from the interviews, our team of professionals has developed a responsive and easy-to-navigate website. We tested our application after learning about the problems faced by our potential users and developing a plan to address those difficulties. The final step is to upload the website to a server that is quick, safe, and scalable. With the help of a user-centered design process, we were able to create a layout for the website that was both functional and straightforward. Through our streamlined interface and intuitive menu structure, we make it easy for visitors to complete their intended tasks.`,
       aboutProjectInfo: [
         {
           id: 1,
           subtitle: "Industry",
-          title: "Electronic automobile",
+          title: "Productivity",
           logo: "/images/case-studies/sprints.svg",
         },
         {
@@ -618,34 +618,31 @@ export const worksData = [
         {
           id: 4,
           subtitle: "Duration",
-          title: "5 Months",
+          title: "36+ Months",
           logo: "/images/case-studies/duration.svg",
         },
       ],
       solutionParagraph: `We are a top app development firm because we focus on the nitty-gritty of each client’s needs and then deliver the answer they were hoping for. To provide a first-rate experience, our knowledgeable staff created a platform that distributes the necessary software parts to the following three customers.`,
       solutionPoints1: [
-        "EV Owner: The primary user of Charge OnSite is an electric vehicle owner looking to locate charging stations, schedule charging sessions, and pay using various accepted payment methods.",
-        "Super Admin: An app’s top administrator has access to every setting in the program. Company, entity, property, location, billing, administrative, driver, and permit management are all under his control.",
-        "Property Admin: Our talented group created the property admin choice for user comfort. The Super admin might delegate his app management responsibilities to the property admin if he cannot manage the app.",
+        "Forget Me Not is a relationship development website that allows users to create multiple events and employ them in any way they see fit. We made helpful solutions for users' problems by digging deep to discover their pain points. Users can associate a date with an event using the event's date and time fields.",
+        "We have provided many options for customers to communicate emotions to their loved ones. Users can add text, photos, and videos to their events after setting the message and attaching it to a date-specific contact. The recipient receives an automatic notification and can download the text or attachments.",
       ],
-      solutionImage: "/images/case-studies/solutionChargeonsite.webp",
+      solutionImage: "/images/case-studies/forgetmenotSolution.png",
       keyFuncParagraph:
-        "We devised a method that incorporates every feature needed in a Charge OnSite app. Users can use this app on both mobile and desktop devices. Electric vehicle (EV) owners and building managers can use this app to access EV charging facilities.",
+        "Forget Me Not is a one-of-a-kind web-based application that helps users keep track of memorable occasions so they never miss a special moment. Our experienced team created this website to be safe and user-friendly, with a visually appealing layout, so users can browse without confusion and search less for what they need.",
       keypoints1: [
-        "The versatility of the app is expanded through three user modules.",
-        "High-quality, uncomplicated, and user-friendly user interface",
-        "The app’s interface is the most straightforward and most intuitive ever created.",
-        "A lightning-fast server and database support this application.",
+        "We carefully considered the user's feelings and emotions while designing this website.",
+        "Users can edit the event at any moment to add or remove memories.",
+        "Users can schedule events for the upcoming year in advance to save time and avoid duplicating efforts.",
       ],
-      keyFuncImage: "/images/case-studies/keyfuncChargeonsite.webp",
+      keyFuncImage: "/images/case-studies/forgetmenotKeyfunc.png",
       resultParagraph:
-        "We made this app so that the charging station and the app can communicate without hiccups. The app has a lightning-fast connection time, allowing users to link up with a power source in a flash.",
+        "Forget Me Not is an innovative tool for expressing love and concern to those who matter most in one's life.",
       resultPoints1: [
-        "The state-of-the-art architecture of this top app is based on a Tree-Based Network.",
-        "The safety of our customers is never jeopardized. This software is protected by a login and password system.",
-      ],
-      resultPoints2: [
-        "The ability to exercise various command options is a great plus for this app. Two people control the app at a time simply by giving access from the super admin to the property admin.",
+        "We designed this app with consideration for the users' feelings in mind, hoping that it will bring them happiness.",
+        "We developed this app so that users may zero down on their tasks and get things done quickly and efficiently.",
+        "We aim to increase user happiness by making the site more user-friendly, accessible, and effective regarding how it interacts with its visitors.",
+        "Through the application of cutting-edge pricing strategies, we were able to develop a competitive yet reasonable pricing plan.",
       ],
     },
   },
@@ -754,43 +751,44 @@ export const worksData = [
     logo: "/images/works/images/logos/clouding.svg",
     imageSrc: "/images/works/images/clouding.png",
     details: {
-      coloredPartTitle: "Impromek- ",
-      regularTitle: "Online baseball training coaching by professional mentor",
+      coloredPartTitle: "Cloud Accounting-",
+      regularTitle:
+        "convenient account management app for professional accounting solutions",
       heroInfo: [
         {
           id: 1,
           icon: "/images/case-studies/developers.svg",
           alt: "Developers",
-          title: "5 Members",
-          subtitle: "We had three developers, one SQA and one scrum master.",
+          title: "7 Developers",
+          subtitle: "We had  7 developers, one SQA and one scrum master.",
         },
         {
           id: 2,
           icon: "/images/case-studies/sprints.svg",
           alt: "Sprints",
-          title: "13 Sprints",
-          subtitle: "This product ran for total 13 sprints.",
+          title: "24 Sprints",
+          subtitle: "This product ran for total 24 sprints.",
         },
         {
           id: 3,
           icon: "/images/case-studies/duration.svg",
           alt: "Duration",
-          title: "5 Months",
+          title: "8 Months",
           subtitle:
-            "The total duration of the development timeline was 5 months.",
+            "The total duration of the development timeline was 8 months.",
         },
       ],
       overviewParagraphs: [
-        "Charge OnSite is the largest electric vehicle charging network in the world. One can find over 500+ charging locations in its app. It’s the most extensive and easy-to-use network, with charging stations for electric cars for both commercial fleets and individual drivers. It provides a vast network of charging stations throughout the United States, with the added convenience of accepting digital payments.",
+        "Cloud Accounting is a robust account management platform that can automate financial services' marketing operations. It is an efficient accounting tool that allows businesses to handle their transactions, payroll, debit, and credit. This practical resource allows the user to keep track of everything in one convenient location. Cloud accounting is helpful for small firms, accountants, and bookkeepers because of its powerful invoicing capabilities and accounting facilities.",
       ],
-      overviewImage: "/images/case-studies/overviewChargeonsite.webp",
-      aboutParagraph: `Our professional software development team mapped out a strategy to build a platform after thoroughly analyzing the client’s requirements through careful planning and research. To create this software, we employed state-of-the-art methods and hardware. We use cutting-edge lingo and technologies such as Node.js, React.py, and the Ant design framework.
+      overviewImage: "/images/case-studies/cloudingOverview.png",
+      aboutParagraph: `Our experienced team's goal was to create an efficient accounting solution that assists users of all professional categories and saves them time from tedious paperwork. We researched the websites of the best accounting companies in the globe to determine where Cloud Accounting stands among accounting software. This helps us identify the most important aspects of accounting software and where they may be enhanced. Once the primary functions were determined, we began interviewing and surveying to ascertain what the end users wanted. We created a few personas based on user research and used them throughout the software development process. We separately examined and brainstormed the most effective solutions after recognizing the users' needs, problems, and frustrations. Once we had a firm grasp of the target audience's needs, we generated ideas for potential solutions and tested them via prototyping. All of our top-notch thinking went into the design of this software. We make it so that people can have a pleasant and adaptable experience. Once everything is flawlessly crafted, we take it to the testing phase. We were able to learn a lot from the testing and put that knowledge to good use. Thus, we created this very versatile, easy-to-use software to address all concerns.
 `,
       aboutProjectInfo: [
         {
           id: 1,
           subtitle: "Industry",
-          title: "Electronic automobile",
+          title: "Finance",
           logo: "/images/case-studies/sprints.svg",
         },
         {
@@ -808,34 +806,35 @@ export const worksData = [
         {
           id: 4,
           subtitle: "Duration",
-          title: "5 Months",
+          title: "36+ Months",
           logo: "/images/case-studies/duration.svg",
         },
       ],
-      solutionParagraph: `We are a top app development firm because we focus on the nitty-gritty of each client’s needs and then deliver the answer they were hoping for. To provide a first-rate experience, our knowledgeable staff created a platform that distributes the necessary software parts to the following three customers.`,
+      solutionParagraph: `Our skilled developers use cutting-edge tools like Node.js, Python, and React to build this flexible and adaptable software.`,
       solutionPoints1: [
-        "EV Owner: The primary user of Charge OnSite is an electric vehicle owner looking to locate charging stations, schedule charging sessions, and pay using various accepted payment methods.",
-        "Super Admin: An app’s top administrator has access to every setting in the program. Company, entity, property, location, billing, administrative, driver, and permit management are all under his control.",
-        "Property Admin: Our talented group created the property admin choice for user comfort. The Super admin might delegate his app management responsibilities to the property admin if he cannot manage the app.",
+        "Cloud accounting provides many sales tracking capabilities, such as an up-to-date dashboard, contact management, account charts, and sales management.",
+        "The system allows firms to analyze their financial health by recording transactions and maintaining consumer databases.",
+        "With its aid, users can better manage their offerings to customers. As a result, users can divide their accounts into other categories, such as inventory, non-inventory, items, and services.",
+        "It streamlines managing accounts by providing access to various vendors simultaneously.",
       ],
-      solutionImage: "/images/case-studies/solutionChargeonsite.webp",
+      solutionImage: "/images/case-studies/cloudingSolution.png",
       keyFuncParagraph:
-        "We devised a method that incorporates every feature needed in a Charge OnSite app. Users can use this app on both mobile and desktop devices. Electric vehicle (EV) owners and building managers can use this app to access EV charging facilities.",
+        "Cloud accounting is an ideal accounting software platform for a service-based small business since it offers many features to potential consumers.",
       keypoints1: [
-        "The versatility of the app is expanded through three user modules.",
-        "High-quality, uncomplicated, and user-friendly user interface",
-        "The app’s interface is the most straightforward and most intuitive ever created.",
-        "A lightning-fast server and database support this application.",
+        "Adding a new bank account is simple and quick, and users can add as many accounts as they need to keep track of their company's activities and cash flow.",
+        "With this specialized software, users can easily handle their sales taxes and keep tabs on all their tax-related activities.",
+        "With the help of multi-user access, the admin can easily create and manage new user roles based on the level of access.",
+        "Our professional team developed this software based on advanced, industry-recognized security safeguards to keep financial data private and protected.",
       ],
-      keyFuncImage: "/images/case-studies/keyfuncChargeonsite.webp",
+      keyFuncImage: "/images/case-studies/cloudingKeyFunc.png",
       resultParagraph:
-        "We made this app so that the charging station and the app can communicate without hiccups. The app has a lightning-fast connection time, allowing users to link up with a power source in a flash.",
+        "Our specialists developed Cloud Accounting as the optimal answer for handling any sales account. Cloud accounting is a comprehensive business management software that helps the user manage everyday tasks, and lets business owners see the complete picture of the work progress. Everything related to accounting can be done in Cloud Accounting, from setting up multiple vendors to juggling various bank accounts.",
       resultPoints1: [
-        "The state-of-the-art architecture of this top app is based on a Tree-Based Network.",
-        "The safety of our customers is never jeopardized. This software is protected by a login and password system.",
-      ],
-      resultPoints2: [
-        "The ability to exercise various command options is a great plus for this app. Two people control the app at a time simply by giving access from the super admin to the property admin.",
+        "It takes care of several issues simultaneously, such as keeping track of individual companies and transactions.",
+        "This software has many helpful functions that simplify ‌ processing payroll for employees.",
+        "It allows users to improve functions, manage multiple vendors and their inventory competently and keep a tab on every vendor.",
+        "It is the best overall accounting software for keeping and managing the bank accounts of multiple companies in a single platform.",
+        "It is a centralized platform that manages multiple companies as individual accounts on a common forum.",
       ],
     },
   },
