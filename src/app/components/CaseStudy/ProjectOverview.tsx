@@ -20,8 +20,8 @@ const ProjectOverview = ({
       </div>
 
       <div className="py-6 px-4 md:px-0 text-center space-y-4 max-w-6xl mx-auto">
-        {overviewParagraphs.map((overview) => (
-          <p>{overview}</p>
+        {overviewParagraphs.map((overview, index) => (
+          <p key={index}>{overview}</p>
         ))}
       </div>
 

@@ -27,7 +27,7 @@ const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: Props) => {
         <div className="flex justify-center">
           <div className="w-full flex flex-col md:flex-row gap-7 md:justify-between">
             {info.map((item) => (
-              <div className="max-w-[250px] w-full">
+              <div key={item.id} className="max-w-[250px] w-full">
                 <Image src={item.icon} alt={item.alt} width={36} height={36} />
                 <div className="mt-4 space-y-1">
                   <h3 className="text-primary uppercase font-semibold text-lg">
