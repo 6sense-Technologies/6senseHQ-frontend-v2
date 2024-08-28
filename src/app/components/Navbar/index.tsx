@@ -4,16 +4,23 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import { CaretDown } from "@phosphor-icons/react";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
-    <div className="bg-white drop-shadow-md h-20 py-5 relative">
+    <div className="bg-white drop-shadow-md h-20 py-5 relative z-50">
       <div className="px-4 md:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
         {/* Logo Section */}
         <div>
@@ -23,10 +30,15 @@ const Navbar = () => {
         </div>
         {/* Button & Menu Icon */}
         <div className="lg:hidden flex items-center">
-          <Button
-            text="Free Consultation"
-            className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-sm mx-2"
-          />
+          <Link
+            href={"https://meet.brevo.com/6sense-technologies"}
+            target="_blank"
+          >
+            <Button
+              text="Free Consultation"
+              className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-xs md:text-sm mx-2"
+            />
+          </Link>
           <div className="cursor-pointer" onClick={toggleMenu}>
             <Image
               src="/images/menu.svg"
@@ -152,10 +164,15 @@ const Navbar = () => {
         </div>
         {/* Button on large screens */}
         <div className="hidden lg:block">
-          <Button
-            text="Schedule a Free Consultation"
-            className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
-          />
+          <Link
+            href={"https://meet.brevo.com/6sense-technologies"}
+            target="_blank"
+          >
+            <Button
+              text="Schedule a Free Consultation"
+              className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
+            />
+          </Link>
         </div>
       </div>
 
@@ -163,9 +180,9 @@ const Navbar = () => {
       <div
         className={`${
           isOpen
-            ? "translate-y-20 border-t-[3px] border-primary"
+            ? "translate-y-[85px] border-t-[3px] border-primary"
             : "-translate-y-full"
-        } fixed top-0 right-0 w-[300px] bg-white z-50 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
+        } fixed -top-1 right-0 w-[300px] bg-white z-50 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
       >
         <nav className="font-plex-sans-thai flex flex-col p-5 space-y-4">
           <Link href="/" className="hover:opacity-60">

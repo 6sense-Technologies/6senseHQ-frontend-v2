@@ -2,6 +2,7 @@
 
 import CallToAction from "@/app/components/CallToAction";
 import AboutProject from "@/app/components/CaseStudy/AboutProject";
+import CaseStudyFeedback from "@/app/components/CaseStudy/CaseStudyFeedback";
 import CaseStudyHero from "@/app/components/CaseStudy/CaseStudyHero";
 import KeyFunctionalities from "@/app/components/CaseStudy/KeyFunctionalities";
 import ProjectOverview from "@/app/components/CaseStudy/ProjectOverview";
@@ -80,6 +81,10 @@ const CaseStudyDetail = () => {
           title="Project results"
           subtitle={caseStudyInfo?.resultParagraph}
         />
+      </div>
+
+      <div>
+        <CaseStudyFeedback />
       </div>
 
       <div>

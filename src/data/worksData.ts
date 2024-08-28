@@ -966,7 +966,7 @@ export const worksData = [
       overviewParagraphs: [
         "Charge OnSite is the largest electric vehicle charging network in the world. One can find over 500+ charging locations in its app. It’s the most extensive and easy-to-use network, with charging stations for electric cars for both commercial fleets and individual drivers. It provides a vast network of charging stations throughout the United States, with the added convenience of accepting digital payments.",
       ],
-      overviewImage: "/images/case-studies/overviewChargeonsite.webp",
+      overviewImage: "/images/case-studies/voomOverview.png",
       aboutParagraph: `Our professional software development team mapped out a strategy to build a platform after thoroughly analyzing the client’s requirements through careful planning and research. To create this software, we employed state-of-the-art methods and hardware. We use cutting-edge lingo and technologies such as Node.js, React.py, and the Ant design framework.
 `,
       aboutProjectInfo: [
@@ -1001,7 +1001,7 @@ export const worksData = [
         "Super Admin: An app’s top administrator has access to every setting in the program. Company, entity, property, location, billing, administrative, driver, and permit management are all under his control.",
         "Property Admin: Our talented group created the property admin choice for user comfort. The Super admin might delegate his app management responsibilities to the property admin if he cannot manage the app.",
       ],
-      solutionImage: "/images/case-studies/solutionChargeonsite.webp",
+      solutionImage: "/images/case-studies/voomSolution.png",
       keyFuncParagraph:
         "We devised a method that incorporates every feature needed in a Charge OnSite app. Users can use this app on both mobile and desktop devices. Electric vehicle (EV) owners and building managers can use this app to access EV charging facilities.",
       keypoints1: [
@@ -1010,7 +1010,7 @@ export const worksData = [
         "The app’s interface is the most straightforward and most intuitive ever created.",
         "A lightning-fast server and database support this application.",
       ],
-      keyFuncImage: "/images/case-studies/keyfuncChargeonsite.webp",
+      keyFuncImage: "/images/case-studies/voomKeyFunc.png",
       resultParagraph:
         "We made this app so that the charging station and the app can communicate without hiccups. The app has a lightning-fast connection time, allowing users to link up with a power source in a flash.",
       resultPoints1: [
@@ -1058,7 +1058,7 @@ export const worksData = [
       overviewParagraphs: [
         "Charge OnSite is the largest electric vehicle charging network in the world. One can find over 500+ charging locations in its app. It’s the most extensive and easy-to-use network, with charging stations for electric cars for both commercial fleets and individual drivers. It provides a vast network of charging stations throughout the United States, with the added convenience of accepting digital payments.",
       ],
-      overviewImage: "/images/case-studies/overviewChargeonsite.webp",
+      overviewImage: "/images/case-studies/quranOverview.png",
       aboutParagraph: `Our professional software development team mapped out a strategy to build a platform after thoroughly analyzing the client’s requirements through careful planning and research. To create this software, we employed state-of-the-art methods and hardware. We use cutting-edge lingo and technologies such as Node.js, React.py, and the Ant design framework.
 `,
       aboutProjectInfo: [
@@ -1093,7 +1093,7 @@ export const worksData = [
         "Super Admin: An app’s top administrator has access to every setting in the program. Company, entity, property, location, billing, administrative, driver, and permit management are all under his control.",
         "Property Admin: Our talented group created the property admin choice for user comfort. The Super admin might delegate his app management responsibilities to the property admin if he cannot manage the app.",
       ],
-      solutionImage: "/images/case-studies/solutionChargeonsite.webp",
+      solutionImage: "/images/case-studies/quranSolution.png",
       keyFuncParagraph:
         "We devised a method that incorporates every feature needed in a Charge OnSite app. Users can use this app on both mobile and desktop devices. Electric vehicle (EV) owners and building managers can use this app to access EV charging facilities.",
       keypoints1: [
@@ -1102,7 +1102,7 @@ export const worksData = [
         "The app’s interface is the most straightforward and most intuitive ever created.",
         "A lightning-fast server and database support this application.",
       ],
-      keyFuncImage: "/images/case-studies/keyfuncChargeonsite.webp",
+      keyFuncImage: "/images/case-studies/quranKeyFunc.png",
       resultParagraph:
         "We made this app so that the charging station and the app can communicate without hiccups. The app has a lightning-fast connection time, allowing users to link up with a power source in a flash.",
       resultPoints1: [

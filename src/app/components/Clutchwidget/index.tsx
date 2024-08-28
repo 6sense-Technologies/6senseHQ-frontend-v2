@@ -24,16 +24,28 @@ const ClutchWidget = () => {
   }, []);
 
   return (
-    <div
-      className="clutch-widget"
-      data-url="https://widget.clutch.co"
-      data-widget-type="2"
-      data-height="45"
-      data-nofollow="true"
-      data-expandifr="true"
-      data-scale="100"
-      data-clutchcompany-id="1731162"
-    ></div>
+    <>
+      <div
+        className="hidden md:block clutch-widget"
+        data-url="https://widget.clutch.co"
+        data-widget-type="2"
+        data-height="45"
+        data-nofollow="true"
+        data-expandifr="true"
+        data-scale="100"
+        data-clutchcompany-id="1731162"
+      ></div>
+      <div
+        className="block md:hidden clutch-widget"
+        data-url="https://widget.clutch.co"
+        data-widget-type="1"
+        data-height="40"
+        data-nofollow="true"
+        data-expandifr="true"
+        data-scale="100"
+        data-clutchcompany-id="1731162"
+      ></div>
+    </>
   );
 };
 
