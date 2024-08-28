@@ -84,7 +84,14 @@ const CaseStudyDetail = () => {
       </div>
 
       <div>
-        <CaseStudyFeedback />
+        <CaseStudyFeedback
+          feedback={`"Engineering is not a solo endeavor, you’re always dependent on
+            other people around you. It’s important to have people who buy into
+            the need for high collaboration and flexibility, knowing things will
+            change. The 6sense team fit really well into that, allowing us to
+            navigate some pretty difficult challenges."`}
+          nameWithDesignation="Daniel Brown, VP of Engineering at Itcan"
+        />
       </div>
 
       <div>
