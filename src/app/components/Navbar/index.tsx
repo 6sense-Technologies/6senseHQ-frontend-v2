@@ -36,7 +36,7 @@ const Navbar = () => {
           >
             <Button
               text="Free Consultation"
-              className="font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-xs md:text-sm mx-2"
+              className="text-nowrap font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-xs md:text-sm mx-2"
             />
           </Link>
           <div className="cursor-pointer" onClick={toggleMenu}>
