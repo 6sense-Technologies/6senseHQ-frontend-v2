@@ -460,6 +460,32 @@ export const servicesFeatures = [
       "Our team designs, builds and supports elegant apps that are tailored specifically to your business needs.",
   },
 ];
+export const webApplicationFeatures = [
+  {
+    id: 1,
+    count: "6+",
+    featureType: "Years Of Experience",
+    title: "Cost-effective Development",
+    paragraph:
+      "We all speak English and work from one office. Our accessibility and strategic feedback ensure broadband communications, productivity and efficient delivery.",
+  },
+  {
+    id: 2,
+    count: "35+",
+    featureType: "qualified specialists",
+    title: "Cross-functional Agile Team",
+    paragraph:
+      "We work in Scrum and have a sense of ownership. Designers and developers care about clients showing initiative and a proactive approach to problem-solving.",
+  },
+  {
+    id: 3,
+    count: "3",
+    featureType: "months MVP",
+    title: "Technology Expertise",
+    paragraph:
+      "Leverage the up-to-dateness of our technical skills, high-quality coding practices and expertise in making architectural decisions related to app development.",
+  },
+];
 
 export const servicesKeyFeatures = [
   {

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import SectionTitle from "../SectionTitle";
+import { ReactNode } from "react";
 
 type Props = {
+  title: ReactNode;
   servicesKeyFeatures: {
     id: number;
     title: string;
@@ -9,20 +11,7 @@ type Props = {
   }[];
 };
 
-const SectionKeyFeatures = ({ servicesKeyFeatures }: Props) => {
-  const title = (
-    <>
-      <h1
-        className="font-plex-sans-thai text-primary 
-text-4xl md:text-5xl font-bold capitalize"
-      >
-        When to use the
-        <span className="text-secondary"> Managed Delivery </span>
-        model
-      </h1>
-    </>
-  );
-
+const SectionKeyFeatures = ({ servicesKeyFeatures, title }: Props) => {
   return (
     <div className="py-9 md:py-16 bg-gradient-to-b from-[#F8FFE9] to-[#F8FFE980]/10">
       <div className="px-5 text-center">

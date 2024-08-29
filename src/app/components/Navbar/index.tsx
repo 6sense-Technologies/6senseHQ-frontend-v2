@@ -69,31 +69,49 @@ const Navbar = () => {
                 <Link href="/services/ui-design" className="hover:opacity-60">
                   UI Design
                 </Link>
-                <Link href="/ux-design-research" className="hover:opacity-60">
+                <Link
+                  href="/services/ux-design-research"
+                  className="hover:opacity-60"
+                >
                   UX Design & Research
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link
+                  href="/services/web-application"
+                  className="hover:opacity-60"
+                >
                   Web Application Development
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link
+                  href="/services/mobile-application"
+                  className="hover:opacity-60"
+                >
                   Mobile Application Development
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link
+                  href="/services/software-testing"
+                  className="hover:opacity-60"
+                >
                   Software Testing as a Service
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link
+                  href="/services/software-project-management"
+                  className="hover:opacity-60"
+                >
                   Software Project Management as a Service
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link href="/services/ecommerce" className="hover:opacity-60">
                   Ecommerce Solution
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link href="/services/ai" className="hover:opacity-60">
                   ML & AI
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link href="/services/openai" className="hover:opacity-60">
                   Open AI
                 </Link>
-                <Link href="/development" className="hover:opacity-60">
+                <Link
+                  href="/services/facebook-meta"
+                  className="hover:opacity-60"
+                >
                   Facebook Meta
                 </Link>
               </div>
@@ -199,31 +217,43 @@ const Navbar = () => {
             <Link href="/services/ui-design" className="hover:opacity-60">
               UI Design
             </Link>
-            <Link href="/ux-design-research" className="hover:opacity-60">
+            <Link
+              href="/services/ux-design-research"
+              className="hover:opacity-60"
+            >
               UX Design & Research
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link href="/services/web-application" className="hover:opacity-60">
               Web Application Development
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link
+              href="/services/mobile-application"
+              className="hover:opacity-60"
+            >
               Mobile Application Development
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link
+              href="/services/software-testing"
+              className="hover:opacity-60"
+            >
               Software Testing as a Service
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link
+              href="/services/software-project-management"
+              className="hover:opacity-60"
+            >
               Software Project Management as a Service
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link href="/services/ecommerce" className="hover:opacity-60">
               Ecommerce Solution
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link href="/services/ai" className="hover:opacity-60">
               ML & AI
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link href="/services/openai" className="hover:opacity-60">
               Open AI
             </Link>
-            <Link href="/development" className="hover:opacity-60">
+            <Link href="/services/facebook-meta" className="hover:opacity-60">
               Facebook Meta
             </Link>
           </div>

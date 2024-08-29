@@ -7,6 +7,8 @@ import { worksData } from "@/data/worksData";
 import { appsData } from "@/data/appsData";
 import MobileApps from "../components/MobileApps";
 import CallToAction from "../components/CallToAction";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 const CaseStudies = () => {
   return (
@@ -31,7 +33,6 @@ const CaseStudies = () => {
 
       <Works
         pageName="case-studies"
-        worksInfo={worksData}
         subtitle="Our dedicated team of off-shore talent provides our partners with a vastly more economical avenue for company expansion, saving huge over hiring US-based developers or wasting resources on employing, training, and maintaining an internal team."
       />
 

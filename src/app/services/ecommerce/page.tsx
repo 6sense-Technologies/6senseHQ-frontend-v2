@@ -12,23 +12,24 @@ import {
   servicesFeatures,
   servicesKeyFeatures,
   uiDesignAccordions,
+  webApplicationFeatures,
 } from "@/data/propsData";
 import React from "react";
 
-const UIUXService = () => {
+const Ecommerce = () => {
   return (
     <>
       <div>
         <Hero
           achievements={achievements}
           pageName="ui-design"
-          imageSrc="/images/services/ui-design/ui-design.png"
+          imageSrc="/images/services/development/mobileApplication.png"
           imageAlt="UI Design"
           imageWidth={640}
           imageHeight={427}
           justify="between"
-          titlePrimary="UI/UX Design"
-          titleSecondary=" Services"
+          titlePrimary="Premier Custom"
+          titleSecondary=" Software Development Services"
           breakBetweenTitle={true}
         />
       </div>
@@ -42,12 +43,12 @@ text-4xl md:text-5xl font-bold capitalize leading-tight"
             >
               <span className="text-secondary leading-tight">
                 {" "}
-                Get productive solutions
+                Expert custom software
               </span>{" "}
-              from the diverse in-house UI/UX design team at 6sense.
+              development services bring your idea to life.
             </h1>
           }
-          features={servicesFeatures}
+          features={webApplicationFeatures}
         />
       </div>
 
@@ -58,9 +59,8 @@ text-4xl md:text-5xl font-bold capitalize leading-tight"
               className="font-plex-sans-thai text-primary 
 text-4xl md:text-5xl font-bold capitalize"
             >
-              When to use the
-              <span className="text-secondary"> Managed Delivery </span>
-              model
+              <span className="text-secondary"> Custom Software </span>
+              Development Services
             </h1>
           }
           servicesKeyFeatures={servicesKeyFeatures}
@@ -127,4 +127,4 @@ text-4xl md:text-5xl font-bold"
   );
 };
 
-export default UIUXService;
+export default Ecommerce;

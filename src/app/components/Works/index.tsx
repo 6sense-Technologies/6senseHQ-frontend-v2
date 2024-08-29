@@ -1,21 +1,18 @@
+"use client";
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import Link from "next/link";
 import GridSkeleton from "../GridSkeleton";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { SIXSENSE_BACKEND } from "@/constants";
 
 type Props = {
   subtitle: string;
   pageName: string;
-  worksInfo: {
-    id: number;
-    name: string;
-    slug: string;
-    logo: string;
-    imageSrc: string;
-  }[];
 };
 
-const Works = ({ worksInfo, subtitle, pageName }: Props) => {
+const Works = ({ subtitle, pageName }: Props) => {
   const title = (
     <>
       <h1 className="text-primary text-4xl md:text-5xl font-bold">
@@ -37,7 +34,22 @@ const Works = ({ worksInfo, subtitle, pageName }: Props) => {
     </>
   );
 
-  return (
+  //https://sixsense-z2fk.onrender.com/case-studies
+
+  const {
+    data: caseStudies,
+    isFetching: caseStudyLoading,
+    isFetched,
+  } = useQuery({
+    queryKey: ["getCaseStudies"],
+    queryFn: async () => {
+      const res = await axios.get(`${SIXSENSE_BACKEND}/case-studies`);
+      return res.data;
+    },
+    refetchOnWindowFocus: false,
+  });
+
+  https: return (
     <div className="bg-lightGray">
       <div
         className={`px-5 lg:px-0 ${pageName === "home" ? "py-20" : "py-14"}`}
@@ -46,25 +58,38 @@ const Works = ({ worksInfo, subtitle, pageName }: Props) => {
           <SectionTitle title={title} paragraph={paragraph} />
         </div>
 
-        <GridSkeleton />
-
-        <div
-          className={`${
-            pageName === "home" ? "mt-6" : "mt-6 md:mt-14"
-          } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
-        >
-          {worksInfo.map((work) => (
-            <Link href={`/case-studies/${work.slug}`} key={work.id}>
-              <div className="bg-white w-full h-auto shadow-md">
-                <img src={work.imageSrc} className="w-full" alt={work.name} />
-                <div className="p-5">
-                  <img src={work.logo} alt={work.name} />
-                  <h3 className="text-primary font-semibold">{work.name}</h3>
+        {caseStudyLoading && !isFetched ? (
+          <GridSkeleton />
+        ) : (
+          <div
+            className={`${
+              pageName === "home" ? "mt-6" : "mt-6 md:mt-8"
+            } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
+          >
+            {caseStudies?.data?.projects.map((work: any) => (
+              <Link href={`/case-studies/${work.slug}`} key={work.id}>
+                <div className="bg-white w-[362px] h-auto shadow-md">
+                  <div className="h-[460px]">
+                    <img
+                      src={`${SIXSENSE_BACKEND}${work.imageSrc}`}
+                      className="w-full"
+                      alt={work.appName}
+                    />
+                  </div>
+                  <div className="h-[90px] p-5">
+                    <img
+                      src={`${SIXSENSE_BACKEND}${work.logo}`}
+                      alt={work.name}
+                    />
+                    <h3 className="text-primary font-semibold">
+                      {work.appName}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

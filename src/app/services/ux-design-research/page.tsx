@@ -27,7 +27,7 @@ const UIUXService = () => {
           imageWidth={640}
           imageHeight={427}
           justify="between"
-          titlePrimary="UI/UX Design"
+          titlePrimary="UI/UX Research"
           titleSecondary=" Services"
           breakBetweenTitle={true}
         />
@@ -44,7 +44,7 @@ text-4xl md:text-5xl font-bold capitalize leading-tight"
                 {" "}
                 Get productive solutions
               </span>{" "}
-              from the diverse in-house UI/UX design team at 6sense.
+              from the diverse in-house UI/UX design research team at 6sense.
             </h1>
           }
           features={servicesFeatures}
@@ -53,6 +53,7 @@ text-4xl md:text-5xl font-bold capitalize leading-tight"
 
       <div>
         <SectionKeyFeatures
+          servicesKeyFeatures={servicesKeyFeatures}
           title={
             <h1
               className="font-plex-sans-thai text-primary 
@@ -63,7 +64,6 @@ text-4xl md:text-5xl font-bold capitalize"
               model
             </h1>
           }
-          servicesKeyFeatures={servicesKeyFeatures}
         />
       </div>
 
