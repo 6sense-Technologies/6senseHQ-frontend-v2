@@ -107,7 +107,6 @@ text-4xl md:text-5xl font-bold"
       />
       <Works
         pageName="home"
-        worksInfo={worksData}
         subtitle="Experience the Cost-Effective Benefits of Partnering with Our Software
         Development Team"
       />
