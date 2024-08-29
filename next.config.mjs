@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "sixsense-z2fk.onrender.comundefined",
+      },
+    ],
+  },
+};
 
 export default nextConfig;

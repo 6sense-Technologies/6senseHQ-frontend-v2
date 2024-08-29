@@ -1,3 +1,4 @@
+import { SIXSENSE_BACKEND } from "@/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -8,6 +9,7 @@ type Props = {
     id: number;
     icon: string;
     alt: string;
+    total: number;
     title: string;
     subtitle: string;
   }[];
@@ -28,10 +30,15 @@ const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: Props) => {
           <div className="w-full flex flex-col md:flex-row gap-7 md:justify-between">
             {info.map((item) => (
               <div key={item.id} className="max-w-[250px] w-full">
-                <Image src={item.icon} alt={item.alt} width={36} height={36} />
+                <Image
+                  src={`${SIXSENSE_BACKEND}${item.icon}`}
+                  alt={item.alt}
+                  width={36}
+                  height={36}
+                />
                 <div className="mt-4 space-y-1">
                   <h3 className="text-primary uppercase font-semibold text-lg">
-                    {item.title}
+                    {item.total} {item.title}
                   </h3>
                   <p className="font-plex-sans-thai text-lightGray3">
                     {item.subtitle}

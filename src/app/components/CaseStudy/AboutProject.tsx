@@ -1,3 +1,4 @@
+import { SIXSENSE_BACKEND } from "@/constants";
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +9,7 @@ type Props = {
     id: number;
     subtitle: string;
     title: string;
-    logo: string;
+    icon: string;
   }[];
 };
 
@@ -31,13 +32,13 @@ const AboutProject = ({ title, paragraph, aboutProjectInfo }: Props) => {
               {aboutProjectInfo.map((info) => (
                 <div key={info.id} className="max-w-[250px] w-full">
                   <Image
-                    src={info.logo}
+                    src={`${SIXSENSE_BACKEND}${info.icon}`}
                     alt={info.title}
                     width={36}
                     height={36}
                   />
                   <div className="mt-4 space-y-1">
-                    <p className="font-plex-sans-thai text-lightGray3">
+                    <p className="font-plex-sans-thai text-lightGray3 capitalize">
                       {info.subtitle}
                     </p>
                     <h3 className="text-primary uppercase font-semibold">

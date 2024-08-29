@@ -1,7 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import SectionTitle from "../SectionTitle";
 
 type Props = {
+  title: ReactNode;
   features: {
     id: number;
     count: string;
@@ -11,22 +12,7 @@ type Props = {
   }[];
 };
 
-const ServiceFeatures = ({ features }: Props) => {
-  const title = (
-    <>
-      <h1
-        className="max-w-5xl mx-auto font-plex-sans-thai text-primary 
-text-4xl md:text-5xl font-bold capitalize leading-tight"
-      >
-        <span className="text-secondary leading-tight">
-          {" "}
-          Get productive solutions
-        </span>{" "}
-        from the diverse in-house UI/UX design team at 6sense.
-      </h1>
-    </>
-  );
-
+const ServiceFeatures = ({ features, title }: Props) => {
   return (
     <div className="py-20">
       <div className="px-5 text-center">

@@ -10,6 +10,7 @@ import RelatedCases from "@/app/components/CaseStudy/RelatedCases";
 import Result from "@/app/components/CaseStudy/Result";
 import Solution from "@/app/components/CaseStudy/Solution";
 import HeroSkeleton from "@/app/components/HeroSkeleton";
+import { SIXSENSE_BACKEND } from "@/constants";
 import {
   aboutProjectInfo,
   heroInfoItems,
@@ -26,8 +27,6 @@ import { useParams } from "next/navigation";
 
 const CaseStudyDetail = () => {
   const { slug } = useParams();
-  const caseStudy = worksData.filter((data) => data.slug === slug);
-  const caseStudyInfo = caseStudy[0].details;
 
   const { data: caseStudyDetail, isFetching: caseStudyLoading } = useQuery({
     queryKey: ["getCaseStudyDetails", slug],
@@ -54,59 +53,54 @@ const CaseStudyDetail = () => {
             <CaseStudyHero
               coloredPartTitle={caseStudyInformation?.coloredPartTitle}
               regularTitle={caseStudyInformation?.regularTitle}
-              info={heroInfoItems} // here needs to add the heroInfoItems as array
+              info={caseStudyInformation?.heroInfo}
             />
           </div>
           <div>
-            {/* <ProjectOverview
-          title="Project Overview"
-          overviewParagraphs={caseStudyInfo?.overviewParagraphs || []}
-          overviewImage={caseStudyInformation?.overviewImage}
-        /> */}
             <ProjectOverview
               title="Project Overview"
-              overviewParagraphs={caseStudyInfo?.overviewParagraphs || []}
-              overviewImage={caseStudyInfo?.overviewImage || ""}
+              overviewParagraphs={caseStudyInformation?.overviewParagraphs}
+              overviewImage={`${SIXSENSE_BACKEND}${caseStudyInformation?.overviewImage}`}
             />
           </div>
 
           <div>
             <AboutProject
-              aboutProjectInfo={caseStudyInfo?.aboutProjectInfo || []}
+              aboutProjectInfo={caseStudyInformation?.aboutInfo}
               title="About Project"
-              paragraph={caseStudyInfo?.aboutParagraph || ""}
+              paragraph={caseStudyInformation?.aboutParagraph}
             />
           </div>
 
           <div>
             <Solution
-              solutionImage={caseStudyInfo?.solutionImage || ""}
-              solutionPoints1={caseStudyInfo?.solutionPoints1 || []}
-              solutionPoints2={caseStudyInfo?.solutionPoints2}
+              solutionImage={`${SIXSENSE_BACKEND}${caseStudyInformation?.solution?.solutionImage}`}
+              solutionPoints1={caseStudyInformation?.solution?.solutionsPoints1}
+              solutionPoints2={caseStudyInformation?.solution?.solutionsPoints2}
               icon="/images/case-studies/keypointIcon.svg"
               title="Solution"
-              subtitle={caseStudyInfo?.solutionParagraph}
+              subtitle={caseStudyInformation?.solution?.description}
             />
           </div>
 
           <div>
             <KeyFunctionalities
-              keyPoints1={caseStudyInfo?.keypoints1 || []}
-              keyPoints2={caseStudyInfo?.keypoints2}
+              keyPoints1={caseStudyInformation?.keyFeature?.keyFeaturesPoints1}
+              keyPoints2={caseStudyInformation?.keyFeature?.keyFeaturesPoints2}
               icon="/images/case-studies/keypointIcon.svg"
               title="Key functionality"
-              subtitle={caseStudyInfo?.keyFuncParagraph || ""}
-              keyFunctionalityImage={caseStudyInfo?.keyFuncImage || ""}
+              subtitle={caseStudyInformation?.keyFeature?.description}
+              keyFunctionalityImage={`${SIXSENSE_BACKEND}${caseStudyInformation?.keyFeature?.keyFeaturesImage}`}
             />
           </div>
 
           <div>
             <Result
-              resultPoints1={caseStudyInfo?.resultPoints1 || []}
-              resultPoints2={caseStudyInfo?.resultPoints2}
+              resultPoints1={caseStudyInformation?.result?.resultsPoints1}
+              resultPoints2={caseStudyInformation?.result?.resultsPoints2}
               icon="/images/case-studies/keypointIcon.svg"
               title="Project results"
-              subtitle={caseStudyInfo?.resultParagraph}
+              subtitle={caseStudyInformation?.result?.description}
             />
           </div>
 
