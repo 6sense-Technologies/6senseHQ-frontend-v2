@@ -23,7 +23,7 @@ const Feedback = ({
 }: Props) => {
   return (
     <>
-      <div className="md:mx-10 my-9 ">
+      <div className="md:mx-10 my-9">
         <div
           className={`max-w-6xl mx-auto h-full ${
             hasShadow ? "md:shadow-custom-drop" : ""
@@ -65,18 +65,20 @@ const Feedback = ({
           <div className="hidden md:block max-w-6xl mx-auto h-full rounded-b-md border-t border-t-[#D9D9D9] py-12 px-5 lg:px-0">
             <div className="max-w-3xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-y-8">
-                {ourProcess.map((item: any) => (
-                  <div
-                    key={item.id}
-                    className="w-full h-full flex flex-col items-center lg:items-start"
-                  >
-                    <div className="mb-4">
-                      <img src={item.icon} alt={item.alt} />
+                {ourProcess &&
+                  ourProcess.length > 0 &&
+                  ourProcess.map((item: any) => (
+                    <div
+                      key={item.id}
+                      className="w-full h-full flex flex-col items-center lg:items-start"
+                    >
+                      <div className="mb-4">
+                        <img src={item.icon} alt={item.alt} />
+                      </div>
+                      <h3 className="font-bold">{item.title}</h3>
+                      <p>{item.text}</p>
                     </div>
-                    <h3 className="font-bold">{item.title}</h3>
-                    <p>{item.text}</p>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>

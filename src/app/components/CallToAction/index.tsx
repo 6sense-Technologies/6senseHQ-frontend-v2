@@ -8,6 +8,7 @@ type Props = {
   imageSrc?: string;
   alt?: string;
   pageName: string;
+  hasBg?: boolean;
 };
 
 const CallToAction = ({
@@ -17,11 +18,12 @@ const CallToAction = ({
   imageSrc,
   alt,
   pageName,
+  hasBg,
 }: Props) => {
   return (
     <div
-      className={`${
-        pageName === "home" ? "bg-hero" : ""
+      className={`${pageName === "home" ? "bg-hero" : ""} ${
+        hasBg ? "bg-hero" : ""
       } relative overflow-hidden`}
     >
       <div className="py-16">

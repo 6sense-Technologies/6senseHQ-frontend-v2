@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import Link from "next/link";
+import GridSkeleton from "../GridSkeleton";
 
 type Props = {
   subtitle: string;
@@ -44,6 +45,8 @@ const Works = ({ worksInfo, subtitle, pageName }: Props) => {
         <div className="text-center">
           <SectionTitle title={title} paragraph={paragraph} />
         </div>
+
+        <GridSkeleton />
 
         <div
           className={`${

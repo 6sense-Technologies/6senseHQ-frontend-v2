@@ -82,6 +82,17 @@ export default function Home() {
       <Features features={featureItems} />
       <Impact impactStats={impactStats} />
       <Advantages
+        pageName="home"
+        title={
+          <h1
+            className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold"
+          >
+            <span className="text-secondary">Advantages </span>
+            Of Choosing 6sense
+          </h1>
+        }
+        paragraph=""
         accordionItems={advantagesAccordionInfo}
         imageSrc="/images/Choosing-6sense.png"
         alt="Choosing 6sense"

@@ -13,14 +13,14 @@ const CaseStudyFeedback = ({
   clientImage,
 }: Props) => {
   return (
-    <div className="bg-hero py-32">
-      <div className="max-w-6xl mx-auto px-4 md:px-0 flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-4 md:gap-10">
+    <div className="bg-hero py-20">
+      <div className="max-w-6xl mx-auto px-4 md:px-0 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-10">
         <div>
-          <p className="font-plex-sans text-primary text-xl leading-8 font-semibold text-center lg:text-justify italic">
+          <p className="font-plex-sans text-black leading-8 font-semibold text-center lg:text-justify italic">
             {feedback}
           </p>
           <div className="mt-6">
-            <h3 className="font-helvetica text-sm text-primary font-bold text-center md:text-left">
+            <h3 className="font-helvetica text-xl text-primary font-bold text-center md:text-left">
               – {nameWithDesignation}
             </h3>
           </div>
@@ -29,14 +29,14 @@ const CaseStudyFeedback = ({
         <div className="w-full flex justify-center items-center">
           {clientImage ? (
             <img
-              className="w-[150px] md:w-full h-auto"
+              className="w-[150px] md:w-[220px] h-auto"
               src={clientImage}
               alt="Client Feedback"
             />
           ) : (
             <img
-              className="w-[150px] md:w-full h-auto"
-              src="/images/case-studies/avatarClient.webp"
+              className="w-[150px] md:w-[220px] h-auto"
+              src="/images/case-studies/man.png"
               alt="Client Feedback"
             />
           )}

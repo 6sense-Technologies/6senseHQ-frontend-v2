@@ -431,3 +431,125 @@ export const keyPoints2 = [
   "Munca allows users to create and generate a professional report that users can share from their iOS mobile phone with anyone.",
   "Users can easily link all their bank accounts and will track all the transactions and expenses in one place.",
 ];
+
+// Services Props Data
+
+export const servicesFeatures = [
+  {
+    id: 1,
+    count: "100+",
+    featureType: "Designed Projects",
+    title: "WEB & DESKTOP DESIGN",
+    paragraph:
+      "Our designers help ambitious organizations make a lasting impact by delivering cutting-edge projects",
+  },
+  {
+    id: 2,
+    count: "30+",
+    featureType: "Effective Redesigns",
+    title: "REDESIGN",
+    paragraph:
+      "Discover your true potential and bring clarity to your business via totally new UI/UX features for your app",
+  },
+  {
+    id: 3,
+    count: "23",
+    featureType: "Awards Won",
+    title: "MOBILE APP DESIGN",
+    paragraph:
+      "Our team designs, builds and supports elegant apps that are tailored specifically to your business needs.",
+  },
+];
+
+export const servicesKeyFeatures = [
+  {
+    id: 1,
+    title: "You need a clear timeline and results",
+    paragraph:
+      "With our extensive experience, we can swiftly generate accurate estimates concerning both the overall duration of your IT project and the results we will ensure within this timeframe.",
+  },
+  {
+    id: 2,
+    title: "You want to exercise transparent budget control",
+    paragraph:
+      "When it comes to resource estimates, our projections are as accurate as the deadlines we set. All your expenses and costs will be thoroughly assessed in advance and tracked.",
+  },
+  {
+    id: 3,
+    title: "Feature management is a must for you",
+    paragraph:
+      "6sense Managed Delivery experts will make sure that you can define the set of features you expect to obtain and take into consideration every applicable element.",
+  },
+  {
+    id: 4,
+    title: "Your in-house team should focus on business matters",
+    paragraph:
+      "Contracting Andersen will relieve your IT employees of additional development burdens and enable them to fully concentrate on your core business priorities.",
+  },
+  {
+    id: 5,
+    title: "You need multi-faceted external expertise",
+    paragraph:
+      "Sometimes, in-house teams lack not only some skills but also entire development and management skill sets. That's when 6sense product development services come to the rescue.",
+  },
+  {
+    id: 6,
+    title: "You want to share responsibility with a trusted vendor",
+    paragraph:
+      "Andersen ensures business continuity and risk management of your software by integrating testing and auditing into the Software Solution Development lifecycle.",
+  },
+];
+
+export const uiDesignAccordions = [
+  {
+    title: "Mobile App Design",
+    content:
+      "With a strong focus on modern platform guidelines and user needs, Andersen creates unique mobile app designs",
+  },
+  {
+    title: "Web & Desktop Design",
+    content:
+      "We have the ability to seamlessly integrate with our clients’ existing systems and processes. This means that our software can work alongside their current technology and platforms, rather than requiring them to completely overhaul their systems. This not only saves time and resources, but also helps to minimize disruptions to their business operations.",
+  },
+  {
+    title: "Redesign services",
+    content:
+      "By designing software that fits the specific workflow and processes of the client, we can help streamline data entry and organization, making it easier to access and use. In addition, our custom software can be designed with robust security measures in place to protect sensitive data and prevent unauthorized access.",
+  },
+  {
+    title: "Graphic Design Services",
+    content:
+      "By designing software that fits the specific workflow and processes of the client, we can help streamline data entry and organization, making it easier to access and use. In addition, our custom software can be designed with robust security measures in place to protect sensitive data and prevent unauthorized access.",
+  },
+];
+
+export const feedbackProcess = [
+  {
+    id: 1,
+    icon: "/images/industry.svg",
+    alt: "Construction",
+    title: "Construction",
+    text: "Industry",
+  },
+  {
+    id: 2,
+    icon: "/images/duration.svg",
+    alt: "Duration",
+    title: "16 months",
+    text: "Duration",
+  },
+  {
+    id: 3,
+    icon: "/images/team.svg",
+    alt: "Engineers",
+    title: "8 Engineers",
+    text: "Team Size",
+  },
+  {
+    id: 4,
+    icon: "/images/industry.svg",
+    alt: "Technology",
+    title: "Node JS, React Js",
+    text: "Technology",
+  },
+];
