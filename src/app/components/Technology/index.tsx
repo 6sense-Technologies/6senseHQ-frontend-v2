@@ -11,7 +11,7 @@ const Technology = ({ image, alt }: Props) => {
     <>
       <h1
         className="font-plex-sans-thai text-primary 
-text-4xl md:text-5xl font-bold px-8"
+text-4xl md:text-5xl font-bold"
       >
         Expertise In
         <span className="text-secondary"> Leading Technologies</span>

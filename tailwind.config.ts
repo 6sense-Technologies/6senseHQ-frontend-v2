@@ -27,6 +27,7 @@ const config: Config = {
         lightGray3: "#666666",
         lightGray4: "#676767",
         lightGray5: "#5E6B74",
+        lightBorder: "#D4D4D4",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],

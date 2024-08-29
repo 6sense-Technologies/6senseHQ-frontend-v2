@@ -58,7 +58,7 @@ const Navbar = () => {
             <div className="flex justify-between items-center">
               <Link
                 className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
-                href={"/case-study"}
+                href={"#"}
               >
                 Services <CaretDown size={16} weight="bold" />
               </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[300px]">
               <div className="flex flex-col px-4 lg:py-4 lg:space-y-3">
-                <Link href="/ui-design" className="hover:opacity-60">
+                <Link href="/services/ui-design" className="hover:opacity-60">
                   UI Design
                 </Link>
                 <Link href="/ux-design-research" className="hover:opacity-60">
@@ -105,10 +105,11 @@ const Navbar = () => {
               className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
               href={"/case-studies"}
             >
-              Case Studies <CaretDown size={16} weight="bold" />
+              Case Studies
+              {/* <CaretDown size={16} weight="bold" /> */}
             </Link>
 
-            <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
+            {/* <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
               <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
                 <Link href="/charge-onsite" className="hover:opacity-60">
                   Charge Onsite
@@ -126,7 +127,7 @@ const Navbar = () => {
                   Itcan
                 </Link>
               </div>
-            </ul>
+            </ul> */}
           </div>
 
           <div className="group relative lg:py-2">
@@ -190,12 +191,12 @@ const Navbar = () => {
           </Link>
 
           {/* parent */}
-          <Link href="/our-services" className="font-semibold hover:opacity-60">
+          <Link href="#" className="font-semibold hover:opacity-60">
             Services
           </Link>
           {/* Submenu of services */}
           <div className="pl-4 flex flex-col space-y-4">
-            <Link href="/ui-design" className="hover:opacity-60">
+            <Link href="/services/ui-design" className="hover:opacity-60">
               UI Design
             </Link>
             <Link href="/ux-design-research" className="hover:opacity-60">
@@ -231,7 +232,7 @@ const Navbar = () => {
           <Link href="/case-studies" className="font-semibold hover:opacity-60">
             Case Studies
           </Link>
-          {/* submenu */}
+          {/* submenu
           <div className="pl-4 flex flex-col space-y-4">
             <Link href="/charge-onsite" className="hover:opacity-60">
               Charge Onsite
@@ -248,7 +249,7 @@ const Navbar = () => {
             <Link href="/itcan" className="hover:opacity-60">
               Itcan
             </Link>
-          </div>
+          </div> */}
 
           {/* Parent */}
           <Link href="/about-us" className="font-semibold hover:opacity-60">

@@ -47,9 +47,9 @@ const Hero = ({
   return (
     <div className="bg-hero">
       <div
-        className={`max-w-7xl mx-auto ${pageName === "home" && "py-16"} ${
-          pageName === "case-studies" && "py-28"
-        } px-5 ${classNames}`}
+        className={`max-w-7xl mx-auto ${
+          pageName === "home" ? "py-16" : "py-28"
+        } px-5 md:px-0 ${classNames}`}
       >
         <div
           className={`flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 items-center justify-${justify}`}

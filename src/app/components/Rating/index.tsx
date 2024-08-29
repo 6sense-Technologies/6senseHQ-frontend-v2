@@ -1,5 +1,7 @@
+// "use client";
 import React from "react";
 import ClutchWidget from "../Clutchwidget";
+import Link from "next/link";
 
 type Props = {
   ratingsInfo: {
@@ -19,9 +21,15 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
           <div className="w-[200px]">
             <ClutchWidget />
           </div>
-          <button className="hidden lg:block ml-2 px-4 py-2 border text-sm text-highlight border-highlight font-semibold">
-            {buttonText}
-          </button>
+          <Link
+            className="ml-2"
+            href={"https://clutch.co/profile/6sensehq"}
+            target="_blank"
+          >
+            <button className="hidden lg:block px-4 py-2 border text-sm text-highlight border-highlight font-semibold">
+              {buttonText}
+            </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 ">
