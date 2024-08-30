@@ -78,7 +78,9 @@ const Hero = ({
                         alt={item.alt}
                         width={22}
                         height={22}
-                        className="mt-[2px] w-[22px] h-[22px]"
+                        className={`w-[22px] h-[22px] ${
+                          pageName === "home" ? "" : "mt-[2px]"
+                        }`}
                       />
                     </div>
                     <p>
