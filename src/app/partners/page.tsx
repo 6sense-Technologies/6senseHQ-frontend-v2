@@ -7,10 +7,10 @@ import {
   partnersAchievements,
 } from "@/data/propsData";
 import Features from "../components/Features";
-import Expertise from "../components/Expertise";
 import CallToAction from "../components/CallToAction";
-import SuccessStories from "../components/SuccessStories";
 import CaseStudyFeedback from "../components/CaseStudy/CaseStudyFeedback";
+import Expertise from "../components/Expertise";
+import SuccessStories from "../components/SuccessStories";
 
 const Partners = () => {
   return (
