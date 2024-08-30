@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import { partnersAchievements } from "@/data/propsData";
 
-const Partners = () => {
+const Team = () => {
   return (
     <>
       <div>
@@ -24,4 +24,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default Team;
