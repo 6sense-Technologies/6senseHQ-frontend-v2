@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import { achievements, partnersAchievements } from "@/data/propsData";
+import { achievements, goalInfo, partnersAchievements } from "@/data/propsData";
 import OurStory from "../components/OurStory";
 import OurGoal from "../components/OurGoal";
 import Story from "../components/Story";
@@ -42,6 +42,8 @@ text-4xl md:text-5xl font-bold px-[17px]"
 
       <div>
         <OurGoal
+          imageSrc="/images/team/team2.png"
+          goalInfo={goalInfo}
           title={
             <h1
               className="font-plex-sans-thai text-primary 
