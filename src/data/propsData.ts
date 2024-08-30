@@ -661,3 +661,44 @@ export const feedbackProcess = [
     text: "Technology",
   },
 ];
+
+export const goalInfo = [
+  {
+    id: 1,
+    title: "Vision",
+    icon: "/images/team/vision.svg",
+    text: "6sense envisions a future where businesses use AI to transform their strategies, enabling precise targeting and sustainable growth through actionable insights.",
+  },
+  {
+    id: 2,
+    title: "Mission",
+    icon: "/images/team/mission.svg",
+    text: "6sense's mission is to empower businesses with AI-driven insights that accelerate revenue growth by helping them identify and engage the right accounts at the right time.",
+  },
+  {
+    id: 3,
+    title: "Goal",
+    icon: "/images/team/goal.svg",
+    text: "6sense's goal is to innovate continuously, refining their platform to meet evolving customer needs, ensuring they lead in AI-driven marketing technology.",
+  },
+];
+export const ourValues = [
+  {
+    id: 1,
+    title: "Top-Tier Talent Pool",
+    icon: "/images/verified.svg",
+    text: "Our proactive HR team consistently enriches our talent pool with exceptional engineers. By staying ahead of market trends and dynamics, we attract and retain the industry's best, ensuring that our team is always equipped to deliver outstanding results.",
+  },
+  {
+    id: 2,
+    title: "Training & Development",
+    icon: "/images/verified.svg",
+    text: "Through regular workshops and a well-structured internship program, we identify and nurture the most promising young talents in the industry. Our developers, even with just two years of experience, often outperform others with twice the experience, thanks to our focused training approach.",
+  },
+  {
+    id: 3,
+    title: "Precision in Project Execution",
+    icon: "/images/verified.svg",
+    text: "Our client-friendly development process, combined with robust DevOps practices, ensures that every project is executed with precision, efficiency, and innovation. This streamlined approach guarantees that we consistently meet and exceed client expectations.",
+  },
+];

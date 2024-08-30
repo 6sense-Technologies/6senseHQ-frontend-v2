@@ -5,9 +5,20 @@ import Image from "next/image";
 const OurGoal = ({
   title,
   paragraph,
+  goalInfo,
+  imageSrc,
+  pageName,
 }: {
   title: ReactNode;
   paragraph: string;
+  imageSrc: string;
+  pageName?: string;
+  goalInfo: {
+    id: number;
+    title: string;
+    icon?: string;
+    text: string;
+  }[];
 }) => {
   const text = (
     <>
@@ -17,28 +28,10 @@ const OurGoal = ({
     </>
   );
 
-  const goalInfo = [
-    {
-      id: 1,
-      title: "Vision",
-      icon: "/images/team/vision.svg",
-      text: "6sense envisions a future where businesses use AI to transform their strategies, enabling precise targeting and sustainable growth through actionable insights.",
-    },
-    {
-      id: 2,
-      title: "Mission",
-      icon: "/images/team/mission.svg",
-      text: "6sense's mission is to empower businesses with AI-driven insights that accelerate revenue growth by helping them identify and engage the right accounts at the right time.",
-    },
-    {
-      id: 3,
-      title: "Goal",
-      icon: "/images/team/goal.svg",
-      text: "6sense's goal is to innovate continuously, refining their platform to meet evolving customer needs, ensuring they lead in AI-driven marketing technology.",
-    },
-  ];
   return (
-    <div className="mt-12 bg-lightGray py-20">
+    <div
+      className={` py-20 ${pageName === "values" ? "" : " bg-lightGray mt-12"}`}
+    >
       <div className="px-4 text-center">
         <SectionTitle title={title} paragraph={text} />
       </div>
@@ -46,24 +39,23 @@ const OurGoal = ({
       <div className="px-4 md:px-0 my-10 max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center ">
           <div className="flex-1 flex-grow">
-            <Image
-              src={"/images/team/team2.png"}
-              alt="Team"
-              width={400}
-              height={400}
-            />
+            <Image src={imageSrc} alt="Team" width={400} height={400} />
           </div>
           <div className="flex-1 flex-grow">
             {goalInfo.map((goal) => (
-              <div className="flex space-y-4 gap-4" key={goal.id}>
-                <div>
-                  <Image
-                    className="mt-4"
-                    src={goal.icon}
-                    alt="Goal"
-                    width={80}
-                    height={80}
-                  />
+              <div className="flex gap-2 space-y-4" key={goal.id}>
+                <div className="flex-shrink-0">
+                  {goal.icon && (
+                    <div>
+                      <Image
+                        className={`${pageName === "values" ? "mt-5" : "mt-4"}`}
+                        src={goal.icon}
+                        alt="Goal"
+                        width={pageName === "values" ? 24 : 36}
+                        height={pageName === "values" ? 24 : 36}
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-1">

@@ -18,7 +18,7 @@ const LeaderShip = ({
   );
 
   return (
-    <div className="bg-hero my-12 py-20">
+    <div className="bg-hero py-20">
       <div className="px-4 text-center">
         <SectionTitle title={title} paragraph={text} />
       </div>

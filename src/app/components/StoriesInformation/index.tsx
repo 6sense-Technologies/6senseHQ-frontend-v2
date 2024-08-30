@@ -3,7 +3,7 @@ import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 
 const StoriesInformation = () => {
   return (
-    <div className="px-4 md:px-0 py-20">
+    <div className="my-20 px-4 md:px-0">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center">
         <div className="bg-hero max-w-[354px] h-[202px] w-full py-7 px-20">
           <h2 className="text-primary text-4xl text-center leading-snug">
