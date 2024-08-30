@@ -1,15 +1,20 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 const Button = ({
   text,
   className,
-  type,
+  icon,
 }: {
   text: string;
   className?: string;
-  type?: string;
+  icon?: ReactNode;
 }) => {
-  return <button className={`${className}`}>{text}</button>;
+  return (
+    <button className={`flex items-center justify-center gap-2 ${className}`}>
+      {text}
+      {icon}
+    </button>
+  );
 };
 
 export default Button;

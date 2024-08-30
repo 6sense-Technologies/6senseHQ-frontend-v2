@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "case-study-bg": "url('/images/case-studies/background.webp')",
+        "join-team": "url('/images/team/jointeam.png')",
       },
       colors: {
         hero: "#F8F4EC",
@@ -28,6 +29,7 @@ const config: Config = {
         lightGray4: "#676767",
         lightGray5: "#5E6B74",
         lightBorder: "#D4D4D4",
+        customSilver: "#D9D9D9",
       },
       fontFamily: {
         "plex-sans": ["IBM Plex Sans", "sans-serif"],
