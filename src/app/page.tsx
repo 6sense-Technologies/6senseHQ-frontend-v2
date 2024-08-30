@@ -28,7 +28,6 @@ import {
   ratingsInfo,
   statsInfo,
 } from "@/data/propsData";
-import { worksData } from "@/data/worksData";
 import { appsData } from "@/data/appsData";
 import BuyerGuide from "./components/BuyerGuide";
 import Mistakes from "./components/Mistakes";
@@ -79,7 +78,23 @@ export default function Home() {
         mistakes={mistakes}
       />
 
-      <Features features={featureItems} />
+      <Features
+        pageName="home"
+        features={featureItems}
+        title={
+          <h1
+            className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold px-[17px]"
+          >
+            Setting
+            <span className="text-secondary"> 6sense </span>
+            Apart From The Competition
+          </h1>
+        }
+        paragraph="We go above and beyond to ensure your satisfaction and success. Don’t
+        just take our word for it – check out our track record and see for
+        yourself why we stand out from the competition."
+      />
       <Impact impactStats={impactStats} />
       <Advantages
         pageName="home"

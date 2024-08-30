@@ -55,6 +55,34 @@ export const achievements = [
     contentEnd: "with Custom Software",
   },
 ];
+
+export const partnersAchievements = [
+  {
+    id: 1,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Leverage our expertise to offer",
+    contentHighlight: "Additional Services",
+    contentEnd: "to your clients",
+  },
+  {
+    id: 2,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Our highly skilled engineers can seamlessly",
+    contentHighlight: "Integrate with your team",
+    contentEnd: "",
+  },
+  {
+    id: 3,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "You keep the client relationship, while we provide",
+    contentHighlight: "The expertise",
+    contentEnd: "behind the scenes",
+  },
+];
+
 export const statsInfo = [
   {
     id: 1,
@@ -225,6 +253,60 @@ export const featureItems = [
     ],
     imageSrc: "/images/Satisfaction-Guaranteed.webp",
     imageAlt: "Satisfaction-Guaranteed",
+  },
+];
+
+export const featureItemsForPartnership = [
+  {
+    item: [
+      {
+        title: "Working as Your Company",
+        items: [
+          {
+            text: "Your Clients, Our Expertise: Our talented pool of developers will work directly with you and your clients, under your brand, ensuring a consistent and cohesive experience for your clients.",
+          },
+          {
+            text: "Seamless Integration: We have a proven software development process backed by SCRUM and other technical frameworks. Our team can easily align our process with yours, so you don’t need to change the way you work. We adapt to your workflows, making the collaboration as smooth as possible.",
+          },
+          {
+            text: "Behind-the-Scenes Support: Whether it’s white-label services or staff augmentation, we work discreetly behind the scenes to help you deliver high-quality software solutions without increasing your internal overhead.",
+          },
+        ],
+      },
+    ],
+    imageSrc: "/images/Transparency-Communication.webp",
+    imageAlt: "Transparency and Communication",
+  },
+  {
+    item: [
+      {
+        title: " Working as Our Company",
+        items: [
+          {
+            text: "Client Acquisition: You’ll focus on identifying opportunities and bringing clients to the table. Once the deal is closed, we take over the project management and execution, allowing you to focus on business development.",
+          },
+          {
+            text: "Full Service Delivery: We handle the entire client relationship from start to finish, providing top-notch service and delivering the software solutions that your clients need. You can trust us to represent your brand with professionalism and expertise.",
+          },
+          {
+            text: "Profitable Collaboration: This model allows you to earn commissions or referral fees while we manage the heavy lifting of project delivery, ensuring a mutually beneficial relationship.",
+          },
+        ],
+      },
+      {
+        title: "A Simple Model for a Profitable Relationship",
+        items: [
+          {
+            text: "No matter which partnership model you choose, our goal is to build a profitable and long-lasting relationship. We offer clear communication, transparent processes, and flexible terms to ensure that both parties thrive.",
+          },
+          {
+            text: "At 6sense Technologies, we believe in growing together—let’s create exceptional software solutions and success stories, side by side.",
+          },
+        ],
+      },
+    ],
+    imageSrc: "/images/Scalable-Team-Options.webp",
+    imageAlt: "Scalable-Team-Options",
   },
 ];
 

@@ -70,14 +70,15 @@ const Hero = ({
                 {achievements.map((item) => (
                   <div
                     key={item.id}
-                    className="flex items-start md:items-center gap-1 md:gap-2 font-helvetica"
+                    className="flex gap-1 md:gap-2 font-helvetica"
                   >
-                    <div className="mt-1 md:mt-0">
+                    <div>
                       <Image
                         src={item.image}
                         alt={item.alt}
-                        width={20}
-                        height={20}
+                        width={22}
+                        height={22}
+                        className="mt-[2px] w-[22px] h-[22px]"
                       />
                     </div>
                     <p>
