@@ -164,10 +164,10 @@ const Navbar = () => {
                 <Link href="/team" className="hover:opacity-60">
                   Team
                 </Link>
-                <Link href="/values" className="hover:opacity-60">
+                {/* <Link href="/values" className="hover:opacity-60">
                   Clients
-                </Link>
-                <Link href="/team" className="hover:opacity-60">
+                </Link> */}
+                <Link href="/partners" className="hover:opacity-60">
                   Partners
                 </Link>
               </div>
@@ -293,10 +293,10 @@ const Navbar = () => {
             <Link href="/team" className="hover:opacity-60">
               Team
             </Link>
-            <Link href="/values" className="hover:opacity-60">
+            {/* <Link href="/values" className="hover:opacity-60">
               Clients
-            </Link>
-            <Link href="/team" className="hover:opacity-60">
+            </Link> */}
+            <Link href="/partners" className="hover:opacity-60">
               Partners
             </Link>
           </div>

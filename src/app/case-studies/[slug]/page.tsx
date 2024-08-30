@@ -31,7 +31,9 @@ const CaseStudyDetail = () => {
   const { data: caseStudyDetail, isFetching: caseStudyLoading } = useQuery({
     queryKey: ["getCaseStudyDetails", slug],
     queryFn: async () => {
-      const res = await axios.get(`https://sixsense-z2fk.onrender.com/${slug}`);
+      const res = await axios.get(
+        `https://6sense-backend-v2.vercel.app/case-studies/${slug}`
+      );
       return res.data;
     },
     refetchOnWindowFocus: false,

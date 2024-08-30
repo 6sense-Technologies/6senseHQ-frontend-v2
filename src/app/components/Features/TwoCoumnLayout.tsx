@@ -14,9 +14,11 @@ type FeaturesProps = {
   imageSrc: string;
   imageAlt: string;
   imageOnLeft?: boolean;
+  pageName: string;
 };
 
 const TwoColumnLayout = ({
+  pageName,
   features,
   imageSrc,
   imageAlt,
@@ -37,7 +39,11 @@ const TwoColumnLayout = ({
             <div className="mt-4 space-y-4">
               {items.map(({ text }, idx) => (
                 <div key={idx} className="flex items-start gap-2">
-                  <img src="/images/verified.webp" alt="Verified" />
+                  <img
+                    className="mt-[2px]"
+                    src="/images/verified.webp"
+                    alt="Verified"
+                  />
                   <p className="font-helvetica text-justify">{text}</p>
                 </div>
               ))}

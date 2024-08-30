@@ -1,1 +1,1 @@
-export const SIXSENSE_BACKEND = "https://sixsense-z2fk.onrender.com";
+export const SIXSENSE_BACKEND = "https://6sense-backend-v2.vercel.app";

@@ -6,6 +6,7 @@ import GridSkeleton from "../GridSkeleton";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { SIXSENSE_BACKEND } from "@/constants";
+import Image from "next/image";
 
 type Props = {
   subtitle: string;
@@ -106,17 +107,21 @@ const Works = ({ subtitle, pageName }: Props) => {
                 <Link href={`/case-studies/${work.slug}`} key={work.id}>
                   <div className="bg-white w-[362px] h-auto shadow-md">
                     <div className="h-[460px]">
-                      <img
+                      <Image
                         src={`${SIXSENSE_BACKEND}${work.imageSrc}`}
                         className="w-full"
                         alt={work.appName}
+                        width={362}
+                        height={460}
                       />
                     </div>
                     <div className="h-[90px] p-5">
-                      <img
-                        src={`${SIXSENSE_BACKEND}${work.logo}`}
-                        alt={work.name}
-                      />
+                      <div className="h-[26px]">
+                        <img
+                          src={`${SIXSENSE_BACKEND}${work.logo}`}
+                          alt={work.name}
+                        />
+                      </div>
                       <h3 className="text-primary font-semibold">
                         {work.appName}
                       </h3>
