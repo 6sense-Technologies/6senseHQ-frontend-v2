@@ -22,7 +22,7 @@ text-4xl md:text-5xl font-bold"
             </h1>
             <div>
               <Link
-                href={"https://meet.brevo.com/6sense-technologies"}
+                href={"https://6sensehq.freshteam.com/jobs/"}
                 target="_blank"
               >
                 <Button
