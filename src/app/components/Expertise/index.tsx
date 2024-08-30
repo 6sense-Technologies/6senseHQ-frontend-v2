@@ -183,8 +183,8 @@ const Expertise = ({ title }: { title: ReactNode }) => {
       <div className="px-4 my-20 max-w-7xl mx-auto flex justify-center items-center">
         <div className="grid sm:grid-cols-4 gap-x-10 gap-y-4">
           {ourServices.map((service) => (
-            <Link href={`${service.src}`}>
-              <div key={service.id} className="flex gap-2">
+            <Link key={service.id} href={`${service.src}`}>
+              <div className="flex gap-2">
                 <img
                   className="w-[22px] h-[22px]"
                   src={service.icon}
