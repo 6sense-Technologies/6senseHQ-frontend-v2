@@ -60,23 +60,23 @@ export default function Home() {
       <Services ourServices={ourServices} />
       <KeyFactors keyfactorIcons={keyFactorIcons} />
       <Technology image="/images/technologies.png" alt="Technology" />
-      <BuyerGuide
+      {/* <BuyerGuide
         coloredPartTitle="Buyers Guide"
         regularTitle="for Developing Custom Software"
         imageSrc="/images/buyersguide.png"
         icon="/images/tick.svg"
         alt="Tick"
         guides={buyerGuides}
-      />
+      /> */}
 
-      <Mistakes
+      {/* <Mistakes
         coloredPartTitle="10 Mistakes"
         regularTitle=" You Should Avoid While Developing Custom Software"
         icon="/images/tick.svg"
         alt="Icon"
         imageSrc="/images/10mistakes.png"
         mistakes={mistakes}
-      />
+      /> */}
 
       <Features
         pageName="home"
@@ -127,11 +127,10 @@ text-4xl md:text-5xl font-bold"
       />
 
       <Feedback
-        paragraph="I find it comforting that they follow the schedule they
-                  provided me with. It establishes trust between us."
+        paragraph="The solution 6sense Technologies came up with to the problem was truly innovative and first in class. Their strong technical skills and speed of development are super impressive."
         logo="/images/impromek.svg"
         name="Gabriel Sotomayor"
-        designation="CEO, Impromek Ltd."
+        designation="CEO, Impromek Inc."
         ourProcess={ourProcess}
         bgColor="bg-slate-50"
       />

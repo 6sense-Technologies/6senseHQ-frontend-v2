@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import Feedback from "../Feedback";
+import { feedbackProcess } from "@/data/propsData";
 
 type Props = {
   keyfactorIcons: {
@@ -13,37 +14,6 @@ type Props = {
 };
 
 const KeyFactors = ({ keyfactorIcons }: Props) => {
-  const process = [
-    {
-      id: 1,
-      icon: "/images/industry.svg",
-      alt: "Construction",
-      title: "Construction",
-      text: "Industry",
-    },
-    {
-      id: 2,
-      icon: "/images/duration.svg",
-      alt: "Duration",
-      title: "16 months",
-      text: "Duration",
-    },
-    {
-      id: 3,
-      icon: "/images/team.svg",
-      alt: "Engineers",
-      title: "8 Engineers",
-      text: "Team Size",
-    },
-    {
-      id: 4,
-      icon: "/images/industry.svg",
-      alt: "Technology",
-      title: "Node JS, React Js",
-      text: "Technology",
-    },
-  ];
-
   const title = (
     <>
       <h1
@@ -87,7 +57,7 @@ text-4xl md:text-5xl font-bold"
           logo="/images/itcan1.png"
           name="AL"
           designation="CEO, Itcan Inc."
-          ourProcess={process}
+          ourProcess={feedbackProcess}
           hasShadow={true}
         />
       </div>
