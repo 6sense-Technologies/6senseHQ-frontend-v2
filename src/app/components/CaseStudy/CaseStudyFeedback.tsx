@@ -27,19 +27,11 @@ const CaseStudyFeedback = ({
         </div>
 
         <div className="w-full flex justify-center items-center">
-          {clientImage ? (
-            <img
-              className="w-[150px] md:w-[220px] h-auto"
-              src={clientImage}
-              alt="Client Feedback"
-            />
-          ) : (
-            <img
-              className="w-[150px] md:w-[220px] h-auto"
-              src="/images/case-studies/man.png"
-              alt="Client Feedback"
-            />
-          )}
+          <img
+            className="w-[150px] md:w-[220px] h-auto"
+            src={clientImage}
+            alt="Client Feedback"
+          />
         </div>
       </div>
     </div>

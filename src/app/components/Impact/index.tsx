@@ -30,7 +30,7 @@ const Impact = ({ impactStats }: Props) => {
 
   return (
     <div className="bg-lightGray">
-      <div className="py-14">
+      <div className="py-16">
         <div className="text-center">
           <SectionTitle title={title} paragraph={paragraph} />
         </div>

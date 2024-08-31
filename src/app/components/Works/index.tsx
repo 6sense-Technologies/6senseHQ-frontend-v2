@@ -100,13 +100,13 @@ const Works = ({ subtitle, pageName }: Props) => {
           <div
             className={`${
               pageName === "home" ? "mt-6" : "mt-6 md:mt-8"
-            } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
+            } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
           >
             {data?.pages.map((page) =>
               page.data.projects.map((work: any) => (
                 <Link href={`/case-studies/${work.slug}`} key={work.id}>
-                  <div className="bg-white w-[362px] h-auto shadow-md">
-                    <div className="h-[460px]">
+                  <div className="bg-white w-[304px] md:w-[362px] h-auto shadow-md">
+                    <div className="md:h-[460px]">
                       <Image
                         src={`${SIXSENSE_BACKEND}${work.imageSrc}`}
                         className="w-full"
@@ -115,7 +115,7 @@ const Works = ({ subtitle, pageName }: Props) => {
                         height={460}
                       />
                     </div>
-                    <div className="h-[90px] p-5">
+                    <div className="md:h-[90px] p-5">
                       <div className="h-[26px]">
                         <img
                           src={`${SIXSENSE_BACKEND}${work.logo}`}

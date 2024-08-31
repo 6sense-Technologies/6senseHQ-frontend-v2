@@ -32,7 +32,7 @@ const Features = ({ features, title, paragraph, pageName }: Features) => {
   );
 
   return (
-    <div className="my-6 md:my-12">
+    <div className="mt-12">
       <div className="px-4 text-center">
         <SectionTitle title={title} paragraph={text} />
       </div>
