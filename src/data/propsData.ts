@@ -24,7 +24,7 @@ export const ourProcess = [
     id: 4,
     icon: "/images/industry.svg",
     alt: "Technology",
-    title: "Node JS, React Js",
+    title: "NestJS, NextJS, MongoDB",
     text: "Technology",
   },
 ];
@@ -657,7 +657,7 @@ export const feedbackProcess = [
     id: 4,
     icon: "/images/industry.svg",
     alt: "Technology",
-    title: "Node JS, React Js",
+    title: "NestJS, NextJS, MongoDB",
     text: "Technology",
   },
 ];

@@ -27,7 +27,7 @@ const CallToAction = ({
       } relative overflow-hidden`}
     >
       <div className="py-16">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-around gap-7 px-10 md:px-0 ">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-around gap-7 px-4 md:px-0 ">
           <div className="space-y-2">
             <h1 className="px-10 md:px-0 capitalize font-plex-sans-thai text-4xl md:text-5xl font-bold text-center md:text-left">
               <span className="text-primary">{regularTitle}</span>{" "}

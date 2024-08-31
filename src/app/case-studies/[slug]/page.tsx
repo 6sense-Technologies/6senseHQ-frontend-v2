@@ -41,8 +41,9 @@ const CaseStudyDetail = () => {
   });
 
   const caseStudyInformation = caseStudyDetail?.data?.details;
+  const clientFeedback = caseStudyInformation?.clientFeedback;
 
-  console.log(caseStudyInformation);
+  console.log(clientFeedback);
 
   return (
     <div>
@@ -106,16 +107,21 @@ const CaseStudyDetail = () => {
             />
           </div>
 
-          <div>
-            <CaseStudyFeedback
-              feedback={`"Engineering is not a solo endeavor, you’re always dependent on
-            other people around you. It’s important to have people who buy into
-            the need for high collaboration and flexibility, knowing things will
-            change. The 6sense team fit really well into that, allowing us to
-            navigate some pretty difficult challenges."`}
-              nameWithDesignation="Daniel Brown, VP of Engineering at Itcan"
-            />
-          </div>
+          {clientFeedback &&
+            clientFeedback?.feedback &&
+            clientFeedback?.clientNameAndDesignation && (
+              <div>
+                <CaseStudyFeedback
+                  clientImage={
+                    clientFeedback?.clientImage
+                      ? clientFeedback?.clientImage
+                      : "/images/case-studies/man.png"
+                  }
+                  feedback={`"${clientFeedback?.feedback}"`}
+                  nameWithDesignation={clientFeedback?.clientNameAndDesignation}
+                />
+              </div>
+            )}
 
           <div>
             <RelatedCases title="Related cases" worksInfo={worksData} />

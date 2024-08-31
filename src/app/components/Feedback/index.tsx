@@ -75,7 +75,7 @@ const Feedback = ({
                       <div className="mb-4">
                         <img src={item.icon} alt={item.alt} />
                       </div>
-                      <h3 className="font-bold">{item.title}</h3>
+                      <h3 className="font-bold text-nowrap">{item.title}</h3>
                       <p>{item.text}</p>
                     </div>
                   ))}
