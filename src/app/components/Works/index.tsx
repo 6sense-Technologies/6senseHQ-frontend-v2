@@ -110,7 +110,7 @@ const Works = ({ subtitle, pageName }: Props) => {
                       <Image
                         src={`${SIXSENSE_BACKEND}${work.imageSrc}`}
                         className="w-full"
-                        alt={work.appName}
+                        alt={work.slug}
                         width={362}
                         height={460}
                       />
@@ -119,7 +119,7 @@ const Works = ({ subtitle, pageName }: Props) => {
                       <div className="h-[26px]">
                         <img
                           src={`${SIXSENSE_BACKEND}${work.logo}`}
-                          alt={work.name}
+                          alt={work.appName}
                         />
                       </div>
                       <h3 className="text-primary font-semibold">
