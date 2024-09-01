@@ -22,7 +22,7 @@ const Partners = () => {
           breakBetweenTitle={true}
           subtitle="Your Gateway to Top Talent and Expertise"
           achievements={partnersAchievements}
-          imageSrc="/images/6sense.png"
+          imageSrc="/images/6sensehero.png"
           imageWidth={640}
           imageHeight={427}
           imageAlt="6sense Team"
