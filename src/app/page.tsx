@@ -43,7 +43,7 @@ export default function Home() {
         subtitle="By An Award Winning Agency"
         achievements={achievements}
         statsInfo={statsInfo}
-        imageSrc="/images/6sense.png"
+        imageSrc="/images/6sensehero.png"
         imageWidth={640}
         imageHeight={427}
         imageAlt="6sense Team"
