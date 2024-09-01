@@ -74,6 +74,7 @@ const Hero = ({
                   >
                     <div className="flex-shrink-0">
                       <Image
+                        loading="eager"
                         src={item.image}
                         alt={item.alt}
                         width={22}
