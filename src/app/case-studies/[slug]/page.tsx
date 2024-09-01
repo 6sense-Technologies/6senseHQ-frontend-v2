@@ -11,15 +11,6 @@ import Result from "@/app/components/CaseStudy/Result";
 import Solution from "@/app/components/CaseStudy/Solution";
 import HeroSkeleton from "@/app/components/HeroSkeleton";
 import { SIXSENSE_BACKEND } from "@/constants";
-import {
-  aboutProjectInfo,
-  heroInfoItems,
-  keyPoints1,
-  keyPoints2,
-  overviewParagraphs,
-  resultPoints,
-  solutionPoints,
-} from "@/data/propsData";
 import { worksData } from "@/data/worksData";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
@@ -42,8 +33,6 @@ const CaseStudyDetail = () => {
 
   const caseStudyInformation = caseStudyDetail?.data?.details;
   const clientFeedback = caseStudyInformation?.clientFeedback;
-
-  console.log(clientFeedback);
 
   return (
     <div>

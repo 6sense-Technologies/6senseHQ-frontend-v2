@@ -55,6 +55,58 @@ export const achievements = [
     contentEnd: "with Custom Software",
   },
 ];
+export const tesingAchievements = [
+  {
+    id: 1,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Ensuring Quality Across",
+    contentHighlight: "Web and Mobile",
+    contentEnd: "Platforms",
+  },
+  {
+    id: 2,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Expertise in",
+    contentHighlight: "Automated Testing",
+    contentEnd: "with Selenium and Playwright",
+  },
+  {
+    id: 3,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Comprehensive",
+    contentHighlight: "API Testing and Performance",
+    contentEnd: "Assurance",
+  },
+];
+export const managementAchievements = [
+  {
+    id: 1,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Delivering ",
+    contentHighlight: "Projects",
+    contentEnd: "on Time",
+  },
+  {
+    id: 2,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Within",
+    contentHighlight: "Budget",
+    contentEnd: "",
+  },
+  {
+    id: 3,
+    image: "/images/pointIcon.svg",
+    alt: "icon",
+    contentStart: "Beyond ",
+    contentHighlight: "Expectations",
+    contentEnd: "",
+  },
+];
 
 export const partnersAchievements = [
   {
@@ -568,6 +620,58 @@ export const webApplicationFeatures = [
       "Leverage the up-to-dateness of our technical skills, high-quality coding practices and expertise in making architectural decisions related to app development.",
   },
 ];
+export const testingFeatures = [
+  {
+    id: 1,
+    count: "6+",
+    featureType: "Years Of Testing Experience",
+    title: "High Quality",
+    paragraph:
+      "Proven track record of delivering high-quality testing services across multiple industries and technologies.",
+  },
+  {
+    id: 2,
+    count: "50+",
+    featureType: "Successful Projects",
+    title: "Extensive Expertise",
+    paragraph:
+      "Our extensive portfolio includes projects across various domains, ensuring that we bring experience and expertise to every engagement.",
+  },
+  {
+    id: 3,
+    count: "100%",
+    featureType: "Client Satisfaction",
+    title: "Bug Free Software",
+    paragraph:
+      "We pride ourselves on our commitment to quality and client satisfaction, ensuring that your software is bug-free and ready for the market",
+  },
+];
+export const managementFeatures = [
+  {
+    id: 1,
+    count: "8+",
+    featureType: "Years of Project Management Experience",
+    title: "On Time, On Budget",
+    paragraph:
+      "With over a decade of experience in managing complex software projects, we ensure your projects are delivered on time and within budget.",
+  },
+  {
+    id: 2,
+    count: "50+",
+    featureType: "Successful Projects",
+    title: "Extensive Expertise",
+    paragraph:
+      "Our team has successfully managed and delivered over 50 software projects across various industries, ensuring client satisfaction and project success.",
+  },
+  {
+    id: 3,
+    count: "100%",
+    featureType: "Client Satisfaction",
+    title: "Efficient Management",
+    paragraph:
+      "We prioritize client satisfaction by providing transparent communication, efficient resource management, and risk mitigation strategies.",
+  },
+];
 
 export const servicesKeyFeatures = [
   {
@@ -607,6 +711,101 @@ export const servicesKeyFeatures = [
       "Andersen ensures business continuity and risk management of your software by integrating testing and auditing into the Software Solution Development lifecycle.",
   },
 ];
+export const testingServicesKeyFeatures = [
+  {
+    id: 1,
+    title: "Software Testing Services",
+    paragraph:
+      "Ensure that your web and mobile applications work flawlessly across all devices. Our comprehensive functional testing services make sure that every feature of your application functions as intended, providing a seamless user experience.",
+    features: ["Web Application Testing", "Mobile Application Testing"],
+  },
+  {
+    id: 2,
+    title: "Performance Testing",
+    paragraph:
+      "Our performance testing services ensure your software remains stable and responsive, no matter the conditions. We evaluate how your application handles varying loads to ensure it performs optimally.",
+    features: ["Load Testing", "Stress Testing", "Endurance Testing"],
+  },
+  {
+    id: 3,
+    title: "Automated Testing",
+    paragraph:
+      "Leverage the power of automation to streamline your testing process. We use cutting-edge tools like Selenium and Playwright to automate repetitive testing tasks, ensuring continuous quality without manual intervention.",
+    features: ["Selenium Automation", "Playwright Automation"],
+  },
+  {
+    id: 4,
+    title: "API Testing",
+    paragraph:
+      "Our API testing services verify the reliability and performance of your APIs, ensuring they are robust, secure, and function as expected under various scenarios.",
+    features: ["Manual API Testing", "Automated API Testing"],
+  },
+  {
+    id: 5,
+    title: "Comprehensive Test Case Writing",
+    paragraph:
+      "We create comprehensive test cases that cover all aspects of your application, ensuring that every feature and function is thoroughly tested.",
+    features: ["Structured Test Cases", "Comprehensive Coverage"],
+  },
+  {
+    id: 6,
+    title: "Agile and Collaborative Testing Process",
+    paragraph:
+      "Our testing process is driven by Agile methodologies, ensuring regular updates, clear communication, and continuous improvement.",
+    features: ["SCRUM Practices", "Collaborative Workflow"],
+  },
+];
+export const managementServicesKeyFeatures = [
+  {
+    id: 1,
+    title: "End-to-End Project Management",
+    paragraph:
+      "Our comprehensive project management services cover the entire lifecycle of your software project, from initial planning to final delivery. We ensure that every phase is executed with precision, keeping your project on track and within scope.",
+    features: [
+      "Project Planning",
+      "Execution and Monitoring",
+      "Final Delivery",
+    ],
+  },
+  {
+    id: 2,
+    title: "Agile Project Management",
+    paragraph:
+      "We specialize in Agile project management, ensuring that your project remains flexible and responsive to change. Our Agile approach allows us to adapt quickly to new requirements, ensuring that your project evolves with your business needs.",
+    features: ["SCRUM Framework", "Continuous Improvement"],
+  },
+  {
+    id: 3,
+    title: "Risk Management",
+    paragraph:
+      "Risk management is a critical component of our project management services. We identify potential risks early in the project lifecycle and develop strategies to mitigate them, ensuring that your project stays on course.",
+    features: ["Risk Identification", "Mitigation Strategies"],
+  },
+  {
+    id: 4,
+    title: "Resource Management",
+    paragraph:
+      "Our resource management services ensure that your project has the right people and tools at the right time. We optimize resource allocation to ensure efficiency and avoid bottlenecks, keeping your project on schedule.",
+    features: ["Resource Allocation", "Team Coordination"],
+  },
+  {
+    id: 5,
+    title: "Transparent Communication and Reporting",
+    paragraph:
+      "We prioritize transparent communication and detailed reporting, keeping you informed every step of the way. Our project managers provide regular updates and reports, ensuring you have full visibility into the status of your project.",
+    features: ["Regular Updates", "Detailed Reporting"],
+  },
+  {
+    id: 6,
+    title: "Collaborative Tools and Processes",
+    paragraph:
+      "We leverage advanced project management tools and collaborative processes to ensure seamless communication and coordination throughout the project. Our tools help keep everyone on the same page, from your internal team to our project managers.",
+    features: [
+      "Project Management Tools like Jira",
+      "Centralized Communication",
+    ],
+  },
+];
 
 export const uiDesignAccordions = [
   {
@@ -628,6 +827,65 @@ export const uiDesignAccordions = [
     title: "Graphic Design Services",
     content:
       "By designing software that fits the specific workflow and processes of the client, we can help streamline data entry and organization, making it easier to access and use. In addition, our custom software can be designed with robust security measures in place to protect sensitive data and prevent unauthorized access.",
+  },
+];
+export const testingAccordions = [
+  {
+    title: "Comprehensive SRS and Test Case Writing",
+    content:
+      "We start with a comprehensive Software Requirement Specification (SRS) document, ensuring all functional and non-functional requirements are well defined. Our test case writing follows a precise syntax and criteria, ensuring clarity and consistency across all testing stages.",
+  },
+  {
+    title: "Efficient Bug Reporting and Management",
+    content:
+      "We have a well-defined bug reporting process with clear criteria for categorizing and prioritizing issues. Bugs are tracked meticulously, and feedback is incorporated quickly to ensure the highest quality standards.",
+  },
+  {
+    title: "Agile Methodology with SCRUM",
+    content:
+      "We hold daily SCRUM meetings to keep our clients updated on the testing progress and to address any issues in real time. Each sprint is carefully planned and executed, with thorough review and retrospectives to improve efficiency and outcomes continuously.",
+  },
+  {
+    title: "Collaborative Workflow",
+    content:
+      "We utilize GitHub discussions for all scope and testing-related communications. This centralized approach keeps all conversations, documents, and decisions in one place, making collaboration easy and ensuring nothing falls through the cracks.",
+  },
+  {
+    title: "Client-Centric Approach",
+    content:
+      "We maintain clear and regular communication with our clients, ensuring that they are always informed and involved in the testing process.",
+  },
+];
+export const managementAccordions = [
+  {
+    title: "Comprehensive Project Planning and Requirement Analysis",
+    content:
+      "We begin with a thorough analysis of your project requirements, creating a detailed Project Requirements Document (PRD). This ensures that all functional and non-functional requirements are clearly defined and aligned with your business goals. Our planning phase includes setting realistic milestones, timelines, and deliverables, which form the foundation for successful project execution.",
+  },
+  {
+    title: "Rigorous Risk Management and Mitigation",
+    content:
+      "Risk management is integral to our project management approach. We identify potential risks early in the project lifecycle and develop strategies to mitigate them. Our well-defined risk management process includes regular assessments, prioritization of risks, and swift action to address any issues, ensuring that your project stays on track.",
+  },
+  {
+    title: "Agile Methodology with SCRUM",
+    content:
+      "We implement Agile methodologies, particularly SCRUM, to ensure flexibility and adaptability throughout the project. Our daily SCRUM meetings keep the team aligned and allow us to address any challenges in real time. Each sprint is meticulously planned, executed, and reviewed, with retrospectives driving continuous improvement and efficiency.",
+  },
+  {
+    title: "Efficient Resource Management",
+    content:
+      "Our resource management process ensures that the right people and tools are allocated to each task at the right time. We carefully monitor resource utilization, adjust allocations as needed, and ensure that all team members are working efficiently towards the project goals. This approach helps us avoid bottlenecks and maintain productivity throughout the project lifecycle.",
+  },
+  {
+    title: "Transparent Communication and Reporting",
+    content:
+      "We prioritize clear, consistent communication with all stakeholders. Our project managers provide regular updates and detailed reports, ensuring that you are always informed of the project’s status. We use advanced project management tools to centralize all communications, making it easy to track progress, decisions, and changes in one place.",
+  },
+  {
+    title: "Client-Centric Collaboration",
+    content:
+      "We believe that successful project management is built on strong collaboration with our clients. We maintain open lines of communication, involve you in key decisions, and ensure that your feedback is incorporated throughout the project. Our goal is to deliver a final product that meets your expectations and drives your business forward.",
   },
 ];
 

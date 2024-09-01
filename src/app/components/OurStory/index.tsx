@@ -21,7 +21,7 @@ const OurStory = ({
     { id: 1, count: "7", text: "Years in Business" },
     { id: 2, count: "50+", text: "SUCCESSFULL PROJECTS" },
     { id: 2, count: "120+", text: "Our satisfied customers" },
-    { id: 2, count: "1.2M", text: "SOCIAL FLOWERS" },
+    // { id: 2, count: "1.2M", text: "SOCIAL FLOWERS" },
   ];
   return (
     <div className="my-12">
@@ -30,7 +30,7 @@ const OurStory = ({
       </div>
 
       <div className="px-4 md:px-0 my-10 max-w-6xl mx-auto">
-        <div className="grid grid-cosl-1 md:grid-cols-4 place-items-center gap-y-10 md:gap-x-10">
+        <div className="grid grid-cosl-1 md:grid-cols-3 place-items-center gap-y-10 md:gap-x-10">
           {storyInNumbersInfo.map((info) => (
             <div key={info.id} className="flex items-center gap-4">
               <h2 className="font-plex-sans-thai text-[64px] font-light text-primary">
