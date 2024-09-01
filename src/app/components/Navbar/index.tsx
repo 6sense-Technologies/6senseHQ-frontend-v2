@@ -151,7 +151,7 @@ const Navbar = () => {
           <div className="group relative lg:py-2">
             <Link
               className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
-              href={"/about-us"}
+              href={"#"}
             >
               About Us <CaretDown size={16} weight="bold" />
             </Link>
@@ -282,7 +282,7 @@ const Navbar = () => {
           </div> */}
 
           {/* Parent */}
-          <Link href="/about-us" className="font-semibold hover:opacity-60">
+          <Link href="#" className="font-semibold hover:opacity-60">
             About Us
           </Link>
           {/* submenus */}
