@@ -8,6 +8,7 @@ type Props = {
     id: number;
     title: string;
     paragraph: string;
+    features?: string[];
   }[];
 };
 
@@ -29,6 +30,27 @@ const SectionKeyFeatures = ({ servicesKeyFeatures, title }: Props) => {
                 {feature.title}
               </h2>
               <p className="text-textSecondary pt-3">{feature.paragraph}</p>
+              {feature.features && (
+                <div className="mt-2">
+                  {feature.features.map((ft, index) => (
+                    <ul key={index} className="flex items-center gap-1">
+                      <div className="flex-shrink-0">
+                        <div>
+                          <Image
+                            src="/images/verified.svg"
+                            alt="Icon"
+                            width={20}
+                            height={20}
+                          />
+                        </div>
+                      </div>
+                      <li className="text-textSecondary font-plex-sans-thai">
+                        {ft}
+                      </li>
+                    </ul>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

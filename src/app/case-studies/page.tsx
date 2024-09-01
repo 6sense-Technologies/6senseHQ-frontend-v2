@@ -3,12 +3,9 @@ import Hero from "../components/Hero";
 import { achievements, organizations } from "@/data/propsData";
 import Companies from "../components/Companies";
 import Works from "../components/Works";
-import { worksData } from "@/data/worksData";
 import { appsData } from "@/data/appsData";
 import MobileApps from "../components/MobileApps";
 import CallToAction from "../components/CallToAction";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 
 const CaseStudies = () => {
   return (
@@ -17,7 +14,7 @@ const CaseStudies = () => {
         titlePrimary="Our"
         titleSecondary=" Portfolio"
         achievements={achievements}
-        imageSrc="/images/case-studies/caseStudyHero.webp"
+        imageSrc="/images/team/team5.png"
         imageAlt="Case Study"
         imageWidth={448}
         imageHeight={300}

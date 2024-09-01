@@ -15,8 +15,6 @@ const Result = ({
   resultPoints1,
   resultPoints2,
 }: Props) => {
-  console.log(resultPoints2);
-
   return (
     <div className="max-w-7xl mx-auto py-14">
       <div className="max-w-3xl mx-auto">

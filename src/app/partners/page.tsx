@@ -93,6 +93,7 @@ text-4xl md:text-5xl font-bold px-[17px]"
       {/* Client Feedback */}
       <div>
         <CaseStudyFeedback
+          clientImage="/images/case-studies/man.png"
           feedback={`“Partnering with 6sense Technologies has allowed us to offer much more than just resource placement. Their ability to provide not only skilled developers but also in-depth technical consultancy and process oriented approach has made a real difference for our clients, especially startups looking to scale quickly and effectively.”`}
           nameWithDesignation="VP of Sales, 6pm Global"
         />
