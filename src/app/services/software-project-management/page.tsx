@@ -9,6 +9,10 @@ import {
   achievements,
   advantagesAccordionInfo,
   feedbackProcess,
+  managementAccordions,
+  managementAchievements,
+  managementFeatures,
+  managementServicesKeyFeatures,
   servicesFeatures,
   servicesKeyFeatures,
   uiDesignAccordions,
@@ -21,15 +25,15 @@ const SoftwareProjectManagement = () => {
     <>
       <div>
         <Hero
-          achievements={achievements}
+          achievements={managementAchievements}
           pageName="ui-design"
           imageSrc="/images/services/development/mobileApplication.png"
-          imageAlt="UI Design"
+          imageAlt="Sotware Project Management"
           imageWidth={640}
           imageHeight={427}
           justify="between"
-          titlePrimary="Premier Custom"
-          titleSecondary=" Software Development Services"
+          titlePrimary="Expert Software "
+          titleSecondary=" Project Management Services"
           breakBetweenTitle={true}
         />
       </div>
@@ -41,14 +45,14 @@ const SoftwareProjectManagement = () => {
               className="max-w-5xl mx-auto font-plex-sans-thai text-primary 
 text-4xl md:text-5xl font-bold capitalize leading-tight"
             >
+              Expert{" "}
               <span className="text-secondary leading-tight">
-                {" "}
-                Expert custom software
-              </span>{" "}
-              development services bring your idea to life.
+                Software Testing{" "}
+              </span>
+              Services to Ensure Quality at Every Stage
             </h1>
           }
-          features={webApplicationFeatures}
+          features={managementFeatures}
         />
       </div>
 
@@ -59,11 +63,12 @@ text-4xl md:text-5xl font-bold capitalize leading-tight"
               className="font-plex-sans-thai text-primary 
 text-4xl md:text-5xl font-bold capitalize"
             >
-              <span className="text-secondary"> Custom Software </span>
-              Development Services
+              Software
+              <span className="text-secondary"> Project Management </span>
+              Services
             </h1>
           }
-          servicesKeyFeatures={servicesKeyFeatures}
+          servicesKeyFeatures={managementServicesKeyFeatures}
         />
       </div>
 
@@ -87,12 +92,13 @@ text-4xl md:text-5xl font-bold capitalize"
               className="font-plex-sans-thai text-primary 
 text-4xl md:text-5xl font-bold"
             >
-              <span className="text-secondary">Benefits </span>
-              of 6sense Managed Delivery
+              Our
+              <span className="text-secondary"> Proven </span>
+              Process
             </h1>
           }
-          paragraph="6sense Managed Delivery framework will put your business in the right position to benefit from a range of important and far-reaching advantages."
-          accordionItems={uiDesignAccordions}
+          paragraph="The success of our project management services is driven by our disciplined, process-oriented approach, ensuring that every project is executed with precision and excellence."
+          accordionItems={managementAccordions}
           imageSrc="/images/services/ui-design/uiuxAdvantage.png"
           alt="Benifit of Choosing"
         />

@@ -48,7 +48,7 @@ const Hero = ({
     <div className="bg-hero">
       <div
         className={`max-w-7xl mx-auto ${
-          pageName === "home" ? "py-16" : "py-28"
+          pageName === "home" ? "py-16" : "py-16 md:py-28"
         } px-5 md:px-0 ${classNames}`}
       >
         <div
@@ -72,14 +72,14 @@ const Hero = ({
                     key={item.id}
                     className="flex gap-1 md:gap-2 font-helvetica"
                   >
-                    <div>
+                    <div className="flex-shrink-0">
                       <Image
                         src={item.image}
                         alt={item.alt}
                         width={22}
                         height={22}
-                        className={`w-[22px] h-[22px] ${
-                          pageName === "home" ? "" : "mt-[2px]"
+                        className={` w-[22px] h-[22px] flex-shrink-0 ${
+                          pageName === "home" ? "" : ""
                         }`}
                       />
                     </div>

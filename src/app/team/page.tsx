@@ -16,7 +16,7 @@ const Team = () => {
           titlePrimary="About"
           titleSecondary=" Us"
           achievements={achievements}
-          imageSrc="/images/team/team.png"
+          imageSrc="/images/team/team4.png"
           imageWidth={640}
           imageHeight={427}
           imageAlt="6sense Team"
@@ -57,7 +57,7 @@ text-4xl md:text-5xl font-bold px-[17px]"
         />
       </div>
 
-      <div>
+      {/* <div>
         <Story
           title={
             <h1
@@ -69,13 +69,13 @@ text-4xl md:text-5xl font-bold px-[17px]"
             </h1>
           }
         />
-      </div>
+      </div> */}
 
       <div>
         <StoriesInformation />
       </div>
 
-      <div>
+      {/* <div>
         <LeaderShip
           title={
             <h1
@@ -89,7 +89,7 @@ text-4xl md:text-5xl font-bold px-[17px]"
           }
           paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"
         />
-      </div>
+      </div> */}
 
       <div>
         <JoinTeam />

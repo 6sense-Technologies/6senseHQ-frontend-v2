@@ -1,8 +1,9 @@
 import React from "react";
 import Hero from "../components/Hero";
 import { achievements, goalInfo, ourValues } from "@/data/propsData";
-import OurGoal from "../components/OurGoal";
+import WhatWeValue from "../components/OurGoal";
 import CallToAction from "../components/CallToAction";
+import OurGoal from "../components/OurGoal";
 
 const Values = () => {
   return (
@@ -25,6 +26,24 @@ const Values = () => {
         <OurGoal
           pageName="values"
           imageSrc="/images/team/team2.png"
+          goalInfo={goalInfo}
+          title={
+            <h1
+              className="font-plex-sans-thai text-primary 
+text-4xl md:text-5xl font-bold px-[17px]"
+            >
+              Our
+              <span className="text-secondary"> Goal</span>
+            </h1>
+          }
+          paragraph="We've always valued data's ability to tell a story, so here's ours."
+        />
+      </div>
+
+      <div>
+        <WhatWeValue
+          pageName="values"
+          imageSrc="/images/team/team3.png"
           goalInfo={ourValues}
           title={
             <h1

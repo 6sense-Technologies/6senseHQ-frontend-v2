@@ -30,7 +30,9 @@ const OurGoal = ({
 
   return (
     <div
-      className={` py-20 ${pageName === "values" ? "" : " bg-lightGray mt-12"}`}
+      className={`py-10 md:py-20 ${
+        pageName === "values" ? "" : " bg-lightGray mt-12"
+      }`}
     >
       <div className="px-4 text-center">
         <SectionTitle title={title} paragraph={text} />
