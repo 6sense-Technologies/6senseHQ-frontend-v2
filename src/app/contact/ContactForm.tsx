@@ -72,12 +72,6 @@ const ContactForm = () => {
         console.error("reCAPTCHA verification failed");
       }
 
-      //   const verifyRes = await axios.post("/api/verify-recaptcha", {
-      //     recaptchaToken,
-      //   });
-
-      //   console.log(verifyRes);
-
       // Send email and event to backend
       const eventBody = {
         event_name: "contact_form_submission",
