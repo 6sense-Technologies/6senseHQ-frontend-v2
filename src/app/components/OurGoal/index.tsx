@@ -31,7 +31,7 @@ const OurGoal = ({
   return (
     <div
       className={`py-10 md:py-20 ${
-        pageName === "values" ? "" : " bg-lightGray mt-12"
+        pageName === "values" ? "" : " bg-lightGray"
       }`}
     >
       <div className="px-4 text-center">

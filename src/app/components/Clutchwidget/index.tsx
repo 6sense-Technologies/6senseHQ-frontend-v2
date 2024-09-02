@@ -36,7 +36,7 @@ const ClutchWidget = () => {
         data-clutchcompany-id="1731162"
       ></div>
       <div
-        className="block md:hidden clutch-widget"
+        className="flex md:hidden clutch-widget"
         data-url="https://widget.clutch.co"
         data-widget-type="1"
         data-height="40"

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import Companies from "./components/Companies";
 import Services from "./components/Services";
@@ -12,16 +11,13 @@ import Feedback from "./components/Feedback";
 import Rating from "./components/Rating";
 import MobileApps from "./components/MobileApps";
 import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
 import {
   achievements,
   advantagesAccordionInfo,
-  buyerGuides,
   faqAccordionItems,
   featureItems,
   impactStats,
   keyFactorIcons,
-  mistakes,
   organizations,
   ourProcess,
   ourServices,
@@ -29,8 +25,6 @@ import {
   statsInfo,
 } from "@/data/propsData";
 import { appsData } from "@/data/appsData";
-import BuyerGuide from "./components/BuyerGuide";
-import Mistakes from "./components/Mistakes";
 import Impact from "./components/Impact";
 
 export default function Home() {

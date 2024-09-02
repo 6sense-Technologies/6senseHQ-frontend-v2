@@ -2,11 +2,13 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import { ArrowRight } from "@phosphor-icons/react";
+import Link from "next/link";
 
 type Props = {
   ourServices: {
     id: number;
     name: string;
+    url: string;
     icon: string;
     description: string;
   }[];
@@ -26,7 +28,7 @@ const Services = ({ ourServices }: Props) => {
     <>
       <p className="max-w-xl mx-auto font-helvetica py-4 text-blackSecondary">
         Expert custom software development for your business needs. From design
-        to deployment, we’ve got you covered.
+        to deployment, we&appos;ve got you covered.
       </p>
     </>
   );
@@ -51,12 +53,14 @@ const Services = ({ ourServices }: Props) => {
               <p className="text-justify">{item.description}</p>
             </div>
 
-            <button className="mt-4 text-actionColor font-semibold flex items-center gap-1">
-              Learn More{" "}
-              <span className="mt-1">
-                <ArrowRight />
-              </span>
-            </button>
+            <Link href={item.url}>
+              <button className="mt-4 text-actionColor font-semibold flex items-center gap-1">
+                Learn More{" "}
+                <span className="mt-1">
+                  <ArrowRight />
+                </span>
+              </button>
+            </Link>
           </div>
         ))}
       </div>

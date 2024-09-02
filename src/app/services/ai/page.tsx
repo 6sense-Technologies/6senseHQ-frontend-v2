@@ -22,7 +22,7 @@ const AI = () => {
       <div>
         <Hero
           achievements={achievements}
-          pageName="ui-design"
+          pageName="ai"
           imageSrc="/images/services/development/mobileApplication.png"
           imageAlt="UI Design"
           imageWidth={640}
@@ -69,7 +69,7 @@ text-4xl md:text-5xl font-bold capitalize"
 
       <div>
         <CallToAction
-          pageName="services"
+          pageName="ai"
           regularTitle="Curious to Learn"
           coloredPartTitle="More?"
           subtitle="Get in touch with us to know more about the timeline & budget"
@@ -81,7 +81,7 @@ text-4xl md:text-5xl font-bold capitalize"
 
       <div className="mt-20">
         <Advantages
-          pageName="services"
+          pageName="ai"
           title={
             <h1
               className="font-plex-sans-thai text-primary 
@@ -115,7 +115,7 @@ text-4xl md:text-5xl font-bold"
 
       <div>
         <CallToAction
-          pageName="services"
+          pageName="ai"
           regularTitle="Curious to Learn"
           coloredPartTitle="More?"
           subtitle="Get in touch with us to know more about the timeline & budget"

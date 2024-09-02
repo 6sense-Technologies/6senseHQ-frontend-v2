@@ -16,17 +16,17 @@ type Props = {
 const Rating = ({ ratingsInfo, buttonText }: Props) => {
   return (
     <div className="mt-6 px-5 lg:px-0 py-20 max-w-6xl mx-auto bg-slate-50">
-      <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-0 justify-around">
-        <div className="space-y-5">
-          <div className="w-[200px]">
+      <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-0 justify-around">
+        <div className="space-y-5 max-w-[200px] w-full px-8 md:px-0">
+          <div className="max-w-[200px] w-full text-center">
             <ClutchWidget />
           </div>
           <Link
-            className="ml-2"
+            className="hidden md:block md:ml-2"
             href={"https://clutch.co/profile/6sensehq"}
             target="_blank"
           >
-            <button className="hidden lg:block px-4 py-2 border text-sm text-highlight border-highlight font-semibold">
+            <button className="px-4 py-2 border text-sm text-highlight border-highlight font-semibold">
               {buttonText}
             </button>
           </Link>
@@ -57,7 +57,7 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
           ))}
         </div>
 
-        <button className="lg:hidden ml-2 px-4 py-2 border text-sm text-highlight border-highlight font-semibold">
+        <button className="md:hidden ml-2 px-4 py-2 border text-sm text-highlight border-highlight font-semibold">
           {buttonText}
         </button>
       </div>
