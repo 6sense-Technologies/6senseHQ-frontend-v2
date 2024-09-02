@@ -3,10 +3,10 @@ import Hero from "../components/Hero";
 import { achievements, goalInfo, partnersAchievements } from "@/data/propsData";
 import OurStory from "../components/OurStory";
 import OurGoal from "../components/OurGoal";
-import Story from "../components/Story";
 import StoriesInformation from "../components/StoriesInformation";
 import LeaderShip from "../components/LeaderShip";
 import JoinTeam from "../components/JoinTeam";
+import OurTeam from "../components/OurTeam";
 
 const Team = () => {
   return (
@@ -25,7 +25,7 @@ const Team = () => {
         />
       </div>
 
-      <div>
+      {/* <div>
         <OurStory
           title={
             <h1
@@ -38,7 +38,7 @@ text-4xl md:text-5xl font-bold px-[17px]"
           }
           paragraph="We've always valued data's ability to tell a story, so here's ours."
         />
-      </div>
+      </div> */}
 
       <div>
         <OurGoal
@@ -57,22 +57,23 @@ text-4xl md:text-5xl font-bold px-[17px]"
         />
       </div>
 
-      {/* <div>
-        <Story
+      <div>
+        <StoriesInformation />
+      </div>
+
+      <div>
+        <OurTeam
           title={
             <h1
               className="font-plex-sans-thai text-primary 
 text-4xl md:text-5xl font-bold px-[17px]"
             >
               Our
-              <span className="text-secondary"> Stories</span>
+              <span className="text-secondary"> Team</span>
             </h1>
           }
+          paragraph="We've always values our team, so here's ours."
         />
-      </div> */}
-
-      <div>
-        <StoriesInformation />
       </div>
 
       {/* <div>

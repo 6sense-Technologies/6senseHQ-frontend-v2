@@ -114,7 +114,7 @@ const Hero = ({
 
             <div className={`text-center lg:text-left py-5`}>
               {/* Button With CTA */}
-              <ButtonWithCTA />
+              <ButtonWithCTA source={pageName} section="hero" />
             </div>
           </div>
 

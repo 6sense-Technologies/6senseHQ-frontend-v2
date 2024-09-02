@@ -170,6 +170,7 @@ export const organizations = [
 export const ourServices = [
   {
     id: 1,
+    url: "/services/web-application",
     name: "Web Development",
     icon: "/images/web.png",
     description:
@@ -177,6 +178,7 @@ export const ourServices = [
   },
   {
     id: 2,
+    url: "/services/web-application",
     name: "Custom Software Development",
     icon: "/images/software.png",
     description:
@@ -185,6 +187,7 @@ export const ourServices = [
   {
     id: 3,
     name: "Managed Delivery",
+    url: "/services/software-testing",
     icon: "/images/delivery.jpg",
     description:
       "Streamline your project with our managed delivery service, including expert project management and regular progress updates.",
@@ -192,6 +195,7 @@ export const ourServices = [
   {
     id: 4,
     name: "Dedicated Team",
+    url: "/team",
     icon: "/images/team.png",
     description:
       "Dedicate a team of expert developers to your project for personalized service and efficient delivery.",
@@ -199,6 +203,7 @@ export const ourServices = [
   {
     id: 5,
     name: "UI/UX Design",
+    url: "/services/ui-design",
     icon: "/images/uiux.png",
     description:
       "Dedicate a team of expert developers to your project for personalized service and efficient delivery.",
@@ -206,6 +211,7 @@ export const ourServices = [
   {
     id: 6,
     name: "SaaS",
+    url: "/services/web-application",
     icon: "/images/saas.png",
     description:
       "Streamline your business operations with our custom software as a service development solutions.",

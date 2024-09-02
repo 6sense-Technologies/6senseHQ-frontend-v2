@@ -4,10 +4,15 @@ import Button from "../Button";
 import { CalendarDots } from "@phosphor-icons/react";
 import Link from "next/link";
 
-const ButtonWithCTA = () => {
+type Props = {
+  source: string;
+  section: string;
+};
+
+const ButtonWithCTA = ({ source, section }: Props) => {
   return (
     <>
-      <Link href={"/contact"}>
+      <Link href={`/contact?source=${source}&section=${section}`}>
         <Button
           text="Get In Touch"
           className="w-full lg:w-[348px] bg-secondary text-white font-bold px-5 py-4"
