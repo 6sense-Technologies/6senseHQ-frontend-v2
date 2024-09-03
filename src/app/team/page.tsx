@@ -1,10 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
-import { achievements, goalInfo, partnersAchievements } from "@/data/propsData";
-import OurStory from "../components/OurStory";
+import { achievements, goalInfo } from "@/data/propsData";
 import OurGoal from "../components/OurGoal";
 import StoriesInformation from "../components/StoriesInformation";
-import LeaderShip from "../components/LeaderShip";
 import JoinTeam from "../components/JoinTeam";
 import OurTeam from "../components/OurTeam";
 
@@ -16,11 +14,11 @@ const Team = () => {
           titlePrimary="About"
           titleSecondary=" Us"
           achievements={achievements}
-          imageSrc="/images/team/team4.png"
-          imageWidth={640}
-          imageHeight={427}
+          imageSrc="/images/team/team-6sensehq-about-us.png"
+          imageWidth={500}
+          imageHeight={400}
           imageAlt="6sense Team"
-          justify="between"
+          justify="center"
           pageName="team"
         />
       </div>

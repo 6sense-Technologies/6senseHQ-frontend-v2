@@ -9,10 +9,11 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import { CheckCircle } from "@phosphor-icons/react";
+import { CheckCircle, XCircle } from "@phosphor-icons/react";
 import { SIXSENSE_BACKEND } from "@/constants";
 import { useSearchParams } from "next/navigation";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import Script from "next/script";
 
 type FormField = {
   name: string;
@@ -34,6 +35,12 @@ const ContactSchema = z.object({
 
 const ContactForm = () => {
   const [sentEmail, setSentEmail] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [formData, setFormData] = useState<FormField | null>(null);
+  const [recaptchaV2Loaded, setRecaptchaV2Loaded] = useState(false);
+  const [recaptchaV2Token, setRecaptchaV2Token] = useState<string | null>(null);
+
   const {
     handleSubmit,
     reset,
@@ -47,32 +54,8 @@ const ContactForm = () => {
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const onsubmit = async (data: FormField) => {
-    if (!executeRecaptcha) {
-      console.error("Execute reCAPTCHA not available");
-      return;
-    }
-
-    // Execute reCAPTCHA and get the token
-    const recaptchaToken = await executeRecaptcha("contact_form_submission");
-
+  const submitEvent = async (data: FormField, recaptchaToken: string) => {
     try {
-      //Verify reCAPTCHA token with backend
-      const verifyRes = await axios.post(
-        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-        null,
-        {
-          headers: {
-            "access-control-allow-origin": "*",
-          },
-        }
-      );
-
-      if (!verifyRes.data.success) {
-        console.error("reCAPTCHA verification failed");
-      }
-
-      // Send email and event to backend
       const eventBody = {
         event_name: "contact_form_submission",
         contact_properties: {
@@ -86,17 +69,14 @@ const ContactForm = () => {
         event_properties: {
           source,
           section,
-          recaptchaToken,
+          recaptchToken: recaptchaToken,
         },
       };
-
       const res = await axios.post(`${SIXSENSE_BACKEND}/events`, eventBody);
-
       if (res.status === 200) {
         console.log(res.data);
         reset();
         setSentEmail(true);
-
         setTimeout(() => setSentEmail(false), 5000);
       }
     } catch (error) {
@@ -104,6 +84,65 @@ const ContactForm = () => {
       setSentEmail(false);
     }
   };
+
+  const onsubmit = async (data: FormField) => {
+    setLoading(true);
+    setError(null); // Reset error state
+    setFormData(data); // Store form data
+
+    if (!executeRecaptcha) {
+      console.error("Execute reCAPTCHA not available");
+      setLoading(false);
+      setError("reCAPTCHA is not available. Please try again later.");
+      return;
+    }
+
+    try {
+      const recaptchatokenv3 = await executeRecaptcha(
+        "contact_form_submission"
+      );
+
+      const verifyRes = await axios.post(
+        `${SIXSENSE_BACKEND}/verify-recaptcha-v3`,
+        { recaptchaToken: recaptchatokenv3 }
+      );
+
+      if (verifyRes.data.success && verifyRes.data.score >= 0.5) {
+        await submitEvent(data, recaptchatokenv3);
+      } else {
+        setRecaptchaV2Loaded(true);
+      }
+    } catch (error) {
+      console.error("reCAPTCHA verification failed:", error);
+      setError("Verification failed. Please try again.");
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (recaptchaV2Loaded && !recaptchaV2Token && formData) {
+      window.grecaptcha.render("recaptchaV2", {
+        sitekey: process.env.NEXT_PUBLIC_GOOGLE_SITE_KEY_V2,
+        callback: async (token: string) => {
+          setRecaptchaV2Token(token);
+          try {
+            const verifyResv2 = await axios.post(
+              `${SIXSENSE_BACKEND}/verify-recaptcha-v2`,
+              { recaptchaToken: token }
+            );
+            if (verifyResv2.data.success) {
+              await submitEvent(formData, token);
+            } else {
+              setError("reCAPTCHA v2 verification failed. Please try again.");
+            }
+          } catch (error) {
+            console.error("reCAPTCHA v2 verification failed:", error);
+            setError("There was an error with reCAPTCHA v2. Please try again.");
+          }
+        },
+      });
+    }
+  }, [recaptchaV2Loaded, formData]);
 
   return (
     <div className="">
@@ -240,6 +279,10 @@ const ContactForm = () => {
               </div>
 
               <div className="relative">
+                {recaptchaV2Loaded && (
+                  <div id="recaptchaV2" className="mb-2"></div>
+                )}
+
                 <Button
                   text="Send Message"
                   className="font-plex-sans-thai w-full lg:w-[250px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
@@ -250,6 +293,12 @@ const ContactForm = () => {
                     <CheckCircle size={20} />
                     Message Sent Successfully!
                   </p>
+                )}
+
+                {error && (
+                  <div className="mt-4 text-red-500 flex items-center gap-1">
+                    <XCircle size={24} /> {error}
+                  </div>
                 )}
               </div>
             </form>
@@ -289,6 +338,15 @@ const ContactForm = () => {
           guides={buyerGuides}
         />
       </div>
+
+      {recaptchaV2Loaded && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js`}
+          onLoad={() => console.log("reCAPTCHA v2 loaded")}
+          async
+          defer
+        />
+      )}
     </div>
   );
 };
