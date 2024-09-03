@@ -25,7 +25,14 @@ const Navbar = () => {
         {/* Logo Section */}
         <div>
           <Link href="/">
-            <img src="/images/logo.png" alt="6sense Logo" />
+            <div>
+              <Image
+                src="/images/6senseLogo.svg"
+                alt="6sense Logo - Custom Software Development Company"
+                width={148}
+                height={40}
+              />
+            </div>
           </Link>
         </div>
         {/* Button & Menu Icon */}

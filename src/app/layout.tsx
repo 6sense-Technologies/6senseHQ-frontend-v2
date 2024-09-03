@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import QueryClientWrapper from "@/providers/QueryClientWrapper";
 import GoogleRecaptchaProviderWrapper from "@/providers/GoogleRecaptchaProviderWrapper";
 import Script from "next/script";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "6sense - Expert Custom Software Development Company",
@@ -27,6 +28,9 @@ export default function RootLayout({
           {children}
           <Footer />
         </QueryClientWrapper>
+
+        <ScrollToTop />
+
         <Script id="clarity-script" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){

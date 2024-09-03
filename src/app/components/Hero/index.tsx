@@ -99,7 +99,7 @@ const Hero = ({
             <div
               className={`block md:hidden my-5 md:my-0 w-full ${
                 pageName === "case-studies" && "custombgImage"
-              }`}
+              } ${pageName === "team" && "custombgImage"}`}
             >
               <Image
                 src={imageSrc}
@@ -122,7 +122,7 @@ const Hero = ({
           <div
             className={`hidden md:block ${
               pageName === "case-studies" && "custombgImage"
-            }`}
+            } ${pageName === "team" && "custombgImage"}`}
           >
             <Image
               src={imageSrc}
