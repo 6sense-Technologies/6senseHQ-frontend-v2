@@ -101,12 +101,12 @@ const ContactForm = () => {
 
     try {
       const recaptchatokenv3 = await executeRecaptcha(
-        "contact_form_submission"
+        "contact_form_submission",
       );
 
       const verifyRes = await axios.post(
         `${SIXSENSE_BACKEND}/verify-recaptcha-v3`,
-        { recaptchaToken: recaptchatokenv3 }
+        { recaptchaToken: recaptchatokenv3 },
       );
 
       if (verifyRes.data.success && verifyRes.data.score >= 0.5) {
@@ -129,7 +129,7 @@ const ContactForm = () => {
           try {
             const verifyResv2 = await axios.post(
               `${SIXSENSE_BACKEND}/verify-recaptcha-v2`,
-              { recaptchaToken: token }
+              { recaptchaToken: token },
             );
             if (verifyResv2.data.success) {
               await submitEvent(formData, token);
@@ -143,6 +143,7 @@ const ContactForm = () => {
         },
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recaptchaV2Loaded, formData]);
 
   return (

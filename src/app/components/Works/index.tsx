@@ -36,7 +36,7 @@ const Works = ({ subtitle, pageName }: Props) => {
       queryKey: ["getCaseStudies"],
       queryFn: async ({ pageParam = 1 }) => {
         const res = await axios.get(
-          `${SIXSENSE_BACKEND}/case-studies?page=${pageParam}`
+          `${SIXSENSE_BACKEND}/case-studies?page=${pageParam}`,
         );
         return res.data;
       },
@@ -71,18 +71,21 @@ const Works = ({ subtitle, pageName }: Props) => {
       }
     });
 
-    if (triggerRef.current) {
-      observerRef.current.observe(triggerRef.current);
+    const currentTriggerRef = triggerRef.current;
+
+    if (currentTriggerRef) {
+      observerRef.current.observe(currentTriggerRef);
     }
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      if (triggerRef.current) {
-        observerRef.current?.unobserve(triggerRef.current);
+      if (currentTriggerRef) {
+        observerRef.current?.unobserve(currentTriggerRef);
       }
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [handleScroll, isFetchingNextPage, hasNextPage]);
 
   return (
@@ -128,7 +131,7 @@ const Works = ({ subtitle, pageName }: Props) => {
                     </div>
                   </div>
                 </Link>
-              ))
+              )),
             )}
           </div>
         )}
