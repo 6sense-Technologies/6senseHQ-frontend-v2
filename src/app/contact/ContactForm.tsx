@@ -9,7 +9,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import { CheckCircle, CircleNotch, XCircle } from "@phosphor-icons/react";
+import { CheckCircle, CircleNotch, Warning } from "@phosphor-icons/react";
 import { SIXSENSE_BACKEND } from "@/constants";
 import { useSearchParams } from "next/navigation";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -43,6 +43,7 @@ const ContactForm = () => {
 
   const {
     handleSubmit,
+    getValues,
     reset,
     register,
     formState: { errors },
@@ -88,6 +89,7 @@ const ContactForm = () => {
   };
 
   const onsubmit = async (data: FormField) => {
+    if (!data.consent) setError("Consent is required!");
     setError(null); // Reset error state
     setFormData(data); // Store form data
 
@@ -209,7 +211,10 @@ const ContactForm = () => {
                 />
 
                 {errors && errors.name && (
-                  <p className="text-sm text-red-500">{errors.name.message}</p>
+                  <div className="flex items-center text-sm text-red-500 gap-1">
+                    <Warning size={15} />
+                    <p>{errors.name.message}</p>
+                  </div>
                 )}
               </div>
               <div>
@@ -220,7 +225,10 @@ const ContactForm = () => {
                   className="px-4 pb-2 w-full outline-none border-b border-b-[#CAD2D6] placeholder:font-medium"
                 />
                 {errors && errors.email && (
-                  <p className="text-sm text-red-500">{errors.email.message}</p>
+                  <div className="flex items-center text-sm text-red-500">
+                    <Warning size={15} />
+                    <p className="">{errors.email.message}</p>
+                  </div>
                 )}
               </div>
               <div>
@@ -272,6 +280,11 @@ const ContactForm = () => {
                           </span>
                         </Link>
                       </label>
+                      {!getValues("consent") && (
+                        <div className="mt-4 text-red-500 flex items-center gap-1 text-sm">
+                          <Warning size={15} /> Consent is required!
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -302,7 +315,7 @@ const ContactForm = () => {
 
                 {error && (
                   <div className="mt-4 text-red-500 flex items-center gap-1">
-                    <XCircle size={24} /> {error}
+                    <Warning size={24} /> {error}
                   </div>
                 )}
               </div>
