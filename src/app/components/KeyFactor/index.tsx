@@ -55,7 +55,7 @@ text-4xl md:text-5xl font-bold"
                         passion and commitment to building great products."
           quoteLogo="/images/quote.png"
           logo="/images/itcan1.png"
-          name="AL"
+          name="MD Alayob"
           designation="CEO, Itcan Inc."
           ourProcess={feedbackProcess}
           hasShadow={true}
