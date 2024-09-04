@@ -152,7 +152,7 @@ export const statsInfo = [
   },
   {
     id: 3,
-    stat: "4.9",
+    stat: "5.0",
     icon: "/images/rating.svg",
     alt: "Stats Icon",
     text: "Client Feedbacks",

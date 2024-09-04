@@ -36,13 +36,15 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
           {ratingsInfo.map((item, index) => (
             <div
               key={item.id}
-              className={`flex flex-row-reverse md:flex-row text-right md:text-left md:items-center py-10 gap-3 ${
+              className={`flex flex-row md:flex-row ${
+                index === 1 || index === 3 ? "text-left" : "text-right"
+              } md:text-left md:items-center py-10 gap-3 ${
                 index === 0 || index === 1
                   ? "border-b pb-4 md:border-0"
                   : "pt-4"
               } ${
                 index === 0 || index === 2
-                  ? "border-r pr-4 md:border-0"
+                  ? "flex-row-reverse border-r pr-4 md:border-0"
                   : "pl-4"
               } border-highlight`}
             >
