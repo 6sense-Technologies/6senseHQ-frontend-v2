@@ -4,15 +4,19 @@ const Button = ({
   text,
   className,
   icon,
+  position,
 }: {
   text: string;
   className?: string;
   icon?: ReactNode;
+  position?: string;
 }) => {
   return (
     <button className={`flex items-center justify-center gap-2 ${className}`}>
+      {position === "before" ? icon : ""}
       {text}
-      {icon}
+      {position === "after" ? icon : ""}
+      {!position && icon}
     </button>
   );
 };
