@@ -259,7 +259,7 @@ const ContactForm = () => {
                         className="accent-secondary w-4 h-4 mt-1"
                         id="consent"
                         type="checkbox"
-                        checked
+                        defaultChecked
                       />{" "}
                     </div>
                     <div className="max-w-md">
