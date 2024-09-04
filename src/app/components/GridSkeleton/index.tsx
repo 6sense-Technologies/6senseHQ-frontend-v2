@@ -2,7 +2,10 @@ import React from "react";
 
 const GridSkeleton = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div
+      data-testid="grid-skeleton"
+      className="flex justify-center items-center"
+    >
       <div className="max-w-6xl mx-auto flex flex-col gap-6">
         <div className="">
           <div className="md:mt-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-8 gap-y-4">
