@@ -9,7 +9,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import { CheckCircle, XCircle } from "@phosphor-icons/react";
+import { CheckCircle, CircleNotch, XCircle } from "@phosphor-icons/react";
 import { SIXSENSE_BACKEND } from "@/constants";
 import { useSearchParams } from "next/navigation";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -55,6 +55,7 @@ const ContactForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const submitEvent = async (data: FormField, recaptchaToken: string) => {
+    setLoading(true);
     try {
       const eventBody = {
         event_name: "contact_form_submission",
@@ -74,7 +75,7 @@ const ContactForm = () => {
       };
       const res = await axios.post(`${SIXSENSE_BACKEND}/events`, eventBody);
       if (res.status === 200) {
-        console.log(res.data);
+        setLoading(false);
         reset();
         setSentEmail(true);
         setTimeout(() => setSentEmail(false), 5000);
@@ -82,17 +83,16 @@ const ContactForm = () => {
     } catch (error) {
       console.error(error);
       setSentEmail(false);
+      setLoading(false);
     }
   };
 
   const onsubmit = async (data: FormField) => {
-    setLoading(true);
     setError(null); // Reset error state
     setFormData(data); // Store form data
 
     if (!executeRecaptcha) {
       console.error("Execute reCAPTCHA not available");
-      setLoading(false);
       setError("reCAPTCHA is not available. Please try again later.");
       return;
     }
@@ -115,7 +115,6 @@ const ContactForm = () => {
     } catch (error) {
       console.error("reCAPTCHA verification failed:", error);
       setError("Verification failed. Please try again.");
-      setLoading(false);
     }
   };
 
@@ -284,6 +283,12 @@ const ContactForm = () => {
                 )}
 
                 <Button
+                  icon={
+                    loading && (
+                      <CircleNotch size={24} className="animate animate-spin" />
+                    )
+                  }
+                  position="before"
                   text="Send Message"
                   className="font-plex-sans-thai w-full lg:w-[250px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
                 />
