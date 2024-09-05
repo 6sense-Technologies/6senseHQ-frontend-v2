@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../Button";
+import Link from "next/link";
 
 type Props = {
   regularTitle: string;
@@ -12,6 +13,7 @@ type Props = {
     id: number;
     text: string;
   }[];
+  resourceUrl: string;
 };
 
 const Mistakes = ({
@@ -21,6 +23,7 @@ const Mistakes = ({
   imageSrc,
   alt,
   mistakes,
+  resourceUrl,
 }: Props) => {
   return (
     <div className="my-20 px-5 md:px-20 max-w-6xl mx-auto md:gap-x-20 flex flex-col-reverse md:flex-row justify-center">
@@ -41,10 +44,12 @@ const Mistakes = ({
           ))}
 
           <div className="mt-5">
-            <Button
-              text="Download"
-              className="w-full md:w-[348px] bg-secondary text-white font-bold px-5 py-4"
-            />
+            <Link href={resourceUrl} target="_blank">
+              <Button
+                text="Download"
+                className="w-full md:w-[348px] bg-secondary text-white font-bold px-5 py-4"
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -10,7 +10,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { CheckCircle, CircleNotch, Warning } from "@phosphor-icons/react";
-import { SIXSENSE_BACKEND } from "@/constants";
+import {
+  BUYERS_GUIDE_RESOURCE,
+  COST_CONTROL_RESOURCE,
+  SIXSENSE_BACKEND,
+  TEN_MISTAKES_RESOURCE,
+} from "@/constants";
 import { useSearchParams } from "next/navigation";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import Script from "next/script";
@@ -30,7 +35,9 @@ const ContactSchema = z.object({
   companyWebsite: z.string().optional(),
   message: z.string().optional(),
   getNda: z.boolean().optional(),
-  consent: z.boolean(),
+  consent: z
+    .boolean()
+    .refine((val) => val === true, { message: "Your consent is required!" }),
 });
 
 const ContactForm = () => {
@@ -89,7 +96,6 @@ const ContactForm = () => {
   };
 
   const onsubmit = async (data: FormField) => {
-    if (!data.consent) setError("Consent is required!");
     setError(null); // Reset error state
     setFormData(data); // Store form data
 
@@ -98,6 +104,8 @@ const ContactForm = () => {
       setError("reCAPTCHA is not available. Please try again later.");
       return;
     }
+
+    if (!data?.consent) setError("Consent is required!");
 
     try {
       const recaptchatokenv3 = await executeRecaptcha(
@@ -281,9 +289,9 @@ const ContactForm = () => {
                           </span>
                         </Link>
                       </label>
-                      {!getValues("consent") && (
-                        <div className="mt-4 text-red-500 flex items-center gap-1 text-sm">
-                          <Warning size={15} /> Consent is required!
+                      {errors && errors.consent && (
+                        <div className="mt-2 text-red-500 flex items-center text-sm">
+                          <Warning size={15} /> {errors.consent.message}
                         </div>
                       )}
                     </div>
@@ -313,12 +321,6 @@ const ContactForm = () => {
                     Message Sent Successfully!
                   </p>
                 )}
-
-                {error && (
-                  <div className="mt-4 text-red-500 flex items-center gap-1">
-                    <Warning size={24} /> {error}
-                  </div>
-                )}
               </div>
             </form>
           </div>
@@ -327,6 +329,7 @@ const ContactForm = () => {
 
       <div className="my-10">
         <BuyerGuide
+          resourceUrl={BUYERS_GUIDE_RESOURCE}
           coloredPartTitle="Buyers Guide"
           regularTitle="for Developing Custom Software"
           imageSrc="/images/buyersguide.png"
@@ -338,6 +341,7 @@ const ContactForm = () => {
 
       <div className="my-10">
         <Mistakes
+          resourceUrl={TEN_MISTAKES_RESOURCE}
           coloredPartTitle="10 Mistakes"
           regularTitle=" You Should Avoid While Developing Custom Software"
           icon="/images/tick.svg"
@@ -349,6 +353,7 @@ const ContactForm = () => {
 
       <div className="my-10">
         <BuyerGuide
+          resourceUrl={COST_CONTROL_RESOURCE}
           coloredPartTitle="How to Keep"
           regularTitle="Your Custom Software Development Cost Under Control?"
           imageSrc="/images/buyersguide.png"
