@@ -1,13 +1,12 @@
-import React from "react";
 
-type Props = {
+interface IProps {
   title: string;
   subtitle: string;
   icon: string;
   solutionImage: string;
   solutionPoints1: string[];
   solutionPoints2?: string[];
-};
+}
 
 const Solution = ({
   title,
@@ -16,7 +15,7 @@ const Solution = ({
   solutionImage,
   solutionPoints1,
   solutionPoints2,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <div className="max-w-7xl mx-auto py-14">
       <div className="max-w-3xl mx-auto">
@@ -38,18 +37,18 @@ const Solution = ({
           }`}
         >
           <div className="space-y-4">
-            {solutionPoints1.map((point, index) => (
+            {solutionPoints1.map((point, index) => {return (
               <p key={index} className="text-lightGray4 flex items-start gap-2">
                 <img src={icon} className="mt-1" alt="Tick" />
                 {point}
               </p>
-            ))}
+            )})}
           </div>
 
           <div className="space-y-4">
             {solutionPoints2 &&
               solutionPoints2?.length > 0 &&
-              solutionPoints2.map((point, index) => (
+              solutionPoints2.map((point, index) => {return (
                 <p
                   key={index}
                   className="text-lightGray4 flex items-start gap-2"
@@ -57,7 +56,7 @@ const Solution = ({
                   <img src={icon} className="mt-1" alt="Tick" />
                   {point}
                 </p>
-              ))}
+              )})}
           </div>
         </div>
       </div>

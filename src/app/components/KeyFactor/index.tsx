@@ -1,19 +1,17 @@
 "use client";
-import Image from "next/image";
-import React from "react";
-import SectionTitle from "../SectionTitle";
-import Feedback from "../Feedback";
 import { feedbackProcess } from "@/data/propsData";
+import Feedback from "../Feedback";
+import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   keyfactorIcons: {
     id: number;
     icon: string;
     alt: string;
   }[];
-};
+}
 
-const KeyFactors = ({ keyfactorIcons }: Props) => {
+const KeyFactors = ({ keyfactorIcons }: IProps): JSX.Element => {
   const title = (
     <>
       <h1
@@ -40,11 +38,11 @@ text-4xl md:text-5xl font-bold"
         <div className="px-4 text-center">
           <SectionTitle title={title} paragraph={paragraph} />
           <div className="flex flex-wrap items-center justify-center gap-4">
-            {keyfactorIcons.map((ico) => (
+            {keyfactorIcons.map((ico) => {return (
               <div key={ico.id}>
                 <img src={ico.icon} alt={ico.alt} />
               </div>
-            ))}
+            )})}
           </div>
         </div>
 

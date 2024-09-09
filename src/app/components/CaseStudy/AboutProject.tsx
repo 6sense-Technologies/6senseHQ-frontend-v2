@@ -1,8 +1,7 @@
 import { SIXSENSE_BACKEND } from "@/constants";
 import Image from "next/image";
-import React from "react";
 
-type Props = {
+interface IProps {
   title: string;
   paragraph: string;
   aboutProjectInfo: {
@@ -11,9 +10,9 @@ type Props = {
     title: string;
     icon: string;
   }[];
-};
+}
 
-const AboutProject = ({ title, paragraph, aboutProjectInfo }: Props) => {
+const AboutProject = ({ title, paragraph, aboutProjectInfo }: IProps): JSX.Element => {
   return (
     <div className="bg-lightGray">
       <div className="max-w-7xl mx-auto py-14">
@@ -29,7 +28,7 @@ const AboutProject = ({ title, paragraph, aboutProjectInfo }: Props) => {
         <div className="px-4 md:px-0 mt-10">
           <div className="flex">
             <div className="w-full max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-x-7 gap-y-5 md:gap-y-0 px-6 md:px-0">
-              {aboutProjectInfo.map((info) => (
+              {aboutProjectInfo.map((info) => {return (
                 <div key={info.id} className="max-w-[250px] w-full">
                   <Image
                     src={`${SIXSENSE_BACKEND}${info.icon}`}
@@ -46,7 +45,7 @@ const AboutProject = ({ title, paragraph, aboutProjectInfo }: Props) => {
                     </h3>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           </div>
         </div>

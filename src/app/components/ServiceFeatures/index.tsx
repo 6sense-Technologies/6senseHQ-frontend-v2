@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   title: ReactNode;
   features: {
     id: number;
@@ -10,9 +10,9 @@ type Props = {
     title: string;
     paragraph: string;
   }[];
-};
+}
 
-const ServiceFeatures = ({ features, title }: Props) => {
+const ServiceFeatures = ({ features, title }: IProps): JSX.Element => {
   return (
     <div className="py-20">
       <div className="px-5 text-center">
@@ -21,7 +21,7 @@ const ServiceFeatures = ({ features, title }: Props) => {
 
       <div className="mt-[60px] max-w-7xl mx-auto px-4 md:px-0">
         <div className="grid sm:grid-cols-3 place-items-center gap-10 md:gap-14">
-          {features.map((feature) => (
+          {features.map((feature) => {return (
             <div
               key={feature.id}
               className="max-w-[415px] w-full border-l border-l-primary pl-6 h-[287px] flex items-center"
@@ -38,7 +38,7 @@ const ServiceFeatures = ({ features, title }: Props) => {
                 <p className="max-w-[356px] w-full py-2">{feature.paragraph}</p>
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

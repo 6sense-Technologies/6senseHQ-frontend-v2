@@ -1,7 +1,6 @@
 import Link from "next/link";
-import React from "react";
 
-type Props = {
+interface IProps {
   title: string;
   worksInfo: {
     id: number;
@@ -10,9 +9,9 @@ type Props = {
     logo: string;
     imageSrc: string;
   }[];
-};
+}
 
-const RelatedCases = ({ title, worksInfo }: Props) => {
+const RelatedCases = ({ title, worksInfo }: IProps): JSX.Element => {
   return (
     <div className="bg-lightGray py-14">
       <div className="max-w-7xl mx-auto">
@@ -25,7 +24,7 @@ const RelatedCases = ({ title, worksInfo }: Props) => {
 
       <div className="mt-7 max-w-6xl mx-auto">
         <div className="grid sm:grid-cols-3 gap-x-8 gap-y-4 px-10 md:px-0">
-          {worksInfo.slice(0, 3).map((work) => (
+          {worksInfo.slice(0, 3).map((work) => {return (
             <Link href={`/case-studies/${work.slug}`} key={work.id}>
               <div className="bg-white w-full h-auto shadow-md">
                 <img src={work.imageSrc} className="w-full" alt={work.name} />
@@ -35,7 +34,7 @@ const RelatedCases = ({ title, worksInfo }: Props) => {
                 </div>
               </div>
             </Link>
-          ))}
+          )})}
         </div>
       </div>
     </div>

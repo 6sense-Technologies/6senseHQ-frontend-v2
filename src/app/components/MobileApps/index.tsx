@@ -1,7 +1,6 @@
-import React from "react";
 import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   pageName: string;
   subtitle: string;
   appsInfo: {
@@ -9,9 +8,9 @@ type Props = {
     title: string;
     imageSrc: string;
   }[];
-};
+}
 
-const MobileApps = ({ appsInfo, subtitle, pageName }: Props) => {
+const MobileApps = ({ appsInfo, subtitle, pageName }: IProps): JSX.Element => {
   const title = (
     <>
       {pageName === "home" && (
@@ -43,7 +42,7 @@ const MobileApps = ({ appsInfo, subtitle, pageName }: Props) => {
       </div>
       <div className="mt-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-x-5 gap-y-5 place-items-center">
-          {appsInfo.map((app) => (
+          {appsInfo.map((app) => {return (
             <div
               key={app.id}
               className="relative bg-lightGray min-w-[167px] min-h-[217px]"
@@ -59,7 +58,7 @@ const MobileApps = ({ appsInfo, subtitle, pageName }: Props) => {
                 </span>
               )}
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

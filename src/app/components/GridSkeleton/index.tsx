@@ -1,6 +1,5 @@
-import React from "react";
 
-const GridSkeleton = () => {
+const GridSkeleton = (): JSX.Element => {
   return (
     <div
       data-testid="grid-skeleton"

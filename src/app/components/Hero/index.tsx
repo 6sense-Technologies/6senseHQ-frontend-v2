@@ -1,23 +1,23 @@
 import Image from "next/image";
-import Stats, { StatInfo } from "../Stats";
 import ButtonWithCTA from "../ButtonWithCTA";
+import Stats, { IStatInfo } from "../Stats";
 
-type Achievement = {
+interface IAchievement {
   id: number;
   image: string;
   alt: string;
   contentStart: string;
   contentHighlight: string;
   contentEnd: string;
-};
+}
 
-type HeroProps = {
+interface IHeroProps {
   titlePrimary: string;
   titleSecondary: string;
   breakBetweenTitle?: boolean;
   subtitle?: string;
-  achievements: Achievement[];
-  statsInfo?: StatInfo[];
+  achievements: IAchievement[];
+  statsInfo?: IStatInfo[];
   imageSrc: string;
   imageWidth: number;
   imageHeight: number;
@@ -26,7 +26,7 @@ type HeroProps = {
   classNames?: string;
   justify: string;
   pageName: string;
-};
+}
 
 const Hero = ({
   titlePrimary,
@@ -43,7 +43,7 @@ const Hero = ({
   classNames,
   justify,
   pageName,
-}: HeroProps) => {
+}: IHeroProps): JSX.Element => {
   return (
     <div className="bg-hero">
       <div
@@ -67,7 +67,7 @@ const Hero = ({
 
             <div className="mt-5 flex justify-center md:justify-start">
               <div className="space-y-1">
-                {achievements.map((item) => (
+                {achievements.map((item) => {return (
                   <div
                     key={item.id}
                     className="flex gap-1 md:gap-2 font-helvetica"
@@ -92,7 +92,7 @@ const Hero = ({
                       {item.contentEnd}
                     </p>
                   </div>
-                ))}
+                )})}
               </div>
             </div>
 

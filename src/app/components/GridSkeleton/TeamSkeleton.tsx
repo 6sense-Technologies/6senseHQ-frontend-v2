@@ -1,6 +1,5 @@
-import React from "react";
 
-const TeamSkeleton = () => {
+const TeamSkeleton = (): JSX.Element => {
   return (
     <div className="flex justify-center items-center">
       <div className="max-w-6xl mx-auto flex flex-col gap-6">

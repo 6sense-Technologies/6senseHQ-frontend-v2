@@ -1,25 +1,23 @@
-import Image from "next/image";
-import React from "react";
 import ClutchWidget from "../Clutchwidget";
 
-export type StatInfo = {
+export interface IStatInfo {
   id: number;
   stat: string;
   icon: string;
   alt: string;
   text: string;
-};
+}
 
-type StatsProps = {
-  statsInfo: StatInfo[];
-};
+interface IStatsProps {
+  statsInfo: IStatInfo[];
+}
 
-const Stats = ({ statsInfo }: StatsProps) => {
+const Stats = ({ statsInfo }: IStatsProps): JSX.Element => {
   return (
     <div className="max-w-5xl w-full mx-auto">
       <div className="flex justify-center">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:justify-items-center lg:justify-items-start">
-          {statsInfo.map((info, index) => (
+          {statsInfo.map((info, index) => {return (
             <div className="w-full flex" key={info.id}>
               <div className="flex gap-3 w-auto md:w-full">
                 <div className="">
@@ -39,7 +37,7 @@ const Stats = ({ statsInfo }: StatsProps) => {
                 </div>
               </div>
             </div>
-          ))}
+          )})}
           {statsInfo.length > 0 && (
             <div className="w-full flex lg:justify-end">
               <ClutchWidget />

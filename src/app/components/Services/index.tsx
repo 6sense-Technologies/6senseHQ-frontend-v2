@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
-import SectionTitle from "../SectionTitle";
 import { ArrowRight } from "@phosphor-icons/react";
 import Link from "next/link";
+import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   ourServices: {
     id: number;
     name: string;
@@ -12,9 +11,9 @@ type Props = {
     icon: string;
     description: string;
   }[];
-};
+}
 
-const Services = ({ ourServices }: Props) => {
+const Services = ({ ourServices }: IProps): JSX.Element => {
   const title = (
     <>
       <h1 className="font-plex-sans-thai text-primary text-4xl md:text-5xl font-bold">
@@ -40,7 +39,7 @@ const Services = ({ ourServices }: Props) => {
       </div>
 
       <div className="mt-5 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center">
-        {ourServices.map((item) => (
+        {ourServices.map((item) => {return (
           <div
             className="bg-white w-full h-full shadow-custom px-5 py-8 rounded-md flex flex-col"
             key={item.id}
@@ -62,7 +61,7 @@ const Services = ({ ourServices }: Props) => {
               </button>
             </Link>
           </div>
-        ))}
+        )})}
       </div>
     </div>
   );

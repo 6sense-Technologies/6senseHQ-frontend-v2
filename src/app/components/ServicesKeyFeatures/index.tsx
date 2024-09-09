@@ -1,8 +1,8 @@
 import Image from "next/image";
-import SectionTitle from "../SectionTitle";
 import { ReactNode } from "react";
+import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   title: ReactNode;
   servicesKeyFeatures: {
     id: number;
@@ -10,9 +10,9 @@ type Props = {
     paragraph: string;
     features?: string[];
   }[];
-};
+}
 
-const SectionKeyFeatures = ({ servicesKeyFeatures, title }: Props) => {
+const SectionKeyFeatures = ({ servicesKeyFeatures, title }: IProps): JSX.Element => {
   return (
     <div className="py-9 md:py-16 bg-gradient-to-b from-[#F8FFE9] to-[#F8FFE980]/10">
       <div className="px-5 text-center">
@@ -21,7 +21,7 @@ const SectionKeyFeatures = ({ servicesKeyFeatures, title }: Props) => {
 
       <div className="px-4 md:px-0 mt-8 max-w-7xl mx-auto">
         <div className="grid sm:grid-cols-3 gap-5">
-          {servicesKeyFeatures.map((feature) => (
+          {servicesKeyFeatures.map((feature) => {return (
             <div
               key={feature.id}
               className="max-w-[410px] w-full shadow-custom pl-8 py-8 pr-5 bg-white"
@@ -32,7 +32,7 @@ const SectionKeyFeatures = ({ servicesKeyFeatures, title }: Props) => {
               <p className="text-textSecondary pt-3">{feature.paragraph}</p>
               {feature.features && (
                 <div className="mt-2">
-                  {feature.features.map((ft, index) => (
+                  {feature.features.map((ft, index) => {return (
                     <ul key={index} className="flex items-center gap-1">
                       <div className="flex-shrink-0">
                         <div>
@@ -48,11 +48,11 @@ const SectionKeyFeatures = ({ servicesKeyFeatures, title }: Props) => {
                         {ft}
                       </li>
                     </ul>
-                  ))}
+                  )})}
                 </div>
               )}
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

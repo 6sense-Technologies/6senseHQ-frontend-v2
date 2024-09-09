@@ -1,6 +1,5 @@
-import React from "react";
 
-type Props = {
+interface IProps {
   paragraph: string;
   quoteLogo?: string;
   logo: string;
@@ -9,7 +8,7 @@ type Props = {
   ourProcess: any;
   bgColor?: string;
   hasShadow?: boolean;
-};
+}
 
 const Feedback = ({
   paragraph,
@@ -20,7 +19,7 @@ const Feedback = ({
   ourProcess,
   bgColor,
   hasShadow,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <>
       <div className="md:mx-10 my-9">
@@ -67,7 +66,7 @@ const Feedback = ({
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-y-8">
                 {ourProcess &&
                   ourProcess.length > 0 &&
-                  ourProcess.map((item: any) => (
+                  ourProcess.map((item: any) => {return (
                     <div
                       key={item.id}
                       className="w-full h-full flex flex-col items-center lg:items-start"
@@ -78,7 +77,7 @@ const Feedback = ({
                       <h3 className="font-bold text-nowrap">{item.title}</h3>
                       <p>{item.text}</p>
                     </div>
-                  ))}
+                  )})}
               </div>
             </div>
           </div>

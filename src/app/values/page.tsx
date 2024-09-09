@@ -16,7 +16,7 @@ const Values = (): JSX.Element => {
           imageHeight={427}
           imageAlt="6sense Team"
           justify="between"
-          pageName="team"
+          pageName="values"
         />
       </div>
 

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import Button from "../Button";
 import Link from "next/link";
+import Button from "../Button";
 
-type Props = {
+interface IProps {
   regularTitle: string;
   coloredPartTitle: string;
   icon: string;
@@ -14,7 +14,7 @@ type Props = {
     text: string;
   }[];
   resourceUrl: string;
-};
+}
 
 const BuyerGuide = ({
   regularTitle,
@@ -24,7 +24,7 @@ const BuyerGuide = ({
   alt,
   guides,
   resourceUrl,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <div className="bg-white mt-10 px-5 md:px-20 md:shadow-custom md:py-16 max-w-6xl md:gap-x-20 mx-auto flex flex-col md:flex-row justify-center">
       <div className="w-full">
@@ -38,14 +38,14 @@ const BuyerGuide = ({
           </h1>
 
           <div className="max-w-[350px] w-full">
-            {guides.map((guide) => (
+            {guides.map((guide) => {return (
               <div key={guide.id} className="space-y-2 mt-4">
                 <div className="flex gap-2">
                   <img src={icon} alt={alt} className="w-6 h-6" />
                   <p>{guide.text}</p>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
 
           <div className="mt-5">

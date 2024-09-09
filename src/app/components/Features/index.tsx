@@ -1,28 +1,28 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import SectionTitle from "../SectionTitle";
 import TwoColumnLayout from "./TwoCoumnLayout";
 
-type FeatureItem = {
+interface IFeatureItem {
   title: string;
   items: {
     text: string;
   }[];
-};
+}
 
-type Feature = {
-  item: FeatureItem[];
+interface IFeature {
+  item: IFeatureItem[];
   imageSrc: string;
   imageAlt: string;
-};
+}
 
-type Features = {
+interface IFeatures {
   pageName: string;
   title: ReactNode;
   paragraph: string;
-  features: Feature[];
-};
+  features: IFeature[];
+}
 
-const Features = ({ features, title, paragraph, pageName }: Features) => {
+const Features = ({ features, title, paragraph, pageName }: IFeatures): JSX.Element => {
   const text = (
     <>
       <p className="max-w-3xl mx-auto font-helvetica py-5 text-blackSecondary">
@@ -37,7 +37,7 @@ const Features = ({ features, title, paragraph, pageName }: Features) => {
         <SectionTitle title={title} paragraph={text} />
       </div>
 
-      {features.map((feature, index) => (
+      {features.map((feature, index) => {return (
         <div key={index} className={`${index === 2 ? "pb-16 gradient" : ""}`}>
           <div className="px-5">
             <TwoColumnLayout
@@ -49,7 +49,7 @@ const Features = ({ features, title, paragraph, pageName }: Features) => {
             />
           </div>
         </div>
-      ))}
+      )})}
     </div>
   );
 };

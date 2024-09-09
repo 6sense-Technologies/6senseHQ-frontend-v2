@@ -1,12 +1,9 @@
 "use client";
-import React, { ReactNode } from "react";
-import SectionTitle from "../SectionTitle";
-import Image from "next/image";
+import { ArrowRight } from "@phosphor-icons/react";
 import Link from "next/link";
 import Button from "../Button";
-import { ArrowRight } from "@phosphor-icons/react";
 
-const JoinTeam = () => {
+const JoinTeam = (): JSX.Element => {
   return (
     <div className="my-12">
       <div className="relative px-4 md:px-0 max-w-6xl mx-auto h-[120px] md:h-auto">

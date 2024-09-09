@@ -2,11 +2,11 @@
 import { CaretUp } from "@phosphor-icons/react";
 import { useEffect, useRef } from "react";
 
-const ScrollToTop = () => {
+const ScrollToTop = (): JSX.Element => {
   const goToTopRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       if (window.scrollY > 700) {
         goToTopRef.current?.classList.remove("hidden");
         goToTopRef.current?.classList.add("opacity-100");
@@ -18,10 +18,10 @@ const ScrollToTop = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return (): void => { window.removeEventListener("scroll", handleScroll); };
   }, []);
 
-  const goToTop = () => {
+  const goToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",

@@ -1,8 +1,7 @@
 import { SIXSENSE_BACKEND } from "@/constants";
 import Image from "next/image";
-import React from "react";
 
-type Props = {
+interface IProps {
   coloredPartTitle: string;
   regularTitle: string;
   info: {
@@ -13,9 +12,9 @@ type Props = {
     title: string;
     subtitle: string;
   }[];
-};
+}
 
-const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: Props) => {
+const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: IProps): JSX.Element => {
   return (
     <div className="px-4 md:px-0">
       <div className="max-w-3xl mx-auto">
@@ -28,7 +27,7 @@ const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: Props) => {
       <div className="px-4 md:px-0 max-w-5xl mx-auto mt-20">
         <div className="flex justify-center">
           <div className="w-full flex flex-col md:flex-row gap-7 md:justify-between">
-            {info.map((item) => (
+            {info.map((item) => {return (
               <div key={item.id} className="max-w-[250px] w-full">
                 <Image
                   src={`${SIXSENSE_BACKEND}${item.icon}`}
@@ -45,7 +44,7 @@ const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: Props) => {
                   </p>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </div>

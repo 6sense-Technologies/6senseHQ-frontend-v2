@@ -1,6 +1,6 @@
 import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   impactStats: {
     id: number;
     icon: string;
@@ -8,9 +8,9 @@ type Props = {
     alt: string;
     text: string;
   }[];
-};
+}
 
-const Impact = ({ impactStats }: Props) => {
+const Impact = ({ impactStats }: IProps): JSX.Element => {
   const title = (
     <>
       <h1 className="px-9 text-primary text-4xl md:text-5xl text-center font-bold">
@@ -35,7 +35,7 @@ const Impact = ({ impactStats }: Props) => {
           <SectionTitle title={title} paragraph={paragraph} />
         </div>
         <div className="mt-6 flex flex-col md:flex-row gap-5 md:gap-10 items-center md:items-start md:justify-center">
-          {impactStats.map((item) => (
+          {impactStats.map((item) => {return (
             <div key={item.id}>
               <div className="flex justify-center items-center w-[302px] md:w-[230px] h-[204px] bg-white">
                 <div className="flex justify-center items-center flex-col space-y-2">
@@ -47,7 +47,7 @@ const Impact = ({ impactStats }: Props) => {
                 </div>
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

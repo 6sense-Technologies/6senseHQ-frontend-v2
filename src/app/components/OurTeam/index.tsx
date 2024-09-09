@@ -1,11 +1,11 @@
 "use client";
-import React, { ReactNode } from "react";
-import SectionTitle from "../SectionTitle";
-import { useQuery } from "@tanstack/react-query";
 import { SIXSENSE_BACKEND } from "@/constants";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Image from "next/image";
+import { ReactNode } from "react";
 import TeamSkeleton from "../GridSkeleton/TeamSkeleton";
+import SectionTitle from "../SectionTitle";
 
 const OurTeam = ({
   title,
@@ -13,7 +13,7 @@ const OurTeam = ({
 }: {
   title: ReactNode;
   paragraph: string;
-}) => {
+}): JSX.Element => {
   const { data: teamData, isFetching } = useQuery({
     queryKey: ["getTeam"],
     queryFn: async () => {
@@ -45,7 +45,7 @@ const OurTeam = ({
         <div
           className={`md:mt-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
         >
-          {teamInfo.map((info: any) => (
+          {teamInfo.map((info: any) => {return (
             <div
               key={info.id}
               className="bg-white space-y-2 shadow-custom-drop"
@@ -61,7 +61,7 @@ const OurTeam = ({
                 {info.title}
               </h3>
             </div>
-          ))}
+          )})}
         </div>
       )}
     </div>

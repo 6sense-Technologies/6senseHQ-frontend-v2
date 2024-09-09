@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import SectionTitle from "../SectionTitle";
 import Image from "next/image";
+import { ReactNode } from "react";
+import SectionTitle from "../SectionTitle";
 
 const OurGoal = ({
   title,
@@ -19,7 +19,7 @@ const OurGoal = ({
     icon?: string;
     text: string;
   }[];
-}) => {
+}): JSX.Element => {
   const text = (
     <>
       <p className="max-w-3xl mx-auto font-helvetica py-5 text-blackSecondary">
@@ -44,7 +44,7 @@ const OurGoal = ({
             <Image src={imageSrc} alt="Team" width={400} height={400} />
           </div>
           <div className="flex-1 flex-grow">
-            {goalInfo.map((goal) => (
+            {goalInfo.map((goal) => {return (
               <div className="flex gap-2 space-y-4" key={goal.id}>
                 <div className="flex-shrink-0">
                   {goal.icon && (
@@ -67,7 +67,7 @@ const OurGoal = ({
                   <p className="text-blackSecondary">{goal.text}</p>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </div>

@@ -1,16 +1,14 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const ClutchWidget = () => {
-  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+const ClutchWidget = (): JSX.Element => {
 
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://widget.clutch.co/static/js/widget.js";
     script.async = true;
 
-    script.onload = () => {
-      setIsScriptLoaded(true);
+    script.onload = (): void => {
       if (window.CLUTCHCO) {
         window.CLUTCHCO.Init();
       }
@@ -18,7 +16,7 @@ const ClutchWidget = () => {
 
     document.body.appendChild(script);
 
-    return () => {
+    return (): void => {
       document.body.removeChild(script);
     };
   }, []);

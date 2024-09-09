@@ -1,14 +1,14 @@
 import Accordion from "../Accordion";
 
-type Props = {
+interface IProps {
   regularTitle: string;
   coloredPartTitle: string;
   faqAccordionItems: {
     title: string;
     content: string;
   }[];
-};
-const FAQ = ({ faqAccordionItems, regularTitle, coloredPartTitle }: Props) => {
+}
+const FAQ = ({ faqAccordionItems, regularTitle, coloredPartTitle }: IProps): JSX.Element => {
   return (
     <div className="mt-12 upperGradient">
       <div className="max-w-5xl px-5 lg:px-0 mx-auto py-24">

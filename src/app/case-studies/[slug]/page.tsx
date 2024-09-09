@@ -16,7 +16,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams } from "next/navigation";
 
-const CaseStudyDetail = () => {
+const CaseStudyDetail = (): JSX.Element => {
   const { slug } = useParams();
 
   const { data: caseStudyDetail, isFetching: caseStudyLoading } = useQuery({

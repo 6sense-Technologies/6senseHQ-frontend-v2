@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import SectionTitle from "../SectionTitle";
 import Image from "next/image";
+import { ReactNode } from "react";
+import SectionTitle from "../SectionTitle";
 
 const LeaderShip = ({
   title,
@@ -8,7 +8,7 @@ const LeaderShip = ({
 }: {
   title: ReactNode;
   paragraph: string;
-}) => {
+}): JSX.Element => {
   const text = (
     <>
       <p className="max-w-3xl mx-auto font-helvetica py-5 text-blackSecondary">

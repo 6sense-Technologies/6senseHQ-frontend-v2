@@ -1,7 +1,6 @@
-import React from "react";
 import ButtonWithCTA from "../ButtonWithCTA";
 
-type Props = {
+interface IProps {
   regularTitle: string;
   coloredPartTitle: string;
   subtitle: string;
@@ -9,7 +8,7 @@ type Props = {
   alt?: string;
   pageName: string;
   hasBg?: boolean;
-};
+}
 
 const CallToAction = ({
   regularTitle,
@@ -19,7 +18,7 @@ const CallToAction = ({
   alt,
   pageName,
   hasBg,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <div
       className={`${pageName === "home" ? "bg-hero" : ""} ${

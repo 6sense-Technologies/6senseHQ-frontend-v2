@@ -1,9 +1,8 @@
 import Image from "next/image";
-import React from "react";
-import Button from "../Button";
 import Link from "next/link";
+import Button from "../Button";
 
-type Props = {
+interface IProps {
   regularTitle: string;
   coloredPartTitle: string;
   icon: string;
@@ -14,7 +13,7 @@ type Props = {
     text: string;
   }[];
   resourceUrl: string;
-};
+}
 
 const Mistakes = ({
   regularTitle,
@@ -24,7 +23,7 @@ const Mistakes = ({
   alt,
   mistakes,
   resourceUrl,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <div className="my-20 px-5 md:px-20 max-w-6xl mx-auto md:gap-x-20 flex flex-col-reverse md:flex-row justify-center">
       <div className="w-full md:w-1/2">
@@ -34,14 +33,14 @@ const Mistakes = ({
             {regularTitle}
           </h1>
 
-          {mistakes.map((guide) => (
+          {mistakes.map((guide) => {return (
             <div key={guide.id} className="space-y-2 mt-4">
               <div className="flex gap-2">
                 <img src={icon} alt={alt} className="w-6 h-6" />
                 <p>{guide.text}</p>
               </div>
             </div>
-          ))}
+          )})}
 
           <div className="mt-5">
             <Link href={resourceUrl} target="_blank">

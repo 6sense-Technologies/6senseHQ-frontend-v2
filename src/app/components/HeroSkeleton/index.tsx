@@ -1,6 +1,5 @@
-import React from "react";
 
-const HeroSkeleton = () => {
+const HeroSkeleton = (): JSX.Element => {
   return (
     <div className="max-w-3xl mx-auto min-h-[90vh] flex flex-col justify-center items-center gap-6">
       <div>

@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import SectionTitle from "../SectionTitle";
-import Image from "next/image";
 
 const OurStory = ({
   title,
@@ -8,7 +7,7 @@ const OurStory = ({
 }: {
   title: ReactNode;
   paragraph: string;
-}) => {
+}): JSX.Element => {
   const text = (
     <>
       <p className="max-w-3xl mx-auto font-helvetica py-5 text-blackSecondary">
@@ -31,7 +30,7 @@ const OurStory = ({
 
       <div className="px-4 md:px-0 my-10 max-w-6xl mx-auto">
         <div className="grid grid-cosl-1 md:grid-cols-3 place-items-center gap-y-10 md:gap-x-10">
-          {storyInNumbersInfo.map((info) => (
+          {storyInNumbersInfo.map((info) => {return (
             <div key={info.id} className="flex items-center gap-4">
               <h2 className="font-plex-sans-thai text-[64px] font-light text-primary">
                 {info.count}
@@ -42,7 +41,7 @@ const OurStory = ({
                 </p>
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

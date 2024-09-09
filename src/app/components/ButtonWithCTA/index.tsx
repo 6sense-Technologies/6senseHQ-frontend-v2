@@ -1,15 +1,13 @@
 "use client";
-import React from "react";
-import Button from "../Button";
-import { CalendarDots } from "@phosphor-icons/react";
 import Link from "next/link";
+import Button from "../Button";
 
-type Props = {
+interface IProps {
   source: string;
   section: string;
-};
+}
 
-const ButtonWithCTA = ({ source, section }: Props) => {
+const ButtonWithCTA = ({ source, section }: IProps): JSX.Element => {
   return (
     <>
       <Link href={`/contact?source=${source}&section=${section}`}>

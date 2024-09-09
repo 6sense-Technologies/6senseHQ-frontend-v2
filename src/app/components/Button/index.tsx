@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 const Button = ({
   text,
@@ -10,7 +10,7 @@ const Button = ({
   className?: string;
   icon?: ReactNode;
   position?: string;
-}) => {
+}): JSX.Element => {
   return (
     <button className={`flex items-center justify-center gap-2 ${className}`}>
       {position === "before" ? icon : ""}

@@ -1,13 +1,12 @@
-import React from "react";
-import Hero from "../components/Hero";
-import { achievements, organizations } from "@/data/propsData";
-import Companies from "../components/Companies";
-import Works from "../components/Works";
 import { appsData } from "@/data/appsData";
-import MobileApps from "../components/MobileApps";
+import { achievements, organizations } from "@/data/propsData";
 import CallToAction from "../components/CallToAction";
+import Companies from "../components/Companies";
+import Hero from "../components/Hero";
+import MobileApps from "../components/MobileApps";
+import Works from "../components/Works";
 
-const CaseStudies = () => {
+const CaseStudies = (): JSX.Element => {
   return (
     <div>
       <Hero

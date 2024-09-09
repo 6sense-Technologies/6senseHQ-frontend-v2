@@ -2,7 +2,7 @@
 import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
-const StoriesInformation = () => {
+const StoriesInformation = (): JSX.Element => {
   return (
     <div className="my-20 px-4 md:px-0">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 place-items-center">

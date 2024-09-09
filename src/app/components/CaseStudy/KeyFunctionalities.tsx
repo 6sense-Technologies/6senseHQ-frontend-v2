@@ -1,13 +1,12 @@
-import React from "react";
 
-type Props = {
+interface IProps {
   title: string;
   subtitle: string;
   icon: string;
   keyPoints1: string[];
   keyPoints2?: string[];
   keyFunctionalityImage: string;
-};
+}
 
 const KeyFunctionalities = ({
   title,
@@ -16,7 +15,7 @@ const KeyFunctionalities = ({
   keyPoints1,
   keyPoints2,
   keyFunctionalityImage,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <div className="max-w-7xl mx-auto py-4">
       <div className="max-w-3xl mx-auto">
@@ -38,18 +37,18 @@ const KeyFunctionalities = ({
           }`}
         >
           <div className="space-y-4">
-            {keyPoints1.map((point, index) => (
+            {keyPoints1.map((point, index) => {return (
               <p key={index} className="text-lightGray4 flex items-start gap-2">
                 <img src={icon} className="mt-1" alt="Tick" />
                 {point}
               </p>
-            ))}
+            )})}
           </div>
 
           <div className="space-y-4">
             {keyPoints2 &&
               keyPoints2?.length > 0 &&
-              keyPoints2.map((point, index) => (
+              keyPoints2.map((point, index) => {return (
                 <p
                   key={index}
                   className="text-lightGray4 flex items-start gap-2"
@@ -57,7 +56,7 @@ const KeyFunctionalities = ({
                   <img src={icon} className="mt-1" alt="Tick" />
                   {point}
                 </p>
-              ))}
+              )})}
           </div>
         </div>
       </div>

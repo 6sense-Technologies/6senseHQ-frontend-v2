@@ -1,17 +1,15 @@
-import Image from "next/image";
-import React from "react";
 
-type Props = {
+interface IProps {
   feedback: string;
   nameWithDesignation: string;
   clientImage?: string;
-};
+}
 
 const CaseStudyFeedback = ({
   feedback,
   nameWithDesignation,
   clientImage,
-}: Props) => {
+}: IProps): JSX.Element => {
   return (
     <div className="bg-hero py-20">
       <div className="max-w-6xl mx-auto px-4 md:px-0 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-10">

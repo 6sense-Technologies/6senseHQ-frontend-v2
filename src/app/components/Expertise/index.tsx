@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import SectionTitle from "../SectionTitle";
 import Link from "next/link";
+import { ReactNode } from "react";
+import SectionTitle from "../SectionTitle";
 
-const Expertise = ({ title }: { title: ReactNode }) => {
+const Expertise = ({ title }: { title: ReactNode }): JSX.Element => {
   const ourServices = [
     {
       id: 1,
@@ -182,7 +182,7 @@ const Expertise = ({ title }: { title: ReactNode }) => {
 
       <div className="px-5 md:px-0 my-10 md:my-20 max-w-7xl mx-auto flex md:justify-center items-center">
         <div className="grid sm:grid-cols-4 gap-x-10 gap-y-4">
-          {ourServices.map((service) => (
+          {ourServices.map((service) => {return (
             <Link key={service.id} href={`${service.src}`}>
               <div className="flex gap-2">
                 <img
@@ -193,7 +193,7 @@ const Expertise = ({ title }: { title: ReactNode }) => {
                 <p>{service.serviceName}</p>
               </div>
             </Link>
-          ))}
+          )})}
         </div>
       </div>
     </div>

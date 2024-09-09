@@ -1,26 +1,24 @@
 "use client";
-import Image from "next/image";
-import React from "react";
 
-type OrgProps = {
+interface IOrgProps {
   id: number;
   image: string;
   alt: string;
-};
+}
 
-type CompayProps = {
-  organizations: OrgProps[];
+interface ICompayProps {
+  organizations: IOrgProps[];
   title?: string;
   subtitle: string;
   pageName: string;
-};
+}
 
 const Companies = ({
   organizations,
   title,
   subtitle,
   pageName,
-}: CompayProps) => {
+}: ICompayProps): JSX.Element => {
   return (
     <div className={`${pageName === "case-studies" && "bg-lightGray"}`}>
       <div className={`${pageName === "home" ? "mt-12" : "mt-0 pt-14"}  px-5`}>
@@ -37,9 +35,9 @@ const Companies = ({
             pageName === "case-studies" ? "14" : "10"
           } flex-wrap justify-center items-center`}
         >
-          {organizations.map((org) => (
+          {organizations.map((org) => {return (
             <img key={org.id} src={org.image} alt={org.alt} />
-          ))}
+          )})}
         </div>
         {pageName === "case-studies" && (
           <p className="text-center text-textSecondary text-base md:py-2 py-5">

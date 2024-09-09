@@ -1,9 +1,8 @@
 // "use client";
-import React from "react";
-import ClutchWidget from "../Clutchwidget";
 import Link from "next/link";
+import ClutchWidget from "../Clutchwidget";
 
-type Props = {
+interface IProps {
   ratingsInfo: {
     id: number;
     type: string;
@@ -11,9 +10,9 @@ type Props = {
     rating: string;
   }[];
   buttonText: string;
-};
+}
 
-const Rating = ({ ratingsInfo, buttonText }: Props) => {
+const Rating = ({ ratingsInfo, buttonText }: IProps): JSX.Element => {
   return (
     <div className="mt-6 px-5 lg:px-0 py-20 max-w-6xl mx-auto bg-slate-50">
       <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-0 justify-around">
@@ -33,7 +32,7 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
         </div>
 
         <div className="grid grid-cols-2 ">
-          {ratingsInfo.map((item, index) => (
+          {ratingsInfo.map((item, index) => {return (
             <div
               key={item.id}
               className={`flex flex-row md:flex-row ${
@@ -56,7 +55,7 @@ const Rating = ({ ratingsInfo, buttonText }: Props) => {
                 <h4 className="text-xs text-[#002E48]">{item.text}</h4>
               </div>
             </div>
-          ))}
+          )})}
         </div>
 
         <button className="md:hidden ml-2 px-4 py-2 border text-sm text-highlight border-highlight font-semibold">

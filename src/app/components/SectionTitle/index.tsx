@@ -1,11 +1,11 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
-type Props = {
+interface IProps {
   title: ReactNode;
   paragraph?: ReactNode;
-};
+}
 
-const SectionTitle = ({ title, paragraph }: Props) => {
+const SectionTitle = ({ title, paragraph }: IProps): JSX.Element => {
   return (
     <>
       {title}

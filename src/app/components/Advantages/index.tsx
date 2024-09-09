@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Accordion from "../Accordion";
 import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   title: ReactNode;
   paragraph: string;
   accordionItems: {
@@ -12,7 +12,7 @@ type Props = {
   imageSrc: string;
   alt: string;
   pageName: string;
-};
+}
 
 const Advantages = ({
   accordionItems,
@@ -21,7 +21,7 @@ const Advantages = ({
   title,
   paragraph,
   pageName,
-}: Props) => {
+}: IProps): JSX.Element => {
   const textInfo = (
     <>
       <p className="max-w-3xl mx-auto font-helvetica md:py-1 py-4 text-blackSecondary">
