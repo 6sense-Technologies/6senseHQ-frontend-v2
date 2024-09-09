@@ -1,11 +1,9 @@
-import React from "react";
-import Hero from "../components/Hero";
 import { achievements, goalInfo, ourValues } from "@/data/propsData";
-import WhatWeValue from "../components/OurGoal";
 import CallToAction from "../components/CallToAction";
-import OurGoal from "../components/OurGoal";
+import Hero from "../components/Hero";
+import { default as OurGoal, default as WhatWeValue } from "../components/OurGoal";
 
-const Values = () => {
+const Values = (): JSX.Element => {
   return (
     <div>
       <div>

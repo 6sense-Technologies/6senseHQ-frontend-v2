@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NotFound() {
+const NotFound = (): JSX.Element => {
   return (
     <section className="">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -26,3 +26,5 @@ export default function NotFound() {
     </section>
   );
 }
+
+export default NotFound;

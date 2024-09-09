@@ -7,15 +7,13 @@ import ServiceFeatures from "@/app/components/ServiceFeatures";
 import SectionKeyFeatures from "@/app/components/ServicesKeyFeatures";
 import {
   achievements,
-  advantagesAccordionInfo,
   feedbackProcess,
   servicesFeatures,
   servicesKeyFeatures,
   uiDesignAccordions,
 } from "@/data/propsData";
-import React from "react";
 
-const UIUXService = () => {
+const UIUXService = (): JSX.Element => {
   return (
     <>
       <div>

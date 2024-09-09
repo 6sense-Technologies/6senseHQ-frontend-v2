@@ -1,16 +1,4 @@
-import Hero from "./components/Hero";
-import Companies from "./components/Companies";
-import Services from "./components/Services";
-import KeyFactors from "./components/KeyFactor";
-import Technology from "./components/Technology";
-import Features from "./components/Features";
-import Advantages from "./components/Advantages";
-import CallToAction from "./components/CallToAction";
-import Works from "./components/Works";
-import Feedback from "./components/Feedback";
-import Rating from "./components/Rating";
-import MobileApps from "./components/MobileApps";
-import FAQ from "./components/FAQ";
+import { appsData } from "@/data/appsData";
 import {
   achievements,
   advantagesAccordionInfo,
@@ -24,10 +12,22 @@ import {
   ratingsInfo,
   statsInfo,
 } from "@/data/propsData";
-import { appsData } from "@/data/appsData";
+import Advantages from "./components/Advantages";
+import CallToAction from "./components/CallToAction";
+import Companies from "./components/Companies";
+import FAQ from "./components/FAQ";
+import Features from "./components/Features";
+import Feedback from "./components/Feedback";
+import Hero from "./components/Hero";
 import Impact from "./components/Impact";
+import KeyFactors from "./components/KeyFactor";
+import MobileApps from "./components/MobileApps";
+import Rating from "./components/Rating";
+import Services from "./components/Services";
+import Technology from "./components/Technology";
+import Works from "./components/Works";
 
-export default function Home() {
+const Home = (): JSX.Element => {
   return (
     <main className="">
       <Hero
@@ -155,3 +155,4 @@ text-4xl md:text-5xl font-bold"
     </main>
   );
 }
+export default Home;

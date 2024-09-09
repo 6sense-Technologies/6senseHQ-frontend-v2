@@ -1,12 +1,11 @@
-import React from "react";
-import Hero from "../components/Hero";
 import { achievements, goalInfo } from "@/data/propsData";
-import OurGoal from "../components/OurGoal";
-import StoriesInformation from "../components/StoriesInformation";
+import Hero from "../components/Hero";
 import JoinTeam from "../components/JoinTeam";
+import OurGoal from "../components/OurGoal";
 import OurTeam from "../components/OurTeam";
+import StoriesInformation from "../components/StoriesInformation";
 
-const Team = () => {
+const Team = (): JSX.Element => {
   return (
     <>
       <div>
