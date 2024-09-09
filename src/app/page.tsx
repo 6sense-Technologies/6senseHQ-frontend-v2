@@ -12,6 +12,7 @@ import {
   ratingsInfo,
   statsInfo,
 } from "@/data/propsData";
+import { IItemInfo } from "../../types/type";
 import Advantages from "./components/Advantages";
 import CallToAction from "./components/CallToAction";
 import Companies from "./components/Companies";
@@ -28,6 +29,7 @@ import Technology from "./components/Technology";
 import Works from "./components/Works";
 
 const Home = (): JSX.Element => {
+  const ourProcesses: IItemInfo[] = ourProcess ?? []
   return (
     <main className="">
       <Hero
@@ -125,7 +127,7 @@ text-4xl md:text-5xl font-bold"
         logo="/images/impromek.svg"
         name="Gabriel Sotomayor"
         designation="CEO, Impromek Inc."
-        ourProcess={ourProcess}
+        ourProcess={ourProcesses}
         bgColor="bg-slate-50"
       />
 

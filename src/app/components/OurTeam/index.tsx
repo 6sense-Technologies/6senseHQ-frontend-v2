@@ -1,9 +1,10 @@
 "use client";
 import { SIXSENSE_BACKEND } from "@/constants";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import Image from "next/image";
 import { ReactNode } from "react";
+import { ITeamInfo } from "../../../../types/type";
 import TeamSkeleton from "../GridSkeleton/TeamSkeleton";
 import SectionTitle from "../SectionTitle";
 
@@ -17,7 +18,7 @@ const OurTeam = ({
   const { data: teamData, isFetching } = useQuery({
     queryKey: ["getTeam"],
     queryFn: async () => {
-      const res = await axios.get(`${SIXSENSE_BACKEND}/team-gallery/all`);
+      const res: AxiosResponse<{data: ITeamInfo[]}> = await axios.get(`${SIXSENSE_BACKEND}/team-gallery/all`);
       return res.data;
     },
     refetchOnWindowFocus: false,

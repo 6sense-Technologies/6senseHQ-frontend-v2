@@ -1,5 +1,6 @@
 import { appsData } from "@/data/appsData";
 import { achievements, organizations } from "@/data/propsData";
+import { IAchievements, IAppsData, IOrganization } from "../../../types/type";
 import CallToAction from "../components/CallToAction";
 import Companies from "../components/Companies";
 import Hero from "../components/Hero";
@@ -7,12 +8,15 @@ import MobileApps from "../components/MobileApps";
 import Works from "../components/Works";
 
 const CaseStudies = (): JSX.Element => {
+  const ourAchievement: IAchievements[] = achievements ?? [];
+  const ourOrganizations: IOrganization[] = organizations ?? [];
+  const ourAppsData: IAppsData[] = appsData ?? []
   return (
     <div>
       <Hero
         titlePrimary="Our"
         titleSecondary=" Portfolio"
-        achievements={achievements ?? []}
+        achievements={ourAchievement}
         imageSrc="/images/team/team5.png"
         imageAlt="Case Study"
         imageWidth={448}
@@ -23,7 +27,7 @@ const CaseStudies = (): JSX.Element => {
 
       <Companies
         pageName="case-studies"
-        organizations={organizations ?? []}
+        organizations={ourOrganizations}
         subtitle="We’re a industry-leading team of software developers dedicated to transforming creative leaders’ revolutionary ideas into reality"
       />
 
@@ -35,7 +39,7 @@ const CaseStudies = (): JSX.Element => {
       <MobileApps
         pageName="case-studies"
         subtitle="Through our vast experience in the industry, we are proud to have built a strong and powerful reputation for reliability and precision when it comes to creating purpose-built software designed specially to meet specific company goals and resolve internal problems."
-        appsInfo={appsData ?? []}
+        appsInfo={ourAppsData}
       />
 
       <CallToAction

@@ -115,7 +115,7 @@ const CaseStudyDetail = (): JSX.Element => {
           )}
 
         <div>
-          <RelatedCases title="Related cases" worksInfo={worksData} />
+          <RelatedCases title="Related cases" worksInfo={worksData ?? []} />
         </div>
 
         <div>

@@ -1,3 +1,4 @@
+import { IItemInfo } from "../../../../types/type";
 
 interface IProps {
   paragraph: string;
@@ -8,14 +9,6 @@ interface IProps {
   ourProcess: any;
   bgColor?: string;
   hasShadow?: boolean;
-}
-
-interface IItemInfo {
-  id: number,
-  icon: string,
-  alt: string,
-  title: string,
-  text: string
 }
 
 const Feedback = ({

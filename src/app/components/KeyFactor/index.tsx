@@ -1,5 +1,6 @@
 "use client";
 import { feedbackProcess } from "@/data/propsData";
+import { IItemInfo } from "../../../../types/type";
 import Feedback from "../Feedback";
 import SectionTitle from "../SectionTitle";
 
@@ -12,6 +13,7 @@ interface IProps {
 }
 
 const KeyFactors = ({ keyfactorIcons }: IProps): JSX.Element => {
+  const ourFeedbackProcess: IItemInfo[] = feedbackProcess ?? []
   const title = (
     <>
       <h1
@@ -55,7 +57,7 @@ text-4xl md:text-5xl font-bold"
           logo="/images/itcan1.png"
           name="MD Alayob"
           designation="CEO, Itcan Inc."
-          ourProcess={feedbackProcess ?? []}
+          ourProcess={ourFeedbackProcess}
           hasShadow={true}
         />
       </div>

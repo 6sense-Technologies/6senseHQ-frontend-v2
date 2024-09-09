@@ -68,3 +68,45 @@ export interface ICaseStudyInfo {
   }
   message: string
 }
+
+export interface IAchievements {
+    id: number,
+    image: string,
+    alt: string,
+    contentStart: string,
+    contentHighlight: string,
+    contentEnd: string
+}
+
+export interface IOrganization {
+  id: number,
+  image: string,
+  alt: string
+}
+export interface IAppsData {
+  id: number,
+  title: string,
+  imageSrc: string
+}
+
+export interface IItemInfo {
+  id: number,
+  icon: string,
+  alt: string,
+  title: string,
+  text: string
+}
+
+export interface ITeamInfo {
+  status: number
+  data: {
+    id: number
+    _id: string
+    title: string
+    image: string
+    __v: number
+  }[]
+  message: string
+}
+
+
