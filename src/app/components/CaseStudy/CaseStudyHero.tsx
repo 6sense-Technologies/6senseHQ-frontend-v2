@@ -8,7 +8,6 @@ interface IProps {
     id: number;
     icon: string;
     alt: string;
-    total: number;
     title: string;
     subtitle: string;
   }[];
@@ -27,8 +26,8 @@ const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: IProps): JSX.El
       <div className="px-4 md:px-0 max-w-5xl mx-auto mt-20">
         <div className="flex justify-center">
           <div className="w-full flex flex-col md:flex-row gap-7 md:justify-between">
-            {info.map((item) => {return (
-              <div key={item.id} className="max-w-[250px] w-full">
+            {info.map((item, index) => {return (
+              <div key={index} className="max-w-[250px] w-full">
                 <Image
                   src={`${SIXSENSE_BACKEND}${item.icon}`}
                   alt={item.alt}
@@ -37,7 +36,7 @@ const CaseStudyHero = ({ coloredPartTitle, regularTitle, info }: IProps): JSX.El
                 />
                 <div className="mt-4 space-y-1">
                   <h3 className="text-primary uppercase font-semibold text-lg">
-                    {item.total} {item.title}
+                    {item.title}
                   </h3>
                   <p className="font-plex-sans-thai text-lightGray3">
                     {item.subtitle}

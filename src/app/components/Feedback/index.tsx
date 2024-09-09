@@ -10,6 +10,14 @@ interface IProps {
   hasShadow?: boolean;
 }
 
+interface IItemInfo {
+  id: number,
+  icon: string,
+  alt: string,
+  title: string,
+  text: string
+}
+
 const Feedback = ({
   paragraph,
   quoteLogo,
@@ -66,7 +74,7 @@ const Feedback = ({
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center gap-y-8">
                 {ourProcess &&
                   ourProcess.length > 0 &&
-                  ourProcess.map((item: any) => {return (
+                  ourProcess.map((item: IItemInfo) => {return (
                     <div
                       key={item.id}
                       className="w-full h-full flex flex-col items-center lg:items-start"

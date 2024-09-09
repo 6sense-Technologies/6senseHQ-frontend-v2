@@ -55,7 +55,7 @@ text-4xl md:text-5xl font-bold"
           logo="/images/itcan1.png"
           name="MD Alayob"
           designation="CEO, Itcan Inc."
-          ourProcess={feedbackProcess}
+          ourProcess={feedbackProcess ?? []}
           hasShadow={true}
         />
       </div>
