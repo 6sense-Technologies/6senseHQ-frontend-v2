@@ -20,121 +20,122 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <div className="bg-white drop-shadow-md h-20 py-5 relative z-50">
-      <div className="px-4 md:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
-        {/* Logo Section */}
-        <div>
-          <Link href="/">
-            <div>
+    <div className="sticky top-0 z-50">
+      <div className="bg-white drop-shadow-md h-20 py-5 relative z-50 ">
+        <div className="px-4 md:px-0 max-w-7xl mx-auto flex justify-between items-center h-full">
+          {/* Logo Section */}
+          <div>
+            <Link href="/">
+              <div>
+                <Image
+                  src="/images/6senseLogo.svg"
+                  alt="6sense Logo - Custom Software Development Company"
+                  width={148}
+                  height={40}
+                />
+              </div>
+            </Link>
+          </div>
+          {/* Button & Menu Icon */}
+          <div className="lg:hidden flex items-center">
+            <Link
+              href={"https://meet.brevo.com/6sense-technologies"}
+              target="_blank"
+            >
+              <Button
+                text="Free Consultation"
+                className="text-nowrap font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-xs md:text-sm mx-2"
+              />
+            </Link>
+            <div className="cursor-pointer" onClick={toggleMenu}>
               <Image
-                src="/images/6senseLogo.svg"
-                alt="6sense Logo - Custom Software Development Company"
-                width={148}
-                height={40}
+                src="/images/menu.svg"
+                alt="Menu Icon"
+                width={40}
+                height={32}
               />
             </div>
-          </Link>
-        </div>
-        {/* Button & Menu Icon */}
-        <div className="lg:hidden flex items-center">
-          <Link
-            href={"https://meet.brevo.com/6sense-technologies"}
-            target="_blank"
-          >
-            <Button
-              text="Free Consultation"
-              className="text-nowrap font-plex-sans-thai bg-secondary text-white font-bold py-3 md:py-4 px-4 text-xs md:text-sm mx-2"
-            />
-          </Link>
-          <div className="cursor-pointer" onClick={toggleMenu}>
-            <Image
-              src="/images/menu.svg"
-              alt="Menu Icon"
-              width={40}
-              height={32}
-            />
           </div>
-        </div>
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex lg:items-center font-plex-sans-thai text-blackSecondary font-normal text-lg lg:space-x-6">
-          <Link className="hover:opacity-60 py-2" href={"/"}>
-            Home
-          </Link>
-
-          <div className="group relative lg:py-2">
-            <div className="flex justify-between items-center">
-              <Link
-                className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
-                href={"#"}
-              >
-                Services <CaretDown size={16} weight="bold" />
-              </Link>
-            </div>
-
-            <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[300px]">
-              <div className="flex flex-col px-4 lg:py-4 lg:space-y-3">
-                <Link href="/services/ui-design" className="hover:opacity-60">
-                  UI Design
-                </Link>
-                <Link
-                  href="/services/ux-design-research"
-                  className="hover:opacity-60"
-                >
-                  UX Design & Research
-                </Link>
-                <Link
-                  href="/services/web-application"
-                  className="hover:opacity-60"
-                >
-                  Web Application Development
-                </Link>
-                <Link
-                  href="/services/mobile-application"
-                  className="hover:opacity-60"
-                >
-                  Mobile Application Development
-                </Link>
-                <Link
-                  href="/services/software-testing"
-                  className="hover:opacity-60"
-                >
-                  Software Testing as a Service
-                </Link>
-                <Link
-                  href="/services/software-project-management"
-                  className="hover:opacity-60"
-                >
-                  Software Project Management as a Service
-                </Link>
-                <Link href="/services/ecommerce" className="hover:opacity-60">
-                  Ecommerce Solution
-                </Link>
-                <Link href="/services/ai" className="hover:opacity-60">
-                  ML & AI
-                </Link>
-                <Link href="/services/openai" className="hover:opacity-60">
-                  Open AI
-                </Link>
-                <Link
-                  href="/services/facebook-meta"
-                  className="hover:opacity-60"
-                >
-                  Facebook Meta
-                </Link>
-              </div>
-            </ul>
-          </div>
-
-          <div className="group relative lg:py-2">
-            <Link
-              className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
-              href={"/case-studies"}
-            >
-              Case Studies
-              {/* <CaretDown size={16} weight="bold" /> */}
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex lg:items-center font-plex-sans-thai text-blackSecondary font-normal text-lg lg:space-x-6">
+            <Link className="hover:opacity-60 py-2" href={"/"}>
+              Home
             </Link>
 
-            {/* <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
+            <div className="group relative lg:py-2">
+              <div className="flex justify-between items-center">
+                <Link
+                  className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
+                  href={"#"}
+                >
+                  Services <CaretDown size={16} weight="bold" />
+                </Link>
+              </div>
+
+              <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[300px]">
+                <div className="flex flex-col px-4 lg:py-4 lg:space-y-3">
+                  <Link href="/services/ui-design" className="hover:opacity-60">
+                    UI Design
+                  </Link>
+                  <Link
+                    href="/services/ux-design-research"
+                    className="hover:opacity-60"
+                  >
+                    UX Design & Research
+                  </Link>
+                  <Link
+                    href="/services/web-application"
+                    className="hover:opacity-60"
+                  >
+                    Web Application Development
+                  </Link>
+                  <Link
+                    href="/services/mobile-application"
+                    className="hover:opacity-60"
+                  >
+                    Mobile Application Development
+                  </Link>
+                  <Link
+                    href="/services/software-testing"
+                    className="hover:opacity-60"
+                  >
+                    Software Testing as a Service
+                  </Link>
+                  <Link
+                    href="/services/software-project-management"
+                    className="hover:opacity-60"
+                  >
+                    Software Project Management as a Service
+                  </Link>
+                  <Link href="/services/ecommerce" className="hover:opacity-60">
+                    Ecommerce Solution
+                  </Link>
+                  <Link href="/services/ai" className="hover:opacity-60">
+                    ML & AI
+                  </Link>
+                  <Link href="/services/openai" className="hover:opacity-60">
+                    Open AI
+                  </Link>
+                  <Link
+                    href="/services/facebook-meta"
+                    className="hover:opacity-60"
+                  >
+                    Facebook Meta
+                  </Link>
+                </div>
+              </ul>
+            </div>
+
+            <div className="group relative lg:py-2">
+              <Link
+                className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
+                href={"/case-studies"}
+              >
+                Case Studies
+                {/* <CaretDown size={16} weight="bold" /> */}
+              </Link>
+
+              {/* <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
               <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
                 <Link href="/charge-onsite" className="hover:opacity-60">
                   Charge Onsite
@@ -153,123 +154,129 @@ const Navbar = () => {
                 </Link>
               </div>
             </ul> */}
-          </div>
+            </div>
 
-          <div className="group relative lg:py-2">
-            <Link
-              className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
-              href={"#"}
-            >
-              About Us <CaretDown size={16} weight="bold" />
-            </Link>
+            <div className="group relative lg:py-2">
+              <Link
+                className="hover:opacity-60 flex items-center justify-center gap-1 py-2"
+                href={"#"}
+              >
+                About Us <CaretDown size={16} weight="bold" />
+              </Link>
 
-            <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
-              <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
-                <Link href="/values" className="hover:opacity-60">
-                  Values
-                </Link>
-                <Link href="/team" className="hover:opacity-60">
-                  Team
-                </Link>
-                {/* <Link href="/values" className="hover:opacity-60">
+              <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
+                <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
+                  <Link href="/values" className="hover:opacity-60">
+                    Values
+                  </Link>
+                  <Link href="/team" className="hover:opacity-60">
+                    Team
+                  </Link>
+                  {/* <Link href="/values" className="hover:opacity-60">
                   Clients
                 </Link> */}
-                <Link href="/partners" className="hover:opacity-60">
-                  Partners
-                </Link>
-              </div>
-            </ul>
-          </div>
+                  <Link href="/partners" className="hover:opacity-60">
+                    Partners
+                  </Link>
+                </div>
+              </ul>
+            </div>
 
-          <Link className="hover:opacity-60 py-2" href={"/blog"}>
-            Blog
-          </Link>
-          <Link className="hover:opacity-60 py-2" href={"/contact"}>
-            Contact
-          </Link>
-        </div>
-        {/* Button on large screens */}
-        <div className="hidden lg:block">
-          <Link
-            href={"https://meet.brevo.com/6sense-technologies"}
-            target="_blank"
-          >
-            <Button
-              text="Schedule a Free Consultation"
-              className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
-            />
-          </Link>
-        </div>
-      </div>
-
-      {/* Mobile Drawer Menu */}
-      <div
-        className={`${
-          isOpen
-            ? "translate-y-[85px] border-t-[3px] border-primary"
-            : "-translate-y-full"
-        } fixed -top-1 right-0 w-[300px] bg-white z-50 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
-      >
-        <nav className="font-plex-sans-thai flex flex-col p-5 space-y-4">
-          <Link href="/" className="hover:opacity-60">
-            Home
-          </Link>
-
-          {/* parent */}
-          <Link href="#" className="font-semibold hover:opacity-60">
-            Services
-          </Link>
-          {/* Submenu of services */}
-          <div className="pl-4 flex flex-col space-y-4">
-            <Link href="/services/ui-design" className="hover:opacity-60">
-              UI Design
+            <Link className="hover:opacity-60 py-2" href={"/blog"}>
+              Blog
             </Link>
-            <Link
-              href="/services/ux-design-research"
-              className="hover:opacity-60"
-            >
-              UX Design & Research
-            </Link>
-            <Link href="/services/web-application" className="hover:opacity-60">
-              Web Application Development
-            </Link>
-            <Link
-              href="/services/mobile-application"
-              className="hover:opacity-60"
-            >
-              Mobile Application Development
-            </Link>
-            <Link
-              href="/services/software-testing"
-              className="hover:opacity-60"
-            >
-              Software Testing as a Service
-            </Link>
-            <Link
-              href="/services/software-project-management"
-              className="hover:opacity-60"
-            >
-              Software Project Management as a Service
-            </Link>
-            <Link href="/services/ecommerce" className="hover:opacity-60">
-              Ecommerce Solution
-            </Link>
-            <Link href="/services/ai" className="hover:opacity-60">
-              ML & AI
-            </Link>
-            <Link href="/services/openai" className="hover:opacity-60">
-              Open AI
-            </Link>
-            <Link href="/services/facebook-meta" className="hover:opacity-60">
-              Facebook Meta
+            <Link className="hover:opacity-60 py-2" href={"/contact"}>
+              Contact
             </Link>
           </div>
+          {/* Button on large screens */}
+          <div className="hidden lg:block">
+            <Link
+              href={"https://meet.brevo.com/6sense-technologies"}
+              target="_blank"
+            >
+              <Button
+                text="Schedule a Free Consultation"
+                className="font-plex-sans-thai w-full lg:w-[300px] bg-secondary text-white font-bold py-[14px] px-4 text-sm"
+              />
+            </Link>
+          </div>
+        </div>
 
-          {/* Parent */}
-          <Link href="/case-studies" className="font-semibold hover:opacity-60">
-            Case Studies
-          </Link>
-          {/* submenu
+        {/* Mobile Drawer Menu */}
+        <div
+          className={`${
+            isOpen
+              ? "translate-y-[85px] border-t-[3px] border-primary"
+              : "-translate-y-full"
+          } fixed -top-1 right-0 w-[300px] bg-white z-50 transition-transform duration-300 ease-in-out lg:hidden overflow-scroll h-[85vh]`}
+        >
+          <nav className="font-plex-sans-thai flex flex-col p-5 space-y-4">
+            <Link href="/" className="hover:opacity-60">
+              Home
+            </Link>
+
+            {/* parent */}
+            <Link href="#" className="font-semibold hover:opacity-60">
+              Services
+            </Link>
+            {/* Submenu of services */}
+            <div className="pl-4 flex flex-col space-y-4">
+              <Link href="/services/ui-design" className="hover:opacity-60">
+                UI Design
+              </Link>
+              <Link
+                href="/services/ux-design-research"
+                className="hover:opacity-60"
+              >
+                UX Design & Research
+              </Link>
+              <Link
+                href="/services/web-application"
+                className="hover:opacity-60"
+              >
+                Web Application Development
+              </Link>
+              <Link
+                href="/services/mobile-application"
+                className="hover:opacity-60"
+              >
+                Mobile Application Development
+              </Link>
+              <Link
+                href="/services/software-testing"
+                className="hover:opacity-60"
+              >
+                Software Testing as a Service
+              </Link>
+              <Link
+                href="/services/software-project-management"
+                className="hover:opacity-60"
+              >
+                Software Project Management as a Service
+              </Link>
+              <Link href="/services/ecommerce" className="hover:opacity-60">
+                Ecommerce Solution
+              </Link>
+              <Link href="/services/ai" className="hover:opacity-60">
+                ML & AI
+              </Link>
+              <Link href="/services/openai" className="hover:opacity-60">
+                Open AI
+              </Link>
+              <Link href="/services/facebook-meta" className="hover:opacity-60">
+                Facebook Meta
+              </Link>
+            </div>
+
+            {/* Parent */}
+            <Link
+              href="/case-studies"
+              className="font-semibold hover:opacity-60"
+            >
+              Case Studies
+            </Link>
+            {/* submenu
           <div className="pl-4 flex flex-col space-y-4">
             <Link href="/charge-onsite" className="hover:opacity-60">
               Charge Onsite
@@ -288,33 +295,34 @@ const Navbar = () => {
             </Link>
           </div> */}
 
-          {/* Parent */}
-          <Link href="#" className="font-semibold hover:opacity-60">
-            About Us
-          </Link>
-          {/* submenus */}
-          <div className="pl-4 flex flex-col space-y-4">
-            <Link href="/values" className="hover:opacity-60">
-              Values
+            {/* Parent */}
+            <Link href="#" className="font-semibold hover:opacity-60">
+              About Us
             </Link>
-            <Link href="/team" className="hover:opacity-60">
-              Team
-            </Link>
-            {/* <Link href="/values" className="hover:opacity-60">
+            {/* submenus */}
+            <div className="pl-4 flex flex-col space-y-4">
+              <Link href="/values" className="hover:opacity-60">
+                Values
+              </Link>
+              <Link href="/team" className="hover:opacity-60">
+                Team
+              </Link>
+              {/* <Link href="/values" className="hover:opacity-60">
               Clients
             </Link> */}
-            <Link href="/partners" className="hover:opacity-60">
-              Partners
-            </Link>
-          </div>
+              <Link href="/partners" className="hover:opacity-60">
+                Partners
+              </Link>
+            </div>
 
-          <Link href="/blog" className="hover:opacity-60">
-            Blog
-          </Link>
-          <Link href="/contact" className="hover:opacity-60">
-            Contact
-          </Link>
-        </nav>
+            <Link href="/blog" className="hover:opacity-60">
+              Blog
+            </Link>
+            <Link href="/contact" className="hover:opacity-60">
+              Contact
+            </Link>
+          </nav>
+        </div>
       </div>
     </div>
   );
