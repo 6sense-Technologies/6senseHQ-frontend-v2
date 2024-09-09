@@ -75,14 +75,14 @@ const Navbar = (): JSX.Element => {
               <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[300px]">
                 <div className="flex flex-col px-4 lg:py-4 lg:space-y-3">
                   <Link href="/services/ui-design" className="hover:opacity-60">
-                    UI Design
+                    UI/UX Design
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/services/ux-design-research"
                     className="hover:opacity-60"
                   >
                     UX Design & Research
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/services/web-application"
                     className="hover:opacity-60"
@@ -202,14 +202,14 @@ const Navbar = (): JSX.Element => {
             {/* Submenu of services */}
             <div className="pl-4 flex flex-col space-y-4">
               <Link href="/services/ui-design" className="hover:opacity-60">
-                UI Design
+                UI/UX Design
               </Link>
-              <Link
+              {/* <Link
                 href="/services/ux-design-research"
                 className="hover:opacity-60"
               >
                 UX Design & Research
-              </Link>
+              </Link> */}
               <Link
                 href="/services/web-application"
                 className="hover:opacity-60"

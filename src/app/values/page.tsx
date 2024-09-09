@@ -11,11 +11,11 @@ const Values = (): JSX.Element => {
           titlePrimary="We Add"
           titleSecondary=" Values"
           achievements={achievements}
-          imageSrc="/images/team/team.png"
-          imageWidth={640}
-          imageHeight={427}
+          imageSrc="/images/values.png"
+          imageWidth={500}
+          imageHeight={400}
           imageAlt="6sense Team"
-          justify="between"
+          justify="center"
           pageName="values"
         />
       </div>

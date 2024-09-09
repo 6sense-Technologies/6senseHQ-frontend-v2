@@ -3,7 +3,7 @@ import {
   partnersAchievements,
 } from "@/data/propsData";
 import CallToAction from "../components/CallToAction";
-import CaseStudyFeedback from "../components/CaseStudy/CaseStudyFeedback";
+// import CaseStudyFeedback from "../components/CaseStudy/CaseStudyFeedback";
 import Expertise from "../components/Expertise";
 import Features from "../components/Features";
 import Hero from "../components/Hero";
@@ -19,11 +19,11 @@ const Partners = (): JSX.Element => {
           breakBetweenTitle={true}
           subtitle="Your Gateway to Top Talent and Expertise"
           achievements={partnersAchievements}
-          imageSrc="/images/6sensehero.png"
-          imageWidth={640}
-          imageHeight={427}
+          imageSrc="/images/partnership.jpg"
+          imageWidth={500}
+          imageHeight={400}
           imageAlt="6sense Team"
-          justify="between"
+          justify="center"
           pageName="partners"
         />
       </div>
@@ -88,13 +88,13 @@ text-4xl md:text-5xl font-bold px-[17px]"
       </div>
 
       {/* Client Feedback */}
-      <div>
+      {/* <div>
         <CaseStudyFeedback
           clientImage="/images/case-studies/man.png"
           feedback={`“Partnering with 6sense Technologies has allowed us to offer much more than just resource placement. Their ability to provide not only skilled developers but also in-depth technical consultancy and process oriented approach has made a real difference for our clients, especially startups looking to scale quickly and effectively.”`}
           nameWithDesignation="VP of Sales, 6pm Global"
         />
-      </div>
+      </div> */}
 
       <div>
         <CallToAction

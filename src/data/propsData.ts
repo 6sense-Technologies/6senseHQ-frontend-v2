@@ -219,12 +219,12 @@ export const ourServices = [
 ];
 
 export const keyFactorIcons = [
-  { id: 1, icon: "/images/aws.png", alt: "AWS" },
-  { id: 2, icon: "/images/awsSecurity.png", alt: "AWS" },
-  { id: 3, icon: "/images/pspo.png", alt: "PSPO" },
-  { id: 4, icon: "/images/psm.png", alt: "PSM" },
-  { id: 5, icon: "/images/uxmaster.png", alt: "UX" },
-  { id: 6, icon: "/images/acp.png", alt: "ACP" },
+  { id: 1, icon: "/images/aws.svg", alt: "AWS" },
+  { id: 2, icon: "/images/awsSecurity.svg", alt: "AWS" },
+  { id: 3, icon: "/images/pspo.svg", alt: "PSPO" },
+  { id: 4, icon: "/images/psm.svg", alt: "PSM" },
+  { id: 5, icon: "/images/uxmaster.svg", alt: "UX" },
+  { id: 6, icon: "/images/acp.svg", alt: "ACP" },
 ];
 
 export const featureItems = [

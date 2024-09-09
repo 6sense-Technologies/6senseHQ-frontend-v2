@@ -160,7 +160,7 @@ const SuccessStories = ({
             />
           </div>
         </div>
-        <div className="mt-20 flex flex-col gap-10 md:flex-row items-center md:gap-20">
+        {/* <div className="mt-20 flex flex-col gap-10 md:flex-row items-center md:gap-20">
           <div className="flex-1 flex-grow">
             <Image
               src="/images/Transparency-Communication.webp"
@@ -298,7 +298,7 @@ const SuccessStories = ({
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
