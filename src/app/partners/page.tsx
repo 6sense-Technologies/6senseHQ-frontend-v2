@@ -1,18 +1,15 @@
-import React from "react";
-import Hero from "../components/Hero";
 import {
-  achievements,
-  featureItems,
   featureItemsForPartnership,
   partnersAchievements,
 } from "@/data/propsData";
-import Features from "../components/Features";
 import CallToAction from "../components/CallToAction";
 import CaseStudyFeedback from "../components/CaseStudy/CaseStudyFeedback";
 import Expertise from "../components/Expertise";
+import Features from "../components/Features";
+import Hero from "../components/Hero";
 import SuccessStories from "../components/SuccessStories";
 
-const Partners = () => {
+const Partners = (): JSX.Element => {
   return (
     <>
       <div>

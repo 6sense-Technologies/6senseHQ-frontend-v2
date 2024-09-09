@@ -1,12 +1,12 @@
-import Image from "next/image";
+
 import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   image: string;
   alt: string;
-};
+}
 
-const Technology = ({ image, alt }: Props) => {
+const Technology = ({ image, alt }: IProps): JSX.Element => {
   const title = (
     <>
       <h1

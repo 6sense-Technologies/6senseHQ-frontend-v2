@@ -1,17 +1,17 @@
 "use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Button from "../Button";
 import { CaretDown } from "@phosphor-icons/react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import Button from "../Button";
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
   const pathname = usePathname();
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsOpen(!isOpen);
   };
 
@@ -107,7 +107,7 @@ const Navbar = () => {
                   >
                     Software Project Management as a Service
                   </Link>
-                  <Link href="/services/ecommerce" className="hover:opacity-60">
+                  {/* <Link href="/services/ecommerce" className="hover:opacity-60">
                     Ecommerce Solution
                   </Link>
                   <Link href="/services/ai" className="hover:opacity-60">
@@ -121,7 +121,7 @@ const Navbar = () => {
                     className="hover:opacity-60"
                   >
                     Facebook Meta
-                  </Link>
+                  </Link> */}
                 </div>
               </ul>
             </div>
@@ -132,28 +132,7 @@ const Navbar = () => {
                 href={"/case-studies"}
               >
                 Case Studies
-                {/* <CaretDown size={16} weight="bold" /> */}
               </Link>
-
-              {/* <ul className="transition-all duration-300 ease-in-out transform scale-y-0 lg:group-hover:scale-y-100 origin-top lg:group-hover:opacity-100 opacity-0 lg:absolute lg:bg-white lg:border-t-[3px] lg:border-primary lg:w-[240px]">
-              <div className="px-4 lg:py-4 lg:space-y-2 flex flex-col">
-                <Link href="/charge-onsite" className="hover:opacity-60">
-                  Charge Onsite
-                </Link>
-                <Link href="/pattern50" className="hover:opacity-60">
-                  Pattern50
-                </Link>
-                <Link href="/quran-touch" className="hover:opacity-60">
-                  Quran Touch
-                </Link>
-                <Link href="/impromek" className="hover:opacity-60">
-                  Impromek
-                </Link>
-                <Link href="/itcan" className="hover:opacity-60">
-                  Itcan
-                </Link>
-              </div>
-            </ul> */}
             </div>
 
             <div className="group relative lg:py-2">
@@ -255,7 +234,7 @@ const Navbar = () => {
               >
                 Software Project Management as a Service
               </Link>
-              <Link href="/services/ecommerce" className="hover:opacity-60">
+              {/* <Link href="/services/ecommerce" className="hover:opacity-60">
                 Ecommerce Solution
               </Link>
               <Link href="/services/ai" className="hover:opacity-60">
@@ -266,7 +245,7 @@ const Navbar = () => {
               </Link>
               <Link href="/services/facebook-meta" className="hover:opacity-60">
                 Facebook Meta
-              </Link>
+              </Link> */}
             </div>
 
             {/* Parent */}

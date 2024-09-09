@@ -1,8 +1,7 @@
 import GoogleRecaptchaProviderWrapper from "@/providers/GoogleRecaptchaProviderWrapper";
-import React from "react";
 import ContactForm from "./ContactForm";
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   return (
     <GoogleRecaptchaProviderWrapper>
       <ContactForm />

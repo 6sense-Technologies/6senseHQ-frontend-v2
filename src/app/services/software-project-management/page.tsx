@@ -6,21 +6,14 @@ import Hero from "@/app/components/Hero";
 import ServiceFeatures from "@/app/components/ServiceFeatures";
 import SectionKeyFeatures from "@/app/components/ServicesKeyFeatures";
 import {
-  achievements,
-  advantagesAccordionInfo,
   feedbackProcess,
   managementAccordions,
   managementAchievements,
   managementFeatures,
   managementServicesKeyFeatures,
-  servicesFeatures,
-  servicesKeyFeatures,
-  uiDesignAccordions,
-  webApplicationFeatures,
 } from "@/data/propsData";
-import React from "react";
 
-const SoftwareProjectManagement = () => {
+const SoftwareProjectManagement = (): JSX.Element => {
   return (
     <>
       <div>

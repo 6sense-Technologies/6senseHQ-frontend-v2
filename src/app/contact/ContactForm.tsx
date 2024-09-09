@@ -1,33 +1,33 @@
 "use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Button from "../components/Button";
-import BuyerGuide from "../components/BuyerGuide";
-import { buyerGuides, mistakes } from "@/data/propsData";
-import Mistakes from "../components/Mistakes";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import axios from "axios";
-import { CheckCircle, CircleNotch, Warning } from "@phosphor-icons/react";
 import {
   BUYERS_GUIDE_RESOURCE,
   COST_CONTROL_RESOURCE,
   SIXSENSE_BACKEND,
   TEN_MISTAKES_RESOURCE,
 } from "@/constants";
+import { buyerGuides, mistakes } from "@/data/propsData";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CheckCircle, CircleNotch, Warning } from "@phosphor-icons/react";
+import axios from "axios";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import Script from "next/script";
+import { useEffect, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import Button from "../components/Button";
+import BuyerGuide from "../components/BuyerGuide";
+import Mistakes from "../components/Mistakes";
 
-type FormField = {
+interface IFormField {
   name: string;
   email: string;
   companyWebsite: string;
   message: string;
   getNda: boolean;
   consent: boolean;
-};
+}
 
 const ContactSchema = z.object({
   name: z.string().min(1, { message: "Name is required!" }),
@@ -37,24 +37,22 @@ const ContactSchema = z.object({
   getNda: z.boolean().optional(),
   consent: z
     .boolean()
-    .refine((val) => val === true, { message: "Your consent is required!" }),
+    .refine((val) => {return val === true}, { message: "Your consent is required!" }),
 });
 
-const ContactForm = () => {
+const ContactForm = (): JSX.Element => {
   const [sentEmail, setSentEmail] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [formData, setFormData] = useState<FormField | null>(null);
+  const [formData, setFormData] = useState<IFormField | null>(null);
   const [recaptchaV2Loaded, setRecaptchaV2Loaded] = useState(false);
   const [recaptchaV2Token, setRecaptchaV2Token] = useState<string | null>(null);
 
   const {
     handleSubmit,
-    getValues,
     reset,
     register,
     formState: { errors },
-  } = useForm<FormField>({ resolver: zodResolver(ContactSchema) });
+  } = useForm<IFormField>({ resolver: zodResolver(ContactSchema) });
 
   const searchParams = useSearchParams();
   const source = searchParams.get("source") || "";
@@ -62,7 +60,7 @@ const ContactForm = () => {
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const submitEvent = async (data: FormField, recaptchaToken: string) => {
+  const submitEvent = async (data: IFormField, recaptchaToken: string): Promise<void> => {
     setLoading(true);
     try {
       const eventBody = {
@@ -86,7 +84,7 @@ const ContactForm = () => {
         setLoading(false);
         reset();
         setSentEmail(true);
-        setTimeout(() => setSentEmail(false), 5000);
+        setTimeout(() => { setSentEmail(false); }, 5000);
       }
     } catch (error) {
       console.error(error);
@@ -95,17 +93,13 @@ const ContactForm = () => {
     }
   };
 
-  const onsubmit = async (data: FormField) => {
-    setError(null); // Reset error state
+  const onsubmit = async (data: IFormField): Promise<void> => {
     setFormData(data); // Store form data
 
     if (!executeRecaptcha) {
       console.error("Execute reCAPTCHA not available");
-      setError("reCAPTCHA is not available. Please try again later.");
       return;
     }
-
-    if (!data?.consent) setError("Consent is required!");
 
     try {
       const recaptchatokenv3 = await executeRecaptcha(
@@ -124,7 +118,6 @@ const ContactForm = () => {
       }
     } catch (error) {
       console.error("reCAPTCHA verification failed:", error);
-      setError("Verification failed. Please try again.");
     }
   };
 
@@ -142,11 +135,10 @@ const ContactForm = () => {
             if (verifyResv2.data.success) {
               await submitEvent(formData, token);
             } else {
-              setError("reCAPTCHA v2 verification failed. Please try again.");
+              console.error("reCAPTCHA v2 verification failed. Please try again.");
             }
           } catch (error) {
             console.error("reCAPTCHA v2 verification failed:", error);
-            setError("There was an error with reCAPTCHA v2. Please try again.");
           }
         },
       });
@@ -366,7 +358,7 @@ const ContactForm = () => {
       {recaptchaV2Loaded && (
         <Script
           src={`https://www.google.com/recaptcha/api.js`}
-          onLoad={() => console.log("reCAPTCHA v2 loaded")}
+          onLoad={() => { console.log("reCAPTCHA v2 loaded"); }}
           async
           defer
         />
