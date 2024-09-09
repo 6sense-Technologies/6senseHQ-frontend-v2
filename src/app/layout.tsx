@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import QueryClientWrapper from "@/providers/QueryClientWrapper";
-import GoogleRecaptchaProviderWrapper from "@/providers/GoogleRecaptchaProviderWrapper";
+import type { Metadata } from "next";
 import Script from "next/script";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "6sense - Expert Custom Software Development Company",
@@ -16,7 +15,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): JSX.Element {
   return (
     <html lang="en">
       <head>

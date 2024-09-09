@@ -1,11 +1,11 @@
-import { act, fireEvent, render, screen } from "@testing-library/react";
-import Works from "..";
 import {
   QueryClient,
   QueryClientProvider,
   useInfiniteQuery,
 } from "@tanstack/react-query";
+import { render, screen } from "@testing-library/react";
 import axios from "axios";
+import Works from "..";
 
 // Mock react-query's useInfiniteQuery
 jest.mock("@tanstack/react-query", () => {
@@ -22,12 +22,12 @@ jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 // Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
+global.IntersectionObserver = jest.fn().mockImplementation((callback) => {return {
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
-  trigger: () => callback([{ isIntersecting: true }]), // Simulate intersection
-}));
+  trigger: (): void => {return callback([{ isIntersecting: true }])}, // Simulate intersection
+}});
 
 const mockData = {
   data: {

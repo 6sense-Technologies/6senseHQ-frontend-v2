@@ -1,19 +1,19 @@
 "use client";
-import React, { useRef, useEffect, useCallback } from "react";
-import SectionTitle from "../SectionTitle";
-import Link from "next/link";
-import GridSkeleton from "../GridSkeleton";
+import { SIXSENSE_BACKEND } from "@/constants";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { SIXSENSE_BACKEND } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
+import { useCallback, useEffect, useRef } from "react";
+import GridSkeleton from "../GridSkeleton";
+import SectionTitle from "../SectionTitle";
 
-type Props = {
+interface IProps {
   subtitle: string;
   pageName: string;
-};
+}
 
-const Works = ({ subtitle, pageName }: Props) => {
+const Works = ({ subtitle, pageName }: IProps): JSX.Element => {
   const title = (
     <h1 className="text-primary text-4xl md:text-5xl font-bold">
       Some of our
@@ -79,7 +79,7 @@ const Works = ({ subtitle, pageName }: Props) => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
+    return (): void => {
       if (currentTriggerRef) {
         observerRef.current?.unobserve(currentTriggerRef);
       }
@@ -106,7 +106,7 @@ const Works = ({ subtitle, pageName }: Props) => {
             } max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-x-8 gap-y-4`}
           >
             {data?.pages.map((page) =>
-              page.data.projects.map((work: any) => (
+              {return page.data.projects.map((work: any) => {return (
                 <Link href={`/case-studies/${work.slug}`} key={work.id}>
                   <div className="bg-white w-[304px] md:w-[362px] h-auto shadow-md">
                     <div className="md:h-[460px]">
@@ -131,7 +131,7 @@ const Works = ({ subtitle, pageName }: Props) => {
                     </div>
                   </div>
                 </Link>
-              )),
+              )})},
             )}
           </div>
         )}
