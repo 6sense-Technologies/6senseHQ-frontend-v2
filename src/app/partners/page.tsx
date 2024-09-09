@@ -23,7 +23,7 @@ const Partners = (): JSX.Element => {
           imageWidth={500}
           imageHeight={400}
           imageAlt="6sense Team"
-          justify="center"
+          justify="between"
           pageName="partners"
         />
       </div>
