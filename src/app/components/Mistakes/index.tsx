@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { handleDownload } from "../../../../utils/utils";
 import Button from "../Button";
 
 interface IProps {
@@ -43,12 +43,12 @@ const Mistakes = ({
           )})}
 
           <div className="mt-5">
-            <Link href={resourceUrl} target="_blank">
+            <span onClick={() => { handleDownload(resourceUrl); }}>
               <Button
                 text="Download"
                 className="w-full md:w-[348px] bg-secondary text-white font-bold px-5 py-4"
               />
-            </Link>
+            </span>
           </div>
         </div>
       </div>

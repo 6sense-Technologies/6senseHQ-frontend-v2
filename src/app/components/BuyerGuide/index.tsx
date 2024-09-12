@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { handleDownload } from "../../../../utils/utils";
 import Button from "../Button";
 
 interface IProps {
@@ -25,6 +25,7 @@ const BuyerGuide = ({
   guides,
   resourceUrl,
 }: IProps): JSX.Element => {
+
   return (
     <div className="bg-white mt-10 px-5 md:px-20 md:shadow-custom md:py-16 max-w-6xl md:gap-x-20 mx-auto flex flex-col md:flex-row justify-center">
       <div className="w-full">
@@ -49,12 +50,12 @@ const BuyerGuide = ({
           </div>
 
           <div className="mt-5">
-            <Link href={resourceUrl} target="_blank">
+            <span onClick={() => {handleDownload(resourceUrl);}}>
               <Button
                 text="Download"
                 className="w-full md:w-[348px] bg-secondary text-white font-bold px-5 py-4"
               />
-            </Link>
+            </span>
           </div>
         </div>
       </div>
