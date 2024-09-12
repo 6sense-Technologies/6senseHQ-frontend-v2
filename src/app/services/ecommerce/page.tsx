@@ -13,8 +13,8 @@
 //   webApplicationFeatures,
 // } from "@/data/propsData";
 
-// const Ecommerce = (): JSX.Element => {
-//   return (
+const Ecommerce = (): JSX.Element => {
+  return (
 //     <>
 //       <div>
 //         <Hero
@@ -121,7 +121,8 @@
 //         />
 //       </div>
 //     </>
-//   );
-// };
+    <div></div>
+  );
+};
 
-// export default Ecommerce;
+export default Ecommerce;

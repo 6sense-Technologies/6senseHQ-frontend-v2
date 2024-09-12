@@ -6,15 +6,15 @@
 // import ServiceFeatures from "@/app/components/ServiceFeatures";
 // import SectionKeyFeatures from "@/app/components/ServicesKeyFeatures";
 // import {
-//   achievements,
-//   feedbackProcess,
-//   servicesKeyFeatures,
-//   uiDesignAccordions,
-//   webApplicationFeatures,
+//     achievements,
+//     feedbackProcess,
+//     servicesKeyFeatures,
+//     uiDesignAccordions,
+//     webApplicationFeatures,
 // } from "@/data/propsData";
 
-// const OpenAI = (): JSX.Element => {
-//   return (
+const OpenAI = (): JSX.Element => {
+  return (
 //     <>
 //       <div>
 //         <Hero
@@ -121,7 +121,9 @@
 //         />
 //       </div>
 //     </>
-//   );
-// };
 
-// export default OpenAI;
+<div></div>
+  );
+};
+
+export default OpenAI;

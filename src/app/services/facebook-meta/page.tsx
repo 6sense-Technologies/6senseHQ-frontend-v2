@@ -13,8 +13,8 @@
 //   webApplicationFeatures,
 // } from "@/data/propsData";
 
-// const FacebookMeta = (): JSX.Element => {
-//   return (
+const FacebookMeta = (): JSX.Element => {
+  return (
 //     <>
 //       <div>
 //         <Hero
@@ -121,7 +121,8 @@
 //         />
 //       </div>
 //     </>
-//   );
-// };
+    <div></div>
+  );
+};
 
-// export default FacebookMeta;
+export default FacebookMeta;

@@ -13,8 +13,8 @@
 //   webApplicationFeatures,
 // } from "@/data/propsData";
 
-// const AI = (): JSX.Element => {
-//   return (
+const AI = (): JSX.Element => {
+  return (
 //     <>
 //       <div>
 //         <Hero
@@ -121,7 +121,9 @@
 //         />
 //       </div>
 //     </>
-//   );
-// };
 
-// export default AI;
+<div></div>
+  );
+};
+
+export default AI;

@@ -6,15 +6,15 @@
 // import ServiceFeatures from "@/app/components/ServiceFeatures";
 // import SectionKeyFeatures from "@/app/components/ServicesKeyFeatures";
 // import {
-//   achievements,
-//   feedbackProcess,
-//   servicesFeatures,
-//   servicesKeyFeatures,
-//   uiDesignAccordions,
+//     achievements,
+//     feedbackProcess,
+//     servicesFeatures,
+//     servicesKeyFeatures,
+//     uiDesignAccordions,
 // } from "@/data/propsData";
 
-// const UIUXService = (): JSX.Element => {
-//   return (
+const UIUXService = (): JSX.Element => {
+  return (
 //     <>
 //       <div>
 //         <Hero
@@ -122,7 +122,8 @@
 //         />
 //       </div>
 //     </>
-//   );
-// };
+<div></div>
+  );
+};
 
-// export default UIUXService;
+export default UIUXService;
